@@ -96,5 +96,9 @@ releases:
   version: 0.0.103
   name: fmtok8s-api-gateway
   namespace: jx-staging
+- chart: dev/fmtok8s-agenda
+  version: 0.0.43
+  name: fmtok8s-agenda
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
