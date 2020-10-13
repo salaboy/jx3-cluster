@@ -92,5 +92,9 @@ releases:
   version: 0.0.53
   name: fmtok8s-c4p
   namespace: jx-staging
+- chart: dev/fmtok8s-api-gateway
+  version: 0.0.103
+  name: fmtok8s-api-gateway
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
