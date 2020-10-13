@@ -1,0 +1,137 @@
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  creationTimestamp: null
+  labels:
+    env: dev
+    team: jx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: dev
+  namespace: jx
+spec:
+  kind: Development
+  label: Development
+  namespace: jx
+  previewGitInfo:
+    user: {}
+  promotionStrategy: Never
+  source:
+    ref: master
+    url: https://github.com/salaboy/jx3-cluster.git
+  teamSettings:
+    appsRepository: http://chartmuseum.jenkins-x.io
+    bootRequirements: |
+      autoUpdate:
+        enabled: false
+        schedule: ""
+      bootConfigURL: https://github.com/jenkins-x/jx3-boot-config
+      buildPacks:
+        buildPackLibrary:
+          gitRef: master
+          gitURL: https://github.com/jenkins-x/jx3-pipeline-catalog.git
+      cluster:
+        clusterName: tf-jx-saved-worm
+        environmentGitOwner: todo
+        gitKind: github
+        gitName: github
+        gitServer: https://github.com
+        gke:
+          projectNumber: "291005901394"
+        namespace: jx
+        project: camunda-researchanddevelopment
+        provider: gke
+        registry: gcr.io
+        zone: us-central1-a
+      environments:
+      - ingress:
+          domain: ""
+          externalDNS: false
+          namespaceSubDomain: ""
+          tls:
+            email: ""
+            enabled: false
+            production: false
+        key: dev
+        owner: salaboy
+        repository: jx3-cluster
+      - ingress:
+          domain: ""
+          externalDNS: false
+          namespaceSubDomain: ""
+          tls:
+            email: ""
+            enabled: false
+            production: false
+        key: staging
+      - ingress:
+          domain: ""
+          externalDNS: false
+          namespaceSubDomain: ""
+          tls:
+            email: ""
+            enabled: false
+            production: false
+        key: production
+      gitops: true
+      ingress:
+        domain: ""
+        externalDNS: false
+        namespaceSubDomain: -jx.
+        tls:
+          email: ""
+          enabled: false
+          production: true
+      kaniko: true
+      pipelineUser:
+        username: salaboy
+      repository: nexus
+      secretStorage: gsm
+      storage:
+        backup:
+          enabled: false
+          url: ""
+        logs:
+          enabled: true
+          url: gs://logs-tf-jx-saved-worm-0e4cf2b8dca6
+        reports:
+          enabled: true
+          url: gs://reports-tf-jx-saved-worm-0e4cf2b8dca6
+        repository:
+          enabled: true
+          url: gs://repository-tf-jx-saved-worm-0e4cf2b8dca6
+      vault: {}
+      velero:
+        schedule: ""
+        ttl: ""
+      versionStream:
+        ref: master
+        url: https://github.com/jenkins-x/jxr-versions.git
+      webhook: lighthouse
+    buildPackRef: master
+    buildPackUrl: https://github.com/jenkins-x/jx3-pipeline-catalog.git
+    defaultScheduler:
+      apiVersion: jenkins.io/v1
+      kind: Scheduler
+      name: jx-meta-pipeline
+    dockerRegistryOrg: camunda-researchanddevelopment
+    envOrganisation: todo
+    gitPublic: true
+    gitServer: https://github.com
+    helmTemplate: true
+    importMode: YAML
+    kubeProvider: gke
+    pipelineUserEmail: jenkins-x@googlegroups.com
+    pipelineUsername: salaboy
+    promotionEngine: Prow
+    prowConfig: Scheduler
+    prowEngine: Tekton
+    storageLocations:
+      - bucketUrl: gs://logs-tf-jx-saved-worm-0e4cf2b8dca6
+        classifier: logs
+      - bucketUrl: gs://reports-tf-jx-saved-worm-0e4cf2b8dca6
+        classifier: reports
+    useGitOps: true
+    versionStreamRef: master
+    versionStreamUrl: https://github.com/jenkins-x/jxr-versions.git
+  webHookEngine: Lighthouse
+status: {}
