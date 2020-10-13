@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - salaboy/fmtok8s-api-gateway
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - salaboy/fmtok8s-monolith
       require_self_approval: true
     cat: {}
@@ -24,6 +28,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      salaboy/fmtok8s-api-gateway:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       salaboy/fmtok8s-monolith:
       - approve
       - assign
@@ -68,6 +88,9 @@ data:
     triggers:
     - repos:
       - salaboy/jx3-cluster
+      trusted_org: todo
+    - repos:
+      - salaboy/fmtok8s-api-gateway
       trusted_org: todo
     - repos:
       - salaboy/fmtok8s-monolith
