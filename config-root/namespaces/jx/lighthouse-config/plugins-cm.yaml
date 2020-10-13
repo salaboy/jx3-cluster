@@ -6,6 +6,10 @@ data:
       repos:
       - salaboy/jx3-cluster
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - salaboy/fmtok8s-monolith
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -20,6 +24,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      salaboy/fmtok8s-monolith:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       salaboy/jx3-cluster:
       - config-updater
       - approve
@@ -49,6 +69,11 @@ data:
     - repos:
       - salaboy/jx3-cluster
       trusted_org: todo
+    - repos:
+      - salaboy/fmtok8s-monolith
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

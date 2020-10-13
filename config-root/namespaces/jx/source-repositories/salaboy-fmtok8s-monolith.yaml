@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: salaboy
+    provider: github
+    repository: fmtok8s-monolith
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: salaboy-fmtok8s-monolith
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/salaboy/fmtok8s-monolith.git
+  org: salaboy
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: fmtok8s-monolith
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/salaboy/fmtok8s-monolith
