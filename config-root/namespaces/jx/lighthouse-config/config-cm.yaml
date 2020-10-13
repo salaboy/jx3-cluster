@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         salaboy/fmtok8s-api-gateway: true
+        salaboy/fmtok8s-c4p: true
         salaboy/fmtok8s-monolith: true
         salaboy/jx3-cluster: true
     plank: {}
@@ -22,6 +23,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         salaboy/fmtok8s-api-gateway: merge
+        salaboy/fmtok8s-c4p: merge
         salaboy/fmtok8s-monolith: merge
         salaboy/jx3-cluster: merge
       queries:
@@ -36,6 +38,7 @@ data:
         repos:
         - salaboy/jx3-cluster
         - salaboy/fmtok8s-api-gateway
+        - salaboy/fmtok8s-c4p
         - salaboy/fmtok8s-monolith
       - labels:
         - updatebot
@@ -48,6 +51,7 @@ data:
         repos:
         - salaboy/jx3-cluster
         - salaboy/fmtok8s-api-gateway
+        - salaboy/fmtok8s-c4p
         - salaboy/fmtok8s-monolith
       target_url: http://dashboard-jx.35.222.17.41.nip.io
 kind: ConfigMap
