@@ -1,0 +1,32 @@
+environments:
+  # The "default" environment is available and used when `helmfile` is run without `--environment NAME`.
+  #
+  # these values are available to any values.yaml.gotmpl files but they are not passed into 
+  # the helm charts directly
+  default:
+    values:
+    - jx-values.yaml
+    - versionStream/src/fake-secrets.yaml.gotmpl
+repositories:
+- name: doesnotexist
+  url: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+- name: cdf
+  url: https://cdfoundation.github.io/tekton-helm-chart
+- name: jenkins-x
+  url: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+- name: bitnami
+  url: https://charts.bitnami.com/bitnami
+- name: external-secrets
+  url: https://godaddy.github.io/kubernetes-external-secrets
+releases:
+- chart: jenkins-x/jxboot-helmfile-resources
+- chart: external-secrets/kubernetes-external-secrets
+- chart: jx-labs/jenkins-x-crds
+- chart: jx3/jx-pipelines-visualizer
+- chart: jx3/jx-preview
+- chart: stable/nginx-ingress
+- chart: cdf/tekton-pipeline
+- chart: jenkins-x/lighthouse
+- chart: jenkins-x/nexus
+- chart: jenkins-x/chartmuseum
+- chart: jx-labs/pusher-wave
