@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        salaboy/fmtok8s-agenda: true
         salaboy/fmtok8s-api-gateway: true
         salaboy/fmtok8s-c4p: true
         salaboy/fmtok8s-monolith: true
@@ -22,6 +23,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        salaboy/fmtok8s-agenda: merge
         salaboy/fmtok8s-api-gateway: merge
         salaboy/fmtok8s-c4p: merge
         salaboy/fmtok8s-monolith: merge
@@ -37,6 +39,7 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/fmtok8s-agenda
         - salaboy/fmtok8s-api-gateway
         - salaboy/fmtok8s-c4p
         - salaboy/fmtok8s-monolith
@@ -50,6 +53,7 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/fmtok8s-agenda
         - salaboy/fmtok8s-api-gateway
         - salaboy/fmtok8s-c4p
         - salaboy/fmtok8s-monolith
