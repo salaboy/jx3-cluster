@@ -1,0 +1,18 @@
+# Source: fmtok8s-agenda/templates/ingress.yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: fmtok8s-agenda
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              serviceName: fmtok8s-agenda
+              servicePort: 80
+      host: fmtok8s-agenda-jx-staging.35.222.17.41.nip.io

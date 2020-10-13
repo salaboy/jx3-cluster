@@ -1,0 +1,68 @@
+# Source: fmtok8s-agenda/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-13T20:12:07Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-agenda-0.0.43'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.43
+      sha: ed13adad739edaf3a9dadfbcebe3ebb57eb49023
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        Jenkins X build pack
+      sha: a59ee01ed6e4b660a51f25f142414ccd2402dd70
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        remove jx
+      sha: 63c5076a9794d9c89ecb44f72e946a4a56363f05
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-agenda.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda
+  gitOwner: salaboy
+  gitRepository: fmtok8s-agenda
+  name: 'fmtok8s-agenda'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.43
+  version: v0.0.43
+status: {}
