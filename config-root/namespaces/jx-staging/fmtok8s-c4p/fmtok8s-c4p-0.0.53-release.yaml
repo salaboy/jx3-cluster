@@ -1,0 +1,259 @@
+# Source: fmtok8s-c4p/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-13T19:20:01Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-c4p-0.0.53'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.53
+      sha: 364d7893fa46c4df11e1f66a952defaba9f3b5b3
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        Jenkins X build pack
+      sha: 20facf81721931c3e77eb05f77203d8849430ec4
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        removing jx
+      sha: c369c5c534be5a9b996c20ec331490ac15a9c303
+    - author:
+        accountReference:
+          - provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Solving the NPE on Contract test
+      sha: a84e9f792f5e36555bbdd9f56fff16b42e8b1f39
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Changing the GenericGenerator's strategy
+      sha: dafaecaf4b9a859ce3937e7db6947eea72a61423
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Changing tests
+      sha: b4bc5b34d7dbe25dac63e4e7fb330cef36705d14
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Returning OK when created proposal
+      sha: bf0b047414462eb2d5c6ba8646c9b2d28cfce358
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Removing stdout
+      sha: d52013c37f0c83b742192f25d8855a936e84b13f
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Implementing tests without mocks
+      sha: 63a315c3c0e992585b2618ed5fe95eab8236a77c
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Adding others methods
+      sha: 95e40add130871b2b736ff8d8f96bb425cf53c12
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Adding ITests
+      sha: 5a322e174212ab2e5a2aa71b41f12e749e99ea12
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Adding repository layer and using that
+      sha: 6cbfcfafc51696f56742d674cd19eb99392f9381
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Adding SpringDataJPA
+      sha: 2fa42cae428226597e760bd3adfa0cbde0b106ee
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Adding javax.persistence annotations and configuring hibernate.ddl-auto
+      sha: d5b9af1b05dbe31acd21b894ced4db8ca49dfed0
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Adding h2 in-memory database
+      sha: 830435608c0fc5a389181ad4c3c7dd1267912547
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p
+  gitOwner: salaboy
+  gitRepository: fmtok8s-c4p
+  name: 'fmtok8s-c4p'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.53
+  version: v0.0.53
+status: {}
