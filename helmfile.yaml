@@ -88,5 +88,9 @@ releases:
   version: 0.0.21
   name: fmtok8s-monolith
   namespace: jx-staging
+- chart: dev/fmtok8s-c4p
+  version: 0.0.53
+  name: fmtok8s-c4p
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
