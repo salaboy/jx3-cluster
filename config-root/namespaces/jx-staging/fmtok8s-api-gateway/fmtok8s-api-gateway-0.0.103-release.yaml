@@ -1,0 +1,36 @@
+# Source: fmtok8s-api-gateway/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-13T19:46:12Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-api-gateway-0.0.103'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.103
+      sha: 242537ee819a3576c8000eec16a656dbe00b2dee
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-api-gateway.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-api-gateway
+  gitOwner: salaboy
+  gitRepository: fmtok8s-api-gateway
+  name: 'fmtok8s-api-gateway'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.103
+  version: v0.0.103
+status: {}
