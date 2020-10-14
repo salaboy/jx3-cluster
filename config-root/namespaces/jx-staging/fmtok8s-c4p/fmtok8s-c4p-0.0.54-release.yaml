@@ -1,0 +1,52 @@
+# Source: fmtok8s-c4p/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-14T08:30:50Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-c4p-0.0.54'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.54
+      sha: 4dd53a6748bfaf36ba8190b9ef5e1f30ab18e6fb
+    - author:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      branch: master
+      committer:
+        accountReference:
+          - id: matheus-henrique-de-sousa-cruz-0
+            provider: jenkins.io/git-github-userid
+        email: matheus.cruz@radixeng.com.br
+        name: Matheus Henrique de Sousa Cruz
+      message: |
+        Changing integration test's name
+      sha: 50529014cea3d5eeccecf03a9a21ebb904e68fb3
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p
+  gitOwner: salaboy
+  gitRepository: fmtok8s-c4p
+  name: 'fmtok8s-c4p'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.54
+  version: v0.0.54
+status: {}
