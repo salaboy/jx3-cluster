@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-c4p-fmtok8s-c4p
   labels:
     draft: draft-app
-    chart: "fmtok8s-c4p-0.0.54"
+    chart: "fmtok8s-c4p-0.0.55"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,15 +23,17 @@ spec:
     spec:
       containers:
         - name: fmtok8s-c4p
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-c4p:0.0.54"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-c4p:0.0.55"
           imagePullPolicy: IfNotPresent
           env:
+            - name: VERSION
+              value: 0.0.55
           envFrom: null
           ports:
             - containerPort: 8080
           livenessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: 8080
             initialDelaySeconds: 60
             periodSeconds: 10
@@ -39,7 +41,7 @@ spec:
             timeoutSeconds: 1
           readinessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: 8080
             periodSeconds: 10
             successThreshold: 1
