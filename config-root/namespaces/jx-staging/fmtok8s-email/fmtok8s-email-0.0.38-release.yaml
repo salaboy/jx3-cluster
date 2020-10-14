@@ -1,0 +1,68 @@
+# Source: fmtok8s-email/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-14T07:58:06Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-email-0.0.38'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.38
+      sha: cc932aee33bc375ff419a507aa0d7678d358f350
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        Jenkins X build pack
+      sha: 4bd1d947bfa9b716c87d4a8b6c92d977311ab938
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        rm jx
+      sha: 042e74326c643fd1cbd794040d79791f7781a934
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-email.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-email
+  gitOwner: salaboy
+  gitRepository: fmtok8s-email
+  name: 'fmtok8s-email'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.38
+  version: v0.0.38
+status: {}
