@@ -11,5 +11,6 @@ spec:
     - name: fmtok8s-agenda
     - name: fmtok8s-api-gateway
     - name: fmtok8s-c4p
+    - name: fmtok8s-email
     - name: fmtok8s-monolith
     scheduler: in-repo
