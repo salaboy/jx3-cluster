@@ -1,0 +1,52 @@
+# Source: fmtok8s-agenda/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-14T10:12:45Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-agenda-0.0.45'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.45
+      sha: 7a105ca7e55f9c2b9474f94f31f9887821f9a093
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding actuator path and version in deployment
+      sha: 82fb35debca92fa99622754b0ceb7625118e9c13
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-agenda.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda
+  gitOwner: salaboy
+  gitRepository: fmtok8s-agenda
+  name: 'fmtok8s-agenda'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.45
+  version: v0.0.45
+status: {}
