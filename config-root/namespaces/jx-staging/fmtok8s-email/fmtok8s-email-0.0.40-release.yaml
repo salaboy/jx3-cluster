@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-14T09:18:52Z"
+  creationTimestamp: "2020-10-14T09:40:26Z"
   deletionTimestamp: null
-  name: 'fmtok8s-email-0.0.39'
+  name: 'fmtok8s-email-0.0.40'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.39
-      sha: 8a16920b25d5bdebd67839830efe3556860e4d8a
+        release 0.0.40
+      sha: 958b45f6b189d566934b6409f44385ccbfce331d
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        updating deployment, zeebe version and external url
-      sha: 14ebb1b5e22f84800e0e3f528d66c86279c8181f
+        updating the path for actuator
+      sha: 605996057c0d885ebe52065d1a31d07d7757771f
   gitCloneUrl: https://github.com/salaboy/fmtok8s-email.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-email
   gitOwner: salaboy
   gitRepository: fmtok8s-email
   name: 'fmtok8s-email'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.39
-  version: v0.0.39
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.40
+  version: v0.0.40
 status: {}
