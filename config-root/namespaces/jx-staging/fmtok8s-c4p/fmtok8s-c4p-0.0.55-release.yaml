@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-14T08:30:50Z"
+  creationTimestamp: "2020-10-14T09:52:49Z"
   deletionTimestamp: null
-  name: 'fmtok8s-c4p-0.0.54'
+  name: 'fmtok8s-c4p-0.0.55'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,29 +24,29 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.54
-      sha: 4dd53a6748bfaf36ba8190b9ef5e1f30ab18e6fb
+        release 0.0.55
+      sha: 379f1d66b164eae2404f8c361fc5daeda43b14ac
     - author:
         accountReference:
-          - id: matheus-henrique-de-sousa-cruz-0
+          - id: salaboy-2
             provider: jenkins.io/git-github-userid
-        email: matheus.cruz@radixeng.com.br
-        name: Matheus Henrique de Sousa Cruz
+        email: salaboy@gmail.com
+        name: salaboy
       branch: master
       committer:
         accountReference:
-          - id: matheus-henrique-de-sousa-cruz-0
+          - id: salaboy-2
             provider: jenkins.io/git-github-userid
-        email: matheus.cruz@radixeng.com.br
-        name: Matheus Henrique de Sousa Cruz
+        email: salaboy@gmail.com
+        name: salaboy
       message: |
-        Changing integration test's name
-      sha: 50529014cea3d5eeccecf03a9a21ebb904e68fb3
+        updating spring zeebe version and adding version and actuator path to deployment
+      sha: 3901e7040162f37a0c79f20d6a049047c9b80942
   gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p
   gitOwner: salaboy
   gitRepository: fmtok8s-c4p
   name: 'fmtok8s-c4p'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.54
-  version: v0.0.54
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.55
+  version: v0.0.55
 status: {}
