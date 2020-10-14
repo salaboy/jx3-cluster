@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-14T07:58:06Z"
+  creationTimestamp: "2020-10-14T09:18:52Z"
   deletionTimestamp: null
-  name: 'fmtok8s-email-0.0.38'
+  name: 'fmtok8s-email-0.0.39'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.38
-      sha: cc932aee33bc375ff419a507aa0d7678d358f350
+        release 0.0.39
+      sha: 8a16920b25d5bdebd67839830efe3556860e4d8a
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,29 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        Jenkins X build pack
-      sha: 4bd1d947bfa9b716c87d4a8b6c92d977311ab938
-    - author:
-        accountReference:
-          - id: salaboy-2
-            provider: jenkins.io/git-github-userid
-        email: salaboy@gmail.com
-        name: salaboy
-      branch: master
-      committer:
-        accountReference:
-          - id: salaboy-2
-            provider: jenkins.io/git-github-userid
-        email: salaboy@gmail.com
-        name: salaboy
-      message: |
-        rm jx
-      sha: 042e74326c643fd1cbd794040d79791f7781a934
+        updating deployment, zeebe version and external url
+      sha: 14ebb1b5e22f84800e0e3f528d66c86279c8181f
   gitCloneUrl: https://github.com/salaboy/fmtok8s-email.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-email
   gitOwner: salaboy
   gitRepository: fmtok8s-email
   name: 'fmtok8s-email'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.38
-  version: v0.0.38
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.39
+  version: v0.0.39
 status: {}
