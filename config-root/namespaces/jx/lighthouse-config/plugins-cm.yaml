@@ -20,6 +20,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - salaboy/fmtok8s-email
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - salaboy/fmtok8s-monolith
       require_self_approval: true
     cat: {}
@@ -69,6 +73,22 @@ data:
       - dog
       - pony
       salaboy/fmtok8s-c4p:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      salaboy/fmtok8s-email:
       - approve
       - assign
       - blunderbuss
@@ -137,6 +157,9 @@ data:
       trusted_org: todo
     - repos:
       - salaboy/fmtok8s-c4p
+      trusted_org: todo
+    - repos:
+      - salaboy/fmtok8s-email
       trusted_org: todo
     - repos:
       - salaboy/fmtok8s-monolith
