@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-agenda-fmtok8s-agenda
   labels:
     draft: draft-app
-    chart: "fmtok8s-agenda-0.0.43"
+    chart: "fmtok8s-agenda-0.0.44"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: fmtok8s-agenda
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-agenda:0.0.43"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-agenda:0.0.44"
           imagePullPolicy: IfNotPresent
           env:
           envFrom: null
