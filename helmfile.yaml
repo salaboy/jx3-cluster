@@ -101,7 +101,7 @@ releases:
   name: fmtok8s-agenda
   namespace: jx-staging
 - chart: dev/fmtok8s-email
-  version: 0.0.39
+  version: 0.0.40
   name: fmtok8s-email
   namespace: jx-staging
 templates: {}
