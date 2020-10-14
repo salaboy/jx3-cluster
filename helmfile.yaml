@@ -89,7 +89,7 @@ releases:
   name: fmtok8s-monolith
   namespace: jx-staging
 - chart: dev/fmtok8s-c4p
-  version: 0.0.54
+  version: 0.0.55
   name: fmtok8s-c4p
   namespace: jx-staging
 - chart: dev/fmtok8s-api-gateway
