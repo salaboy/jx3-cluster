@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-16T09:15:22Z"
+  creationTimestamp: "2020-10-16T09:23:30Z"
   deletionTimestamp: null
-  name: 'fmtok8s-api-gateway-0.0.106'
+  name: 'fmtok8s-api-gateway-0.0.107'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.106
-      sha: da098971633869be80fa178f3f284cb3679eb310
+        release 0.0.107
+      sha: b0d45beb178f6aa37e40eb4c6723ca0c1d751c2f
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        updating crd
-      sha: 803b2711118112453535cc07bdf612d0fa7ffca5
+        adding correct crd
+      sha: fdd4c586642c5d47f29372f0861ecd3358b07d1d
   gitCloneUrl: https://github.com/salaboy/fmtok8s-api-gateway.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-api-gateway
   gitOwner: salaboy
   gitRepository: fmtok8s-api-gateway
   name: 'fmtok8s-api-gateway'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.106
-  version: v0.0.106
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.107
+  version: v0.0.107
 status: {}
