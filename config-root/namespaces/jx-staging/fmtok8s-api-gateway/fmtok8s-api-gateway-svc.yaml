@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: fmtok8s-api-gateway
   labels:
-    chart: "fmtok8s-api-gateway-0.0.104"
+    chart: "fmtok8s-api-gateway-0.0.105"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     fabric8.io/expose: "true"

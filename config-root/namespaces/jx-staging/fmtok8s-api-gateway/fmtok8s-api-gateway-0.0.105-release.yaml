@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-14T10:04:17Z"
+  creationTimestamp: "2020-10-16T09:08:35Z"
   deletionTimestamp: null
-  name: 'fmtok8s-api-gateway-0.0.104'
+  name: 'fmtok8s-api-gateway-0.0.105'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.104
-      sha: c12a1106f12ab340633703a54774d612b8d3787b
+        release 0.0.105
+      sha: 19b749cde1319cc0b4cd9bcef55d854383866644
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        updating deployment version and actuator path
-      sha: 4516453a68f327a1811929faf43d8d94222c115a
+        adding jx release crd, this is a workaroud
+      sha: 68b9c3252d8e05ba502969a06f05648bea016f7d
   gitCloneUrl: https://github.com/salaboy/fmtok8s-api-gateway.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-api-gateway
   gitOwner: salaboy
   gitRepository: fmtok8s-api-gateway
   name: 'fmtok8s-api-gateway'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.104
-  version: v0.0.104
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.105
+  version: v0.0.105
 status: {}
