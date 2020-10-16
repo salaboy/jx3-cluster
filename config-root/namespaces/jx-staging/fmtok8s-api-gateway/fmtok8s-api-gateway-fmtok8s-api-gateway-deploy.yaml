@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-api-gateway-fmtok8s-api-gateway
   labels:
     draft: draft-app
-    chart: "fmtok8s-api-gateway-0.0.106"
+    chart: "fmtok8s-api-gateway-0.0.107"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,11 +23,11 @@ spec:
     spec:
       containers:
         - name: fmtok8s-api-gateway
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-api-gateway:0.0.106"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-api-gateway:0.0.107"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.106
+              value: 0.0.107
           envFrom: null
           ports:
             - containerPort: 8080
