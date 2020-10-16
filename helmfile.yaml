@@ -93,7 +93,7 @@ releases:
   name: fmtok8s-c4p
   namespace: jx-staging
 - chart: dev/fmtok8s-api-gateway
-  version: 0.0.104
+  version: 0.0.105
   name: fmtok8s-api-gateway
   namespace: jx-staging
 - chart: dev/fmtok8s-agenda
