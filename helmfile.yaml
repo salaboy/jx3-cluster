@@ -106,5 +106,9 @@ releases:
   version: 0.0.40
   name: fmtok8s-email
   namespace: jx-staging
+- chart: dev/customer-waiting-room-app
+  version: 0.0.85
+  name: customer-waiting-room-app
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
