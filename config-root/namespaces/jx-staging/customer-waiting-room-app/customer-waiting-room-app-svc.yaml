@@ -1,0 +1,21 @@
+# Source: customer-waiting-room-app/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-waiting-room-app
+  labels:
+    chart: "customer-waiting-room-app-0.0.85"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    fabric8.io/expose: "true"
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
+  namespace: jx-staging
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    app: customer-waiting-room-app-customer-waiting-room-app

@@ -1,0 +1,55 @@
+# Source: customer-waiting-room-app/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-waiting-room-app-customer-waiting-room-app
+  labels:
+    draft: draft-app
+    chart: "customer-waiting-room-app-0.0.85"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: customer-waiting-room-app-customer-waiting-room-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: customer-waiting-room-app-customer-waiting-room-app
+    spec:
+      containers:
+        - name: customer-waiting-room-app
+          image: "gcr.io/camunda-researchanddevelopment/customer-waiting-room-app:0.0.85"
+          imagePullPolicy: IfNotPresent
+          env:
+          envFrom: null
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:

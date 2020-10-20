@@ -1,0 +1,36 @@
+# Source: customer-waiting-room-app/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-20T14:46:46Z"
+  deletionTimestamp: null
+  name: 'customer-waiting-room-app-0.0.85'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.85
+      sha: 7e9db29acaf50dacfc41ef8b6443fb52369ab638
+  gitCloneUrl: https://github.com/salaboy/customer-waiting-room-app.git
+  gitHttpUrl: https://github.com/salaboy/customer-waiting-room-app
+  gitOwner: salaboy
+  gitRepository: customer-waiting-room-app
+  name: 'customer-waiting-room-app'
+  releaseNotesURL: https://github.com/salaboy/customer-waiting-room-app/releases/tag/v0.0.85
+  version: v0.0.85
+status: {}
