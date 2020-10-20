@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: salaboy
+    provider: github
+    repository: customer-waiting-room-app
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: salaboy-customer-waiting-room-app
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/salaboy/customer-waiting-room-app.git
+  org: salaboy
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: customer-waiting-room-app
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/salaboy/customer-waiting-room-app
