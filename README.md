@@ -13,4 +13,3 @@ git add *
 git commit -a -m "chore: Jenkins X changes"
 ```
 
-touch
