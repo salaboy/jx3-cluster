@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        salaboy/customer-waiting-room-app: true
         salaboy/fmtok8s-agenda: true
         salaboy/fmtok8s-api-gateway: true
         salaboy/fmtok8s-app: true
@@ -25,6 +26,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        salaboy/customer-waiting-room-app: merge
         salaboy/fmtok8s-agenda: merge
         salaboy/fmtok8s-api-gateway: merge
         salaboy/fmtok8s-app: merge
@@ -43,6 +45,7 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/customer-waiting-room-app
         - salaboy/fmtok8s-agenda
         - salaboy/fmtok8s-api-gateway
         - salaboy/fmtok8s-app
@@ -59,6 +62,7 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/customer-waiting-room-app
         - salaboy/fmtok8s-agenda
         - salaboy/fmtok8s-api-gateway
         - salaboy/fmtok8s-app
