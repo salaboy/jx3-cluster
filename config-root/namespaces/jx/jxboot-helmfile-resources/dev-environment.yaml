@@ -115,7 +115,6 @@ spec:
       name: jx-meta-pipeline
     dockerRegistryOrg: camunda-researchanddevelopment
     envOrganisation: todo
-    gitPublic: true
     gitServer: https://github.com
     helmTemplate: true
     importMode: YAML

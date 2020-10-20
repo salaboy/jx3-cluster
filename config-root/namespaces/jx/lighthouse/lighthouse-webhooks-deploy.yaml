@@ -11,7 +11,7 @@ metadata:
   annotations:
     checksum/config: a126f77da7d7209246c55e2b3e603b6e045d4ccda351c68f774a4ba6fe90dcae
     wave.pusher.com/update-on-config-change: 'true'
-    jenkins-x.io/hash: 'e99ad76fd9965e4cf3f49ddcdfff7f5638c91a876522bf0b3829b446d91343f9'
+    jenkins-x.io/hash: '89244bcef6cb23656282f70f24238c3d7ccdd749cb168ab0d19a4c9d66cb4a99'
   namespace: jx
 spec:
   replicas: 1
@@ -28,7 +28,7 @@ spec:
       serviceAccountName: lighthouse-webhooks
       containers:
         - name: lighthouse-webhooks
-          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.851
+          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.0-SNAPSHOT-PR-1117-30
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"
