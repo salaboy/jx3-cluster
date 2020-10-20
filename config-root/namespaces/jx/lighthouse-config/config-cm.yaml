@@ -9,7 +9,6 @@ data:
       enabled:
         salaboy/fmtok8s-agenda: true
         salaboy/fmtok8s-api-gateway: true
-        salaboy/fmtok8s-app: true
         salaboy/fmtok8s-c4p: true
         salaboy/fmtok8s-email: true
         salaboy/fmtok8s-monolith: true
@@ -27,7 +26,6 @@ data:
       merge_method:
         salaboy/fmtok8s-agenda: merge
         salaboy/fmtok8s-api-gateway: merge
-        salaboy/fmtok8s-app: merge
         salaboy/fmtok8s-c4p: merge
         salaboy/fmtok8s-email: merge
         salaboy/fmtok8s-monolith: merge
@@ -45,7 +43,6 @@ data:
         - salaboy/jx3-cluster
         - salaboy/fmtok8s-agenda
         - salaboy/fmtok8s-api-gateway
-        - salaboy/fmtok8s-app
         - salaboy/fmtok8s-c4p
         - salaboy/fmtok8s-email
         - salaboy/fmtok8s-monolith
@@ -61,7 +58,6 @@ data:
         - salaboy/jx3-cluster
         - salaboy/fmtok8s-agenda
         - salaboy/fmtok8s-api-gateway
-        - salaboy/fmtok8s-app
         - salaboy/fmtok8s-c4p
         - salaboy/fmtok8s-email
         - salaboy/fmtok8s-monolith
