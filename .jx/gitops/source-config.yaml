@@ -15,6 +15,7 @@ spec:
     - name: fmtok8s-c4p
     - name: fmtok8s-email
     - name: fmtok8s-monolith
+    - name: fmtok8s-speakers
     - name: payments-service
     - name: queue-service
     - name: tickets-service
