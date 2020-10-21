@@ -122,5 +122,9 @@ releases:
   version: 0.0.37
   name: queue-service
   namespace: jx-staging
+- chart: dev/zeebe-cloud-events-router
+  version: 0.0.49
+  name: zeebe-cloud-events-router
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
