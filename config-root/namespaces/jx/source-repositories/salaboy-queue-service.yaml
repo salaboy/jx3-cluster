@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: salaboy
+    provider: github
+    repository: queue-service
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: salaboy-queue-service
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/salaboy/queue-service.git
+  org: salaboy
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: queue-service
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/salaboy/queue-service
