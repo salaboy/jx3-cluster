@@ -110,5 +110,9 @@ releases:
   version: 0.0.85
   name: customer-waiting-room-app
   namespace: jx-staging
+- chart: dev/tickets-service
+  version: 0.0.35
+  name: tickets-service
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
