@@ -18,6 +18,7 @@ data:
         salaboy/payments-service: true
         salaboy/queue-service: true
         salaboy/tickets-service: true
+        zeebe-io/zeebe-cloud-events-router: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -40,6 +41,7 @@ data:
         salaboy/payments-service: merge
         salaboy/queue-service: merge
         salaboy/tickets-service: merge
+        zeebe-io/zeebe-cloud-events-router: merge
       queries:
       - labels:
         - approved
@@ -61,6 +63,7 @@ data:
         - salaboy/payments-service
         - salaboy/queue-service
         - salaboy/tickets-service
+        - zeebe-io/zeebe-cloud-events-router
       - labels:
         - updatebot
         missingLabels:
@@ -81,6 +84,7 @@ data:
         - salaboy/payments-service
         - salaboy/queue-service
         - salaboy/tickets-service
+        - zeebe-io/zeebe-cloud-events-router
       target_url: http://dashboard-jx.35.222.17.41.nip.io
 kind: ConfigMap
 metadata:
