@@ -16,5 +16,6 @@ spec:
     - name: fmtok8s-email
     - name: fmtok8s-monolith
     - name: payments-service
+    - name: queue-service
     - name: tickets-service
     scheduler: in-repo
