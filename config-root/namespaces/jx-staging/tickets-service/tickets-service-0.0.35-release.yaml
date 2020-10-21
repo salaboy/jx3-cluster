@@ -1,0 +1,52 @@
+# Source: tickets-service/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-21T09:13:28Z"
+  deletionTimestamp: null
+  name: 'tickets-service-0.0.35'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.35
+      sha: 740b37d31ea22f85959fc0ccf22ab3f5fde459a1
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        Jenkins X build pack
+      sha: 009dfda9be3ebbc2791d01886532dee7679fe574
+  gitCloneUrl: https://github.com/salaboy/tickets-service.git
+  gitHttpUrl: https://github.com/salaboy/tickets-service
+  gitOwner: salaboy
+  gitRepository: tickets-service
+  name: 'tickets-service'
+  releaseNotesURL: https://github.com/salaboy/tickets-service/releases/tag/v0.0.35
+  version: v0.0.35
+status: {}
