@@ -106,25 +106,5 @@ releases:
   version: 0.0.40
   name: fmtok8s-email
   namespace: jx-staging
-- chart: dev/customer-waiting-room-app
-  version: 0.0.85
-  name: customer-waiting-room-app
-  namespace: jx-staging
-- chart: dev/tickets-service
-  version: 0.0.35
-  name: tickets-service
-  namespace: jx-staging
-- chart: dev/payments-service
-  version: 0.0.19
-  name: payments-service
-  namespace: jx-staging
-- chart: dev/queue-service
-  version: 0.0.37
-  name: queue-service
-  namespace: jx-staging
-- chart: dev/zeebe-cloud-events-router
-  version: 0.0.49
-  name: zeebe-cloud-events-router
-  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
