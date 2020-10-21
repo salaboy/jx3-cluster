@@ -1,0 +1,52 @@
+# Source: zeebe-cloud-events-router/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-21T10:06:17Z"
+  deletionTimestamp: null
+  name: 'zeebe-cloud-events-router-0.0.49'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.49
+      sha: 7c1237074048b8c5962122cf6fd91c9215ffdcd6
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        update knative client to latest in maven central
+      sha: 2cb97f4094023487751a304c0bcae2157294de77
+  gitCloneUrl: https://github.com/zeebe-io/zeebe-cloud-events-router.git
+  gitHttpUrl: https://github.com/zeebe-io/zeebe-cloud-events-router
+  gitOwner: zeebe-io
+  gitRepository: zeebe-cloud-events-router
+  name: 'zeebe-cloud-events-router'
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-cloud-events-router/releases/tag/v0.0.49
+  version: v0.0.49
+status: {}
