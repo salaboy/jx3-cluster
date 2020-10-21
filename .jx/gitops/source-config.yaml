@@ -19,3 +19,9 @@ spec:
     - name: queue-service
     - name: tickets-service
     scheduler: in-repo
+  - owner: zeebe-io
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: zeebe-cloud-events-router
+    scheduler: in-repo
