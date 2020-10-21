@@ -36,6 +36,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - salaboy/fmtok8s-speakers
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - salaboy/payments-service
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -176,6 +180,22 @@ data:
       - cat
       - dog
       - pony
+      salaboy/fmtok8s-speakers:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       salaboy/jx3-cluster:
       - config-updater
       - approve
@@ -289,6 +309,9 @@ data:
       trusted_org: todo
     - repos:
       - salaboy/fmtok8s-monolith
+      trusted_org: todo
+    - repos:
+      - salaboy/fmtok8s-speakers
       trusted_org: todo
     - repos:
       - salaboy/payments-service
