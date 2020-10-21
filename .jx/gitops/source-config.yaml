@@ -15,4 +15,5 @@ spec:
     - name: fmtok8s-c4p
     - name: fmtok8s-email
     - name: fmtok8s-monolith
+    - name: tickets-service
     scheduler: in-repo
