@@ -1,0 +1,52 @@
+# Source: queue-service/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-21T09:32:35Z"
+  deletionTimestamp: null
+  name: 'queue-service-0.0.37'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.37
+      sha: 2614796f1bb0e991c6bf2c059ee3d5e3f1a0b110
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        Jenkins X build pack
+      sha: 0c69f1005ac75054b648c340b664ba418cb4d367
+  gitCloneUrl: https://github.com/salaboy/queue-service.git
+  gitHttpUrl: https://github.com/salaboy/queue-service
+  gitOwner: salaboy
+  gitRepository: queue-service
+  name: 'queue-service'
+  releaseNotesURL: https://github.com/salaboy/queue-service/releases/tag/v0.0.37
+  version: v0.0.37
+status: {}
