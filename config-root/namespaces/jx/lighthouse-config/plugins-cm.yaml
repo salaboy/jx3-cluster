@@ -34,6 +34,10 @@ data:
       repos:
       - salaboy/fmtok8s-monolith
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - salaboy/tickets-service
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -177,6 +181,22 @@ data:
       - cat
       - dog
       - pony
+      salaboy/tickets-service:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
     requiresig: {}
     sigmention: {}
     size:
@@ -209,6 +229,9 @@ data:
       trusted_org: todo
     - repos:
       - salaboy/fmtok8s-monolith
+      trusted_org: todo
+    - repos:
+      - salaboy/tickets-service
       trusted_org: todo
     welcome:
     - message_template: Welcome

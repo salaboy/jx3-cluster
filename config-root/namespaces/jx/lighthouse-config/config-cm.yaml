@@ -15,6 +15,7 @@ data:
         salaboy/fmtok8s-email: true
         salaboy/fmtok8s-monolith: true
         salaboy/jx3-cluster: true
+        salaboy/tickets-service: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -34,6 +35,7 @@ data:
         salaboy/fmtok8s-email: merge
         salaboy/fmtok8s-monolith: merge
         salaboy/jx3-cluster: merge
+        salaboy/tickets-service: merge
       queries:
       - labels:
         - approved
@@ -52,6 +54,7 @@ data:
         - salaboy/fmtok8s-c4p
         - salaboy/fmtok8s-email
         - salaboy/fmtok8s-monolith
+        - salaboy/tickets-service
       - labels:
         - updatebot
         missingLabels:
@@ -69,6 +72,7 @@ data:
         - salaboy/fmtok8s-c4p
         - salaboy/fmtok8s-email
         - salaboy/fmtok8s-monolith
+        - salaboy/tickets-service
       target_url: http://dashboard-jx.35.222.17.41.nip.io
 kind: ConfigMap
 metadata:
