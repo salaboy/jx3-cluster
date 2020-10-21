@@ -114,5 +114,9 @@ releases:
   version: 0.0.35
   name: tickets-service
   namespace: jx-staging
+- chart: dev/payments-service
+  version: 0.0.19
+  name: payments-service
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
