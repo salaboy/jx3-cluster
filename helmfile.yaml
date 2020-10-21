@@ -99,7 +99,7 @@ releases:
   name: fmtok8s-api-gateway
   namespace: jx-staging
 - chart: dev/fmtok8s-agenda
-  version: 0.0.47
+  version: 0.0.48
   name: fmtok8s-agenda
   namespace: jx-staging
 - chart: dev/fmtok8s-email
