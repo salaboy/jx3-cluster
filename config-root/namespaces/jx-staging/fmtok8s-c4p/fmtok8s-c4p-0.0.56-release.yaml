@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-14T09:52:49Z"
+  creationTimestamp: "2020-10-22T09:00:59Z"
   deletionTimestamp: null
-  name: 'fmtok8s-c4p-0.0.55'
+  name: 'fmtok8s-c4p-0.0.56'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.55
-      sha: 379f1d66b164eae2404f8c361fc5daeda43b14ac
+        release 0.0.56
+      sha: c89f388ba0d2c495f4ea2f5278840ee12985df24
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        updating spring zeebe version and adding version and actuator path to deployment
-      sha: 3901e7040162f37a0c79f20d6a049047c9b80942
+        adding external secrets and improving requests and limits
+      sha: 53c353e492ad35eeab03ad42ad76f967e4da4c8a
   gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p
   gitOwner: salaboy
   gitRepository: fmtok8s-c4p
   name: 'fmtok8s-c4p'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.55
-  version: v0.0.55
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.56
+  version: v0.0.56
 status: {}
