@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-speakers-fmtok8s-speakers
   labels:
     draft: draft-app
-    chart: "fmtok8s-speakers-0.0.4"
+    chart: "fmtok8s-speakers-0.0.5"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: fmtok8s-speakers
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-speakers:0.0.4"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-speakers:0.0.5"
           imagePullPolicy: IfNotPresent
           env:
           envFrom: null
@@ -31,7 +31,7 @@ spec:
             - containerPort: 8080
           livenessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: 8080
             initialDelaySeconds: 60
             periodSeconds: 10
@@ -39,7 +39,7 @@ spec:
             timeoutSeconds: 1
           readinessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: 8080
             periodSeconds: 10
             successThreshold: 1

@@ -107,7 +107,7 @@ releases:
   name: fmtok8s-email
   namespace: jx-staging
 - chart: dev/fmtok8s-speakers
-  version: 0.0.4
+  version: 0.0.5
   name: fmtok8s-speakers
   namespace: jx-staging
 templates: {}
