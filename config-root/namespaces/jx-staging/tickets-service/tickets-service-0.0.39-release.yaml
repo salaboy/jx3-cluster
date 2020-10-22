@@ -1,0 +1,52 @@
+# Source: tickets-service/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-22T11:53:24Z"
+  deletionTimestamp: null
+  name: 'tickets-service-0.0.39'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.39
+      sha: 39ab7b145f9044540bdcede81ac78c1f18e495b6
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        go back to not use knative service
+      sha: 9a5a3a4d5b0e1650fe786942a8b4677077c23d96
+  gitCloneUrl: https://github.com/salaboy/tickets-service.git
+  gitHttpUrl: https://github.com/salaboy/tickets-service
+  gitOwner: salaboy
+  gitRepository: tickets-service
+  name: 'tickets-service'
+  releaseNotesURL: https://github.com/salaboy/tickets-service/releases/tag/v0.0.39
+  version: v0.0.39
+status: {}
