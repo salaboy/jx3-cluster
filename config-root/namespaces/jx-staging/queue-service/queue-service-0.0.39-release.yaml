@@ -1,0 +1,52 @@
+# Source: queue-service/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-22T13:01:23Z"
+  deletionTimestamp: null
+  name: 'queue-service-0.0.39'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.39
+      sha: c1a3659f5f31eea16a4dd47d79b283f35f98bce8
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        knative queue service
+      sha: 9c1b68e64a54dea98bf28e3262a91c02e46d457e
+  gitCloneUrl: https://github.com/salaboy/queue-service.git
+  gitHttpUrl: https://github.com/salaboy/queue-service
+  gitOwner: salaboy
+  gitRepository: queue-service
+  name: 'queue-service'
+  releaseNotesURL: https://github.com/salaboy/queue-service/releases/tag/v0.0.39
+  version: v0.0.39
+status: {}
