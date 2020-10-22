@@ -114,5 +114,9 @@ releases:
   version: 0.0.41
   name: tickets-service
   namespace: jx-staging
+- chart: dev/queue-service
+  version: 0.0.39
+  name: queue-service
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""

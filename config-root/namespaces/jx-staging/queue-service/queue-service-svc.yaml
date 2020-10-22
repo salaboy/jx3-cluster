@@ -1,0 +1,40 @@
+# Source: queue-service/templates/ksvc.yaml
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: queue-service
+  labels:
+    chart: "queue-service-0.0.39"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "1"
+    spec:
+      containers:
+        - image: "gcr.io/camunda-researchanddevelopment/queue-service:0.0.39"
+          imagePullPolicy: IfNotPresent
+          env:
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            failureThreshold: 1
+            httpGet:
+              path: /actuator/health
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 400m
+              memory: 512Mi
