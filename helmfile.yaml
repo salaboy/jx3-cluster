@@ -110,5 +110,9 @@ releases:
   version: 0.0.6
   name: fmtok8s-speakers
   namespace: jx-staging
+- chart: dev/tickets-service
+  version: 0.0.39
+  name: tickets-service
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
