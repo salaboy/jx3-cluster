@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-22T08:44:01Z"
+  creationTimestamp: "2020-10-22T09:11:08Z"
   deletionTimestamp: null
-  name: 'fmtok8s-speakers-0.0.5'
+  name: 'fmtok8s-speakers-0.0.6'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.5
-      sha: 73c5882838ade8995287c27f73219b33e6c29e03
+        release 0.0.6
+      sha: abe22ae2432dbeeb7b18256a5a5a7e6743a6fdcd
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        add right path to actuator
-      sha: 9f3975d545d16353e9cd79ced8caccde3983a0f0
+        adding external secret and increasing requests and limits
+      sha: b456a4b184e24c1da4fa24d6ef65d65fdc7b9a88
   gitCloneUrl: https://github.com/salaboy/fmtok8s-speakers.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-speakers
   gitOwner: salaboy
   gitRepository: fmtok8s-speakers
   name: 'fmtok8s-speakers'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-speakers/releases/tag/v0.0.5
-  version: v0.0.5
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-speakers/releases/tag/v0.0.6
+  version: v0.0.6
 status: {}
