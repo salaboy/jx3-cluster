@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: fmtok8s-monolith
   labels:
-    chart: "fmtok8s-monolith-0.0.21"
+    chart: "fmtok8s-monolith-0.0.22"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     fabric8.io/expose: "true"

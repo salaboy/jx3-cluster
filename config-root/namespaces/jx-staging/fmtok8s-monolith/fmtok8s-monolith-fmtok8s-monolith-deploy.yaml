@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-monolith-fmtok8s-monolith
   labels:
     draft: draft-app
-    chart: "fmtok8s-monolith-0.0.21"
+    chart: "fmtok8s-monolith-0.0.22"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: fmtok8s-monolith
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-monolith:0.0.21"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-monolith:0.0.22"
           imagePullPolicy: IfNotPresent
           env:
           envFrom: null
@@ -31,7 +31,7 @@ spec:
             - containerPort: 8080
           livenessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: 8080
             initialDelaySeconds: 60
             periodSeconds: 10
@@ -39,17 +39,17 @@ spec:
             timeoutSeconds: 1
           readinessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: 8080
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
           resources:
             limits:
-              cpu: 400m
-              memory: 256Mi
+              cpu: 1500m
+              memory: 1768Mi
             requests:
-              cpu: 200m
-              memory: 128Mi
+              cpu: 750m
+              memory: 1024Mi
       terminationGracePeriodSeconds:
       imagePullSecrets:
