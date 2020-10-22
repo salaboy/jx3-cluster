@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-22T11:53:24Z"
+  creationTimestamp: "2020-10-22T12:49:26Z"
   deletionTimestamp: null
-  name: 'tickets-service-0.0.39'
+  name: 'tickets-service-0.0.41'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.39
-      sha: 39ab7b145f9044540bdcede81ac78c1f18e495b6
+        release 0.0.41
+      sha: acdabc8558efb845926a2ade6503785d73c25722
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        go back to not use knative service
-      sha: 9a5a3a4d5b0e1650fe786942a8b4677077c23d96
+        fixing deployment template issue
+      sha: f6daae2519b921e9108ab58dbda70196231865cf
   gitCloneUrl: https://github.com/salaboy/tickets-service.git
   gitHttpUrl: https://github.com/salaboy/tickets-service
   gitOwner: salaboy
   gitRepository: tickets-service
   name: 'tickets-service'
-  releaseNotesURL: https://github.com/salaboy/tickets-service/releases/tag/v0.0.39
-  version: v0.0.39
+  releaseNotesURL: https://github.com/salaboy/tickets-service/releases/tag/v0.0.41
+  version: v0.0.41
 status: {}
