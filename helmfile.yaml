@@ -87,7 +87,7 @@ releases:
   name: pusher-wave
   namespace: secret-infra
 - chart: dev/fmtok8s-monolith
-  version: 0.0.21
+  version: 0.0.22
   name: fmtok8s-monolith
   namespace: jx-staging
 - chart: dev/fmtok8s-c4p
