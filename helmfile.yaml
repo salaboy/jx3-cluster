@@ -111,7 +111,7 @@ releases:
   name: fmtok8s-speakers
   namespace: jx-staging
 - chart: dev/tickets-service
-  version: 0.0.41
+  version: 0.0.42
   name: tickets-service
   namespace: jx-staging
 - chart: dev/queue-service
