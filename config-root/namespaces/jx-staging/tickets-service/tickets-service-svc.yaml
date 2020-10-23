@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: tickets-service
   labels:
-    chart: "tickets-service-0.0.42"
+    chart: "tickets-service-0.0.43"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
 spec:
@@ -14,9 +14,11 @@ spec:
         autoscaling.knative.dev/minScale: "1"
     spec:
       containers:
-        - image: "gcr.io/camunda-researchanddevelopment/tickets-service:0.0.42"
+        - image: "gcr.io/camunda-researchanddevelopment/tickets-service:0.0.43"
           imagePullPolicy: IfNotPresent
           env:
+            - name: SERVER_PORT
+              value: "8080"
           livenessProbe:
             httpGet:
               path: /actuator/health
