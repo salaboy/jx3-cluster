@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: customer-waiting-room-app
   labels:
-    chart: "customer-waiting-room-app-0.0.87"
+    chart: "customer-waiting-room-app-0.0.88"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
 spec:
@@ -14,13 +14,17 @@ spec:
         autoscaling.knative.dev/minScale: "1"
     spec:
       containers:
-        - image: "gcr.io/camunda-researchanddevelopment/customer-waiting-room-app:0.0.87"
+        - image: "gcr.io/camunda-researchanddevelopment/customer-waiting-room-app:0.0.88"
           imagePullPolicy: IfNotPresent
           env:
             - name: PAYMENTS_SERVICE
               value: "http://payments-service.default.svc.cluster.local"
+            - name: QUEUE_SERVICE
+              value: "http://queue-service.default.svc.cluster.local"
             - name: SERVER_PORT
               value: "8080"
+            - name: TICKETS_SERVICE
+              value: "http://tickets-service.default.svc.cluster.local"
           livenessProbe:
             httpGet:
               path: /actuator/health

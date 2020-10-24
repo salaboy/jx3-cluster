@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-24T10:11:39Z"
+  creationTimestamp: "2020-10-24T10:38:30Z"
   deletionTimestamp: null
-  name: 'customer-waiting-room-app-0.0.87'
+  name: 'customer-waiting-room-app-0.0.88'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.87
-      sha: 9c0e75273ba9b8ed710a28309d03cc5e0dfa03dc
+        release 0.0.88
+      sha: 42652ebeae59ca2239d093fbab2fca062bc5f390
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        fixing deployment descriptor
-      sha: 02258b88dfdf333fa2ec5b073b658a8e901e8fd3
+        addinv vars
+      sha: f8af9c5aae0b91dc5e8c955effe52a5cc0442e3d
   gitCloneUrl: https://github.com/salaboy/customer-waiting-room-app.git
   gitHttpUrl: https://github.com/salaboy/customer-waiting-room-app
   gitOwner: salaboy
   gitRepository: customer-waiting-room-app
   name: 'customer-waiting-room-app'
-  releaseNotesURL: https://github.com/salaboy/customer-waiting-room-app/releases/tag/v0.0.87
-  version: v0.0.87
+  releaseNotesURL: https://github.com/salaboy/customer-waiting-room-app/releases/tag/v0.0.88
+  version: v0.0.88
 status: {}
