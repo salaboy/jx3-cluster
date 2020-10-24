@@ -123,7 +123,7 @@ releases:
   name: payments-service
   namespace: jx-staging
 - chart: dev/customer-waiting-room-app
-  version: 0.0.87
+  version: 0.0.88
   name: customer-waiting-room-app
   namespace: jx-staging
 templates: {}
