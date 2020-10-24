@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: queue-service
   labels:
-    chart: "queue-service-0.0.40"
+    chart: "queue-service-0.0.41"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
 spec:
@@ -14,7 +14,7 @@ spec:
         autoscaling.knative.dev/minScale: "1"
     spec:
       containers:
-        - image: "gcr.io/camunda-researchanddevelopment/queue-service:0.0.40"
+        - image: "gcr.io/camunda-researchanddevelopment/queue-service:0.0.41"
           imagePullPolicy: IfNotPresent
           env:
             - name: SERVER_PORT
