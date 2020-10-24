@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-22T13:01:23Z"
+  creationTimestamp: "2020-10-24T09:56:53Z"
   deletionTimestamp: null
-  name: 'queue-service-0.0.39'
+  name: 'queue-service-0.0.40'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.39
-      sha: c1a3659f5f31eea16a4dd47d79b283f35f98bce8
+        release 0.0.40
+      sha: eb02c9041a3d52238a2b8cebb17899e7809e0262
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        knative queue service
-      sha: 9c1b68e64a54dea98bf28e3262a91c02e46d457e
+        adding server port as ENV Variable
+      sha: 5b8aa920fed21e993c50808bc99809547745db98
   gitCloneUrl: https://github.com/salaboy/queue-service.git
   gitHttpUrl: https://github.com/salaboy/queue-service
   gitOwner: salaboy
   gitRepository: queue-service
   name: 'queue-service'
-  releaseNotesURL: https://github.com/salaboy/queue-service/releases/tag/v0.0.39
-  version: v0.0.39
+  releaseNotesURL: https://github.com/salaboy/queue-service/releases/tag/v0.0.40
+  version: v0.0.40
 status: {}
