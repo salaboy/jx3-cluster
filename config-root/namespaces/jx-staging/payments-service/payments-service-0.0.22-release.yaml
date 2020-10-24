@@ -1,0 +1,52 @@
+# Source: payments-service/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-24T09:49:06Z"
+  deletionTimestamp: null
+  name: 'payments-service-0.0.22'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.22
+      sha: 20a7c5c52f5e850b4806e5012293300e5d7ff8dd
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding server port as ENV Variable
+      sha: 22631c1a769aa80177dadddf9266643d8a81b519
+  gitCloneUrl: https://github.com/salaboy/payments-service.git
+  gitHttpUrl: https://github.com/salaboy/payments-service
+  gitOwner: salaboy
+  gitRepository: payments-service
+  name: 'payments-service'
+  releaseNotesURL: https://github.com/salaboy/payments-service/releases/tag/v0.0.22
+  version: v0.0.22
+status: {}
