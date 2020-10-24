@@ -1,0 +1,15 @@
+# Source: tickets-service/templates/ktriggers.yaml
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: tickets-tickets-emitted-trigger
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: Tickets.Emitted
+  subscriber:
+    uri: http://tickets-service.default.svc.cluster.local/emit
