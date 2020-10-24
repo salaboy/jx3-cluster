@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-24T09:56:53Z"
+  creationTimestamp: "2020-10-24T18:54:00Z"
   deletionTimestamp: null
-  name: 'queue-service-0.0.40'
+  name: 'queue-service-0.0.41'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.40
-      sha: eb02c9041a3d52238a2b8cebb17899e7809e0262
+        release 0.0.41
+      sha: 11ab38e9ced7dff990e2bb2559f9b7ea5eccd631
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        adding server port as ENV Variable
-      sha: 5b8aa920fed21e993c50808bc99809547745db98
+        adding triggers
+      sha: ce6ee24d6ac6da2ff771e52c628f85ef76b12f39
   gitCloneUrl: https://github.com/salaboy/queue-service.git
   gitHttpUrl: https://github.com/salaboy/queue-service
   gitOwner: salaboy
   gitRepository: queue-service
   name: 'queue-service'
-  releaseNotesURL: https://github.com/salaboy/queue-service/releases/tag/v0.0.40
-  version: v0.0.40
+  releaseNotesURL: https://github.com/salaboy/queue-service/releases/tag/v0.0.41
+  version: v0.0.41
 status: {}
