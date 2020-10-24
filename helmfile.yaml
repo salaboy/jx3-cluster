@@ -115,7 +115,7 @@ releases:
   name: tickets-service
   namespace: jx-staging
 - chart: dev/queue-service
-  version: 0.0.39
+  version: 0.0.40
   name: queue-service
   namespace: jx-staging
 - chart: dev/payments-service
