@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-24T18:57:05Z"
+  creationTimestamp: "2020-10-24T19:15:22Z"
   deletionTimestamp: null
-  name: 'tickets-service-0.0.44'
+  name: 'tickets-service-0.0.45'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.44
-      sha: 072ecc2c434685d6ba328ac6ce8171cd95f1f366
+        release 0.0.45
+      sha: fe66dc82af5e7f6c0421af1c89a8bd2c32437602
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        adding triggers
-      sha: a6d8e098a2a90bde963cc4a135557248535f011a
+        adding payments service url
+      sha: 8119f1e47ff12eb4e4ee141b973d9e331595d260
   gitCloneUrl: https://github.com/salaboy/tickets-service.git
   gitHttpUrl: https://github.com/salaboy/tickets-service
   gitOwner: salaboy
   gitRepository: tickets-service
   name: 'tickets-service'
-  releaseNotesURL: https://github.com/salaboy/tickets-service/releases/tag/v0.0.44
-  version: v0.0.44
+  releaseNotesURL: https://github.com/salaboy/tickets-service/releases/tag/v0.0.45
+  version: v0.0.45
 status: {}
