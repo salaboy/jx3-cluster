@@ -126,5 +126,9 @@ releases:
   version: 0.0.88
   name: customer-waiting-room-app
   namespace: jx-staging
+- chart: dev/zeebe-cloud-events-router
+  version: 0.0.50
+  name: zeebe-cloud-events-router
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
