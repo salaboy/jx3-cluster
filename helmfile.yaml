@@ -110,25 +110,5 @@ releases:
   version: 0.0.6
   name: fmtok8s-speakers
   namespace: jx-staging
-- chart: dev/tickets-service
-  version: 0.0.45
-  name: tickets-service
-  namespace: jx-staging
-- chart: dev/queue-service
-  version: 0.0.41
-  name: queue-service
-  namespace: jx-staging
-- chart: dev/payments-service
-  version: 0.0.22
-  name: payments-service
-  namespace: jx-staging
-- chart: dev/customer-waiting-room-app
-  version: 0.0.88
-  name: customer-waiting-room-app
-  namespace: jx-staging
-- chart: dev/zeebe-cloud-events-router
-  version: 0.0.50
-  name: zeebe-cloud-events-router
-  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
