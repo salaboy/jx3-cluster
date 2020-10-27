@@ -86,29 +86,5 @@ releases:
   version: 1.0.0
   name: pusher-wave
   namespace: secret-infra
-- chart: dev/fmtok8s-monolith
-  version: 0.0.22
-  name: fmtok8s-monolith
-  namespace: jx-staging
-- chart: dev/fmtok8s-c4p
-  version: 0.0.57
-  name: fmtok8s-c4p
-  namespace: jx-staging
-- chart: dev/fmtok8s-api-gateway
-  version: 0.0.107
-  name: fmtok8s-api-gateway
-  namespace: jx-staging
-- chart: dev/fmtok8s-agenda
-  version: 0.0.50
-  name: fmtok8s-agenda
-  namespace: jx-staging
-- chart: dev/fmtok8s-email
-  version: 0.0.44
-  name: fmtok8s-email
-  namespace: jx-staging
-- chart: dev/fmtok8s-speakers
-  version: 0.0.6
-  name: fmtok8s-speakers
-  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
