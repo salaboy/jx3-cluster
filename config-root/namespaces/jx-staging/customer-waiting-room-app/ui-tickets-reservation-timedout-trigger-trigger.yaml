@@ -1,0 +1,15 @@
+# Source: customer-waiting-room-app/templates/ktriggers.yaml
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: ui-tickets-reservation-timedout-trigger
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: Tickets.ReservationTimedOut
+  subscriber:
+    uri: http://customer-waiting-room-app.default.svc.cluster.local/api/
