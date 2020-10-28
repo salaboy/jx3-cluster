@@ -86,5 +86,9 @@ releases:
   version: 1.0.0
   name: pusher-wave
   namespace: secret-infra
+- chart: dev/customer-waiting-room-app
+  version: 0.0.90
+  name: customer-waiting-room-app
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
