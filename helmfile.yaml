@@ -96,5 +96,9 @@ releases:
   version: 0.0.54
   name: fmtok8s-agenda
   namespace: jx-staging
+- chart: dev/fmtok8s-c4p
+  version: 0.0.58
+  name: fmtok8s-c4p
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
