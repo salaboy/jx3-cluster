@@ -1,0 +1,52 @@
+# Source: fmtok8s-speakers/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-11-02T20:24:40Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-speakers-0.0.8'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.8
+      sha: d2dbe02732bd20cc76feb98f9ce4f32c3f09ad9c
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        conditional in external secrets
+      sha: 71e5745113800435ee84c823ca57512d5a64a055
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-speakers.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-speakers
+  gitOwner: salaboy
+  gitRepository: fmtok8s-speakers
+  name: 'fmtok8s-speakers'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-speakers/releases/tag/v0.0.8
+  version: v0.0.8
+status: {}
