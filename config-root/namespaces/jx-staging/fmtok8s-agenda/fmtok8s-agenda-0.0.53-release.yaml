@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-02T11:00:52Z"
+  creationTimestamp: "2020-11-02T11:35:10Z"
   deletionTimestamp: null
-  name: 'fmtok8s-agenda-0.0.52'
+  name: 'fmtok8s-agenda-0.0.53'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.52
-      sha: 7e43fe1a1e68c478338f32427270acf607fc5169
+        release 0.0.53
+      sha: 50f5e1493dd5a29a2fcfa16917b56d7f22f50c12
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        fixing typo
-      sha: a88e8382589d644cff6ac91735438a15c6772ddd
+        fixing ksvc
+      sha: 46c6a3b0a7d5b5b433e00c9c984214638f3dfe30
   gitCloneUrl: https://github.com/salaboy/fmtok8s-agenda.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda
   gitOwner: salaboy
   gitRepository: fmtok8s-agenda
   name: 'fmtok8s-agenda'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.52
-  version: v0.0.52
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.53
+  version: v0.0.53
 status: {}
