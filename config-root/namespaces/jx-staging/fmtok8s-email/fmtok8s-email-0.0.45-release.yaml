@@ -1,0 +1,52 @@
+# Source: fmtok8s-email/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-11-02T14:53:51Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-email-0.0.45'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.45
+      sha: 4b99ddd90443508d55ac576dd4370dc61e24364b
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        deployment and ksvc update
+      sha: 0c5979c322aad6cd614f8b5e1a6af4ca495694ce
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-email.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-email
+  gitOwner: salaboy
+  gitRepository: fmtok8s-email
+  name: 'fmtok8s-email'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.45
+  version: v0.0.45
+status: {}

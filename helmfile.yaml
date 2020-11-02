@@ -100,5 +100,9 @@ releases:
   version: 0.0.58
   name: fmtok8s-c4p
   namespace: jx-staging
+- chart: dev/fmtok8s-email
+  version: 0.0.45
+  name: fmtok8s-email
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
