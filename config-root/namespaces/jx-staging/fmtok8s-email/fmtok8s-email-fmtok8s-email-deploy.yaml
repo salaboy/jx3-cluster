@@ -1,0 +1,61 @@
+# Source: fmtok8s-email/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fmtok8s-email-fmtok8s-email
+  labels:
+    draft: draft-app
+    chart: "fmtok8s-email-0.0.45"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: fmtok8s-email-fmtok8s-email
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: fmtok8s-email-fmtok8s-email
+    spec:
+      containers:
+        - name: fmtok8s-email
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-email:0.0.45"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: VERSION
+              value: 0.0.45
+            - name: ZEEBE_AUTHORIZATION_SERVER_URL
+              value: https://login.cloud.camunda.io/oauth/token
+            - name: ZEEBE_CLIENT_SECURITY_PLAINTEXT
+              value: "false"
+          envFrom: null
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 1500m
+              memory: 1768Mi
+            requests:
+              cpu: 750m
+              memory: 1024Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
