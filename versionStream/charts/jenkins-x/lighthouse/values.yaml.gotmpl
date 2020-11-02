@@ -22,12 +22,13 @@ tektoncontroller:
 env:
   JX_DEFAULT_IMAGE: gcr.io/jenkinsxio/builder-maven:2.1.142-761
   LIGHTHOUSE_DASHBOARD_TEMPLATE: "namespaces/{{"{{"}} .Namespace {{"}}"}}/pipelineruns/{{"{{"}} .PipelineRun {{"}}"}}"
+  DEFAULT_PIPELINE_RUN_SERVICE_ACCOUNT: tekton-bot
+  DEFAULT_PIPELINE_RUN_TIMEOUT: "2h0m0s"
 
 image:
   repository: gcr.io/jenkinsxio/lighthouse
-
-  # TODO remove when this PR merges https://github.com/jenkins-x/lighthouse/pull/1117
-  tag: 0.0.0-SNAPSHOT-PR-1117-30
+  # TODO until this Pull Request merges: https://github.com/jenkins-x/lighthouse/pull/1141
+  tag: 0.0.0-SNAPSHOT-PR-1141-5
 
 vault:
 {{- if eq .Values.jxRequirements.secretStorage "vault" }}
