@@ -1,0 +1,52 @@
+# Source: fmtok8s-c4p/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-11-02T14:50:09Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-c4p-0.0.58'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.58
+      sha: 627364770fd72a710c0357fc291ca9480c22111c
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        updating deployment,ksvc and adding other model versions
+      sha: 219970a26f86cb9de436247c88c5bc973f140e0e
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p
+  gitOwner: salaboy
+  gitRepository: fmtok8s-c4p
+  name: 'fmtok8s-c4p'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.58
+  version: v0.0.58
+status: {}
