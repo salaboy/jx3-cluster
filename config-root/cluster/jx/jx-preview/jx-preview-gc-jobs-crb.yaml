@@ -1,16 +1,15 @@
-# Source: jxboot-helmfile-resources/charts/gcpreviews/templates/clusterrolebinding.yaml
+# Source: jx-preview/templates/gc-jobs-clusterrolebinding.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: gcpreviews-jx
-  namespace: jx
+  name: jx-preview-gc-jobs
   labels:
     gitops.jenkins-x.io/pipeline: 'cluster'
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: gcpreviews-jx
+  name: cluster-admin
 subjects:
   - kind: ServiceAccount
-    name: jxboot-helmfile-resources-gcpreviews
+    name: jx-preview-gc-jobs
     namespace: jx
