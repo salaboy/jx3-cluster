@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-02T14:53:51Z"
+  creationTimestamp: "2020-11-02T20:23:39Z"
   deletionTimestamp: null
-  name: 'fmtok8s-email-0.0.45'
+  name: 'fmtok8s-email-0.0.46'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.45
-      sha: 4b99ddd90443508d55ac576dd4370dc61e24364b
+        release 0.0.46
+      sha: a1027fec7675293b965b1edaa9c0c307cd482c39
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        deployment and ksvc update
-      sha: 0c5979c322aad6cd614f8b5e1a6af4ca495694ce
+        updating condition external secrets
+      sha: 2081c44b73d68c04d0fa5156a7cfc13c6a9f9cc9
   gitCloneUrl: https://github.com/salaboy/fmtok8s-email.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-email
   gitOwner: salaboy
   gitRepository: fmtok8s-email
   name: 'fmtok8s-email'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.45
-  version: v0.0.45
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email/releases/tag/v0.0.46
+  version: v0.0.46
 status: {}
