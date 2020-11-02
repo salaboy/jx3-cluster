@@ -23,11 +23,11 @@ spec:
         spec:
           containers:
             - command:
-                - jx-preview
-              image: gcr.io/jenkinsxio/jx-preview:0.0.90
+                - /bin/sh
+                - -c
+                - jx gitops git setup --namespace jx --secret tekton-git && jx preview gc
+              image: gcr.io/jenkinsxio/jx-cli:latest
               imagePullPolicy: IfNotPresent
-              args:
-                - gc
               name: jx-preview-gc-jobs
               resources: {}
               terminationMessagePath: /dev/termination-log
@@ -39,6 +39,6 @@ spec:
           terminationGracePeriodSeconds: 30
           serviceAccountName: jx-preview-gc-jobs
   successfulJobsHistoryLimit: 3
-  schedule: "0/30 * * * *"
+  schedule: "*/10 * * * *"
   startingDeadlineSeconds: 4000
   suspend: false

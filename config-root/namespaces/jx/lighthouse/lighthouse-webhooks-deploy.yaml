@@ -5,11 +5,11 @@ metadata:
   name: lighthouse-webhooks
   labels:
     draft: draft-app
-    chart: "lighthouse-0.0.851"
+    chart: "lighthouse-0.0.866"
     app: lighthouse-webhooks
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
-    checksum/config: a126f77da7d7209246c55e2b3e603b6e045d4ccda351c68f774a4ba6fe90dcae
+    checksum/config: db26f27a4c71b63cdd5e772b720957e8032c63ac5f8c7f51f058217ea3377ffb
     wave.pusher.com/update-on-config-change: 'true'
     jenkins-x.io/hash: '45def45cb48f774f3fabbb79a2b4b152a2e44cddac06085269b91820dd05234f'
   namespace: jx
@@ -28,7 +28,7 @@ spec:
       serviceAccountName: lighthouse-webhooks
       containers:
         - name: lighthouse-webhooks
-          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.0-SNAPSHOT-PR-1117-30
+          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.0-SNAPSHOT-PR-1141-5
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"
@@ -53,6 +53,10 @@ spec:
               value: "json"
             - name: "LOGRUS_FORMAT"
               value: "json"
+            - name: DEFAULT_PIPELINE_RUN_SERVICE_ACCOUNT
+              value: "tekton-bot"
+            - name: DEFAULT_PIPELINE_RUN_TIMEOUT
+              value: "2h0m0s"
             - name: JX_DEFAULT_IMAGE
               value: "gcr.io/jenkinsxio/builder-maven:2.1.142-761"
             - name: LIGHTHOUSE_DASHBOARD_TEMPLATE
