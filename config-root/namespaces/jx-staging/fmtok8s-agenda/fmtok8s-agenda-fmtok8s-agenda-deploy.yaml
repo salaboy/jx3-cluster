@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-agenda-fmtok8s-agenda
   labels:
     draft: draft-app
-    chart: "fmtok8s-agenda-0.0.55"
+    chart: "fmtok8s-agenda-0.0.56"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,11 +23,11 @@ spec:
     spec:
       containers:
         - name: fmtok8s-agenda
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-agenda:0.0.55"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-agenda:0.0.56"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.55
+              value: 0.0.56
             - name: ZEEBE_AUTHORIZATION_SERVER_URL
               value: https://login.cloud.camunda.io/oauth/token
             - name: ZEEBE_CLIENT_SECURITY_PLAINTEXT
