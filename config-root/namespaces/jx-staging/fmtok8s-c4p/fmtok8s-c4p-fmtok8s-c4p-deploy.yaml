@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-c4p-fmtok8s-c4p
   labels:
     draft: draft-app
-    chart: "fmtok8s-c4p-0.0.59"
+    chart: "fmtok8s-c4p-0.0.60"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,11 +23,11 @@ spec:
     spec:
       containers:
         - name: fmtok8s-c4p
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-c4p:0.0.59"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-c4p:0.0.60"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.59
+              value: 0.0.60
             - name: ZEEBE_AUTHORIZATION_SERVER_URL
               value: https://login.cloud.camunda.io/oauth/token
             - name: ZEEBE_CLIENT_SECURITY_PLAINTEXT
