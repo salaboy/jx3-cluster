@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-email-fmtok8s-email
   labels:
     draft: draft-app
-    chart: "fmtok8s-email-0.0.48"
+    chart: "fmtok8s-email-0.0.49"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,11 +23,11 @@ spec:
     spec:
       containers:
         - name: fmtok8s-email
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-email:0.0.48"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-email:0.0.49"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.48
+              value: 0.0.49
             - name: ZEEBE_AUTHORIZATION_SERVER_URL
               value: https://login.cloud.camunda.io/oauth/token
             - name: ZEEBE_CLIENT_SECURITY_PLAINTEXT
