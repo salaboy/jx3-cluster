@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-03T10:06:37Z"
+  creationTimestamp: "2020-11-03T10:54:02Z"
   deletionTimestamp: null
-  name: 'fmtok8s-c4p-0.0.60'
+  name: 'fmtok8s-c4p-0.0.61'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.60
-      sha: cb6b8a400c4a9d5c8b34f655b999555aeb51484b
+        release 0.0.61
+      sha: 442f7ab7d64ed20b630914fb32b56be54a8d8dd5
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        adding VERSION
-      sha: 21114e8d8d3b3dbeb0ea574758886f2a586e02bc
+        splitting zeebe secrets config
+      sha: ab59b88a346d89e93e1c4e23e0168c33a5385765
   gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p
   gitOwner: salaboy
   gitRepository: fmtok8s-c4p
   name: 'fmtok8s-c4p'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.60
-  version: v0.0.60
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.61
+  version: v0.0.61
 status: {}
