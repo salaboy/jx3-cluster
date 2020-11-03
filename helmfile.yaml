@@ -97,7 +97,7 @@ releases:
   name: fmtok8s-agenda
   namespace: jx-staging
 - chart: dev/fmtok8s-c4p
-  version: 0.0.61
+  version: 0.0.62
   name: fmtok8s-c4p
   namespace: jx-staging
 - chart: dev/fmtok8s-email
