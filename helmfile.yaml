@@ -101,7 +101,7 @@ releases:
   name: fmtok8s-c4p
   namespace: jx-staging
 - chart: dev/fmtok8s-email
-  version: 0.0.48
+  version: 0.0.49
   name: fmtok8s-email
   namespace: jx-staging
 - chart: dev/fmtok8s-api-gateway
