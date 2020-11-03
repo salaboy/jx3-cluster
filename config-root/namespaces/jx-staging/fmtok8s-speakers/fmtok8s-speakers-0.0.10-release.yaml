@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-03T10:09:21Z"
+  creationTimestamp: "2020-11-03T10:52:24Z"
   deletionTimestamp: null
-  name: 'fmtok8s-speakers-0.0.9'
+  name: 'fmtok8s-speakers-0.0.10'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.9
-      sha: 9549c9556bbb6b7cbf129000c44a02bc13ac31b5
+        release 0.0.10
+      sha: e3abf7d43a113f65564607a7e00221fc08c4ce69
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        adding VERSION
-      sha: f1c413d960f27ffb093332564d30dbc4bdde9d61
+        splitting zeebe secrets config
+      sha: c023aa2b98e5df436c8fc177df9d480a791c4a8b
   gitCloneUrl: https://github.com/salaboy/fmtok8s-speakers.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-speakers
   gitOwner: salaboy
   gitRepository: fmtok8s-speakers
   name: 'fmtok8s-speakers'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-speakers/releases/tag/v0.0.9
-  version: v0.0.9
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-speakers/releases/tag/v0.0.10
+  version: v0.0.10
 status: {}
