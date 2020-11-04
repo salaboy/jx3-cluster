@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-02T20:09:03Z"
+  creationTimestamp: "2020-11-04T12:37:57Z"
   deletionTimestamp: null
-  name: 'fmtok8s-api-gateway-0.0.119'
+  name: 'fmtok8s-api-gateway-0.0.120'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.119
-      sha: ea7e7d281ca20ac90b991f646ee8b704fcc824e9
+        release 0.0.120
+      sha: 5099edf7ae1b346658101096e99db0159fd97699
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        ignoring contract testing due 401 in nexus
-      sha: 0cf8bdbb43a40b411a36307e7f391514df2ef3e4
+        logging in fallbacks and adding callback for approve/reject calls
+      sha: ab3b719bb073bfd68b49a60a9a0537e0f982760d
   gitCloneUrl: https://github.com/salaboy/fmtok8s-api-gateway.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-api-gateway
   gitOwner: salaboy
   gitRepository: fmtok8s-api-gateway
   name: 'fmtok8s-api-gateway'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.119
-  version: v0.0.119
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.120
+  version: v0.0.120
 status: {}
