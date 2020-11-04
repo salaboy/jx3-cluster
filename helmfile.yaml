@@ -112,5 +112,9 @@ releases:
   version: 0.0.11
   name: fmtok8s-speakers
   namespace: jx-staging
+- chart: dev/fmtok8s-app
+  version: 0.0.46
+  name: fmtok8s-app
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
