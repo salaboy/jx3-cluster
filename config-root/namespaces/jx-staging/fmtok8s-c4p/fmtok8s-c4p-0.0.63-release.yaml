@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-03T13:35:35Z"
+  creationTimestamp: "2020-11-04T09:46:16Z"
   deletionTimestamp: null
-  name: 'fmtok8s-c4p-0.0.62'
+  name: 'fmtok8s-c4p-0.0.63'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.62
-      sha: 3fcc207cf66edd42dab72689ae947f074e49731b
+        release 0.0.63
+      sha: f0e3dc2fac99ec2f52057e187ef1915709cdfd92
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        fixing indent
-      sha: 4414ebd1c44c899c1ca3ed6849ec822c57247d66
+        extra env variables
+      sha: d98af669063ff9e6921d26cf03e32c59a9c7e6e6
   gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p
   gitOwner: salaboy
   gitRepository: fmtok8s-c4p
   name: 'fmtok8s-c4p'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.62
-  version: v0.0.62
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.63
+  version: v0.0.63
 status: {}
