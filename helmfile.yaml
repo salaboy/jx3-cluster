@@ -107,7 +107,7 @@ releases:
   name: fmtok8s-email
   namespace: jx-staging
 - chart: dev/fmtok8s-api-gateway
-  version: 0.0.119
+  version: 0.0.120
   name: fmtok8s-api-gateway
   namespace: jx-staging
 - chart: dev/fmtok8s-speakers
