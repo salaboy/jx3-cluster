@@ -111,7 +111,7 @@ releases:
   name: fmtok8s-api-gateway
   namespace: jx-staging
 - chart: dev/fmtok8s-speakers
-  version: 0.0.12
+  version: 0.0.13
   name: fmtok8s-speakers
   namespace: jx-staging
 templates: {}
