@@ -76,6 +76,8 @@ releases:
   namespace: jx
   values:
   - versionStream/charts/jenkins-x/nexus/values.yaml.gotmpl
+  - persistence:
+      size: 30Gi
 - chart: jenkins-x/chartmuseum
   version: 1.1.7
   name: chartmuseum
