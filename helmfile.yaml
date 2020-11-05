@@ -94,29 +94,5 @@ releases:
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
-- chart: dev/fmtok8s-agenda
-  version: 0.0.65
-  name: fmtok8s-agenda
-  namespace: jx-staging
-- chart: dev/fmtok8s-c4p
-  version: 0.0.66
-  name: fmtok8s-c4p
-  namespace: jx-staging
-- chart: dev/fmtok8s-email
-  version: 0.0.51
-  name: fmtok8s-email
-  namespace: jx-staging
-- chart: dev/fmtok8s-api-gateway
-  version: 0.0.120
-  name: fmtok8s-api-gateway
-  namespace: jx-staging
-- chart: dev/fmtok8s-speakers
-  version: 0.0.13
-  name: fmtok8s-speakers
-  namespace: jx-staging
-- chart: dev/zeebe-cloud-events-router
-  version: 0.0.51
-  name: zeebe-cloud-events-router
-  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
