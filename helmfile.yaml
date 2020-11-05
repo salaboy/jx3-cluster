@@ -118,5 +118,9 @@ releases:
   version: 0.0.51
   name: zeebe-cloud-events-router
   namespace: jx-staging
+- chart: dev/fmtok8s-app
+  version: 0.0.52
+  name: fmtok8s-app
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
