@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-04T11:21:34Z"
+  creationTimestamp: "2020-11-05T09:25:38Z"
   deletionTimestamp: null
-  name: 'fmtok8s-agenda-0.0.62'
+  name: 'fmtok8s-agenda-0.0.63'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,13 +24,29 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.62
-      sha: e85a5bfeded6313673c85d028ffbfb99d5189241
+        release 0.0.63
+      sha: 2eec2bb07ed404c56842a809db084c0d08abf4e8
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding simple CloudEvent
+      sha: 08be2323d8a70025faa4c7514c8e8c7f93abd0fe
   gitCloneUrl: https://github.com/salaboy/fmtok8s-agenda.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda
   gitOwner: salaboy
   gitRepository: fmtok8s-agenda
   name: 'fmtok8s-agenda'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.62
-  version: v0.0.62
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.63
+  version: v0.0.63
 status: {}
