@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: fmtok8s-agenda
   labels:
-    chart: "fmtok8s-agenda-0.0.64"
+    chart: "fmtok8s-agenda-0.0.65"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     fabric8.io/expose: "true"

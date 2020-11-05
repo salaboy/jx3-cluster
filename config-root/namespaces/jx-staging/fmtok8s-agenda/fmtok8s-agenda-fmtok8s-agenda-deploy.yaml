@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-agenda-fmtok8s-agenda
   labels:
     draft: draft-app
-    chart: "fmtok8s-agenda-0.0.64"
+    chart: "fmtok8s-agenda-0.0.65"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,11 +23,11 @@ spec:
     spec:
       containers:
         - name: fmtok8s-agenda
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-agenda:0.0.64"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-agenda:0.0.65"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.64
+              value: 0.0.65
             - name: ZEEBE_CLIENT_SECURITY_PLAINTEXT
               value: "false"
           envFrom: null
@@ -50,10 +50,10 @@ spec:
             timeoutSeconds: 1
           resources:
             limits:
-              cpu: 1500m
+              cpu: 1000m
               memory: 1768Mi
             requests:
-              cpu: 750m
+              cpu: 650m
               memory: 1024Mi
       terminationGracePeriodSeconds:
       imagePullSecrets:
