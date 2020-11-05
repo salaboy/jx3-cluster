@@ -1,0 +1,52 @@
+# Source: zeebe-cloud-events-router/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-11-05T09:58:27Z"
+  deletionTimestamp: null
+  name: 'zeebe-cloud-events-router-0.0.51'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.51
+      sha: 513836e973b97f505175f31feca43a489c8b38a2
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        updating deploy and ksvc to use secret
+      sha: 584df6f3f4daa223766ba220bb0dd50d563b3cc6
+  gitCloneUrl: https://github.com/zeebe-io/zeebe-cloud-events-router.git
+  gitHttpUrl: https://github.com/zeebe-io/zeebe-cloud-events-router
+  gitOwner: zeebe-io
+  gitRepository: zeebe-cloud-events-router
+  name: 'zeebe-cloud-events-router'
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-cloud-events-router/releases/tag/v0.0.51
+  version: v0.0.51
+status: {}
