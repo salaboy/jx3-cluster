@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-06T08:47:49Z"
+  creationTimestamp: "2020-11-06T12:27:04Z"
   deletionTimestamp: null
-  name: 'fmtok8s-agenda-0.0.71'
+  name: 'fmtok8s-agenda-0.0.72'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.71
-      sha: 8e09fb4185df854a5bfe19c32b1217d137a4bb59
+        release 0.0.72
+      sha: 813e5090256b8295027934c1757f693c958bb3d6
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        double quoting?? :(
-      sha: de0450e83639a081ec72ed9ef7a337bfe57bcf9f
+        sending proposal as CE payload
+      sha: faf2e9726a575d1cd77b796e8057b4fb4626fce0
   gitCloneUrl: https://github.com/salaboy/fmtok8s-agenda.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda
   gitOwner: salaboy
   gitRepository: fmtok8s-agenda
   name: 'fmtok8s-agenda'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.71
-  version: v0.0.71
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda/releases/tag/v0.0.72
+  version: v0.0.72
 status: {}
