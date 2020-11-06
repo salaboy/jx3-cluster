@@ -102,5 +102,9 @@ releases:
   version: 0.0.52
   name: fmtok8s-email
   namespace: jx-staging
+- chart: dev/fmtok8s-speakers
+  version: 0.0.7
+  name: fmtok8s-speakers
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
