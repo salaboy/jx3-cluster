@@ -1,0 +1,52 @@
+# Source: fmtok8s-c4p/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-11-06T10:59:02Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-c4p-0.0.67'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.67
+      sha: 508f6e75edfe52e8063ddd8bce760dd47af838bc
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        emitting cloud events when proposal arrives and when decision is made
+      sha: db6613d99170c55817f7dba4fa7195b860c6bdfb
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p
+  gitOwner: salaboy
+  gitRepository: fmtok8s-c4p
+  name: 'fmtok8s-c4p'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p/releases/tag/v0.0.67
+  version: v0.0.67
+status: {}
