@@ -110,5 +110,9 @@ releases:
   version: 0.0.67
   name: fmtok8s-c4p
   namespace: jx-staging
+- chart: dev/fmtok8s-app
+  version: 0.0.63
+  name: fmtok8s-app
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
