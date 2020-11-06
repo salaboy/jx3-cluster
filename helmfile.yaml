@@ -95,7 +95,7 @@ releases:
   values:
   - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
 - chart: dev/fmtok8s-agenda
-  version: 0.0.70
+  version: 0.0.71
   name: fmtok8s-agenda
   namespace: jx-staging
 templates: {}
