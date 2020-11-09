@@ -15,6 +15,7 @@ data:
         salaboy/fmtok8s-c4p: true
         salaboy/fmtok8s-c4p-rest: true
         salaboy/fmtok8s-email: true
+        salaboy/fmtok8s-email-rest: true
         salaboy/fmtok8s-monolith: true
         salaboy/fmtok8s-speakers: true
         salaboy/jx3-cluster: true
@@ -41,6 +42,7 @@ data:
         salaboy/fmtok8s-c4p: merge
         salaboy/fmtok8s-c4p-rest: merge
         salaboy/fmtok8s-email: merge
+        salaboy/fmtok8s-email-rest: merge
         salaboy/fmtok8s-monolith: merge
         salaboy/fmtok8s-speakers: merge
         salaboy/jx3-cluster: merge
@@ -66,6 +68,7 @@ data:
         - salaboy/fmtok8s-app
         - salaboy/fmtok8s-c4p-rest
         - salaboy/fmtok8s-c4p
+        - salaboy/fmtok8s-email-rest
         - salaboy/fmtok8s-email
         - salaboy/fmtok8s-monolith
         - salaboy/fmtok8s-speakers
@@ -90,6 +93,7 @@ data:
         - salaboy/fmtok8s-app
         - salaboy/fmtok8s-c4p-rest
         - salaboy/fmtok8s-c4p
+        - salaboy/fmtok8s-email-rest
         - salaboy/fmtok8s-email
         - salaboy/fmtok8s-monolith
         - salaboy/fmtok8s-speakers
