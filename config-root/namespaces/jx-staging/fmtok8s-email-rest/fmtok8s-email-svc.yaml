@@ -2,9 +2,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fmtok8s-email-rest
+  name: fmtok8s-email
   labels:
-    chart: "fmtok8s-email-rest-0.0.1"
+    chart: "fmtok8s-email-rest-0.0.3"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     fabric8.io/expose: "true"

@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-email-rest-fmtok8s-email-rest
   labels:
     draft: draft-app
-    chart: "fmtok8s-email-rest-0.0.1"
+    chart: "fmtok8s-email-rest-0.0.3"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,17 +23,17 @@ spec:
     spec:
       containers:
         - name: fmtok8s-email-rest
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-email-rest:0.0.1"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-email-rest:0.0.3"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.1
+              value: 0.0.3
           envFrom: null
           ports:
             - containerPort: 8080
           livenessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: 8080
             initialDelaySeconds: 60
             periodSeconds: 10
@@ -41,17 +41,17 @@ spec:
             timeoutSeconds: 1
           readinessProbe:
             httpGet:
-              path: /
+              path: /actuator/health
               port: 8080
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
           resources:
             limits:
-              cpu: 400m
-              memory: 256Mi
+              cpu: 1000m
+              memory: 1768Mi
             requests:
-              cpu: 200m
-              memory: 128Mi
+              cpu: 650m
+              memory: 1024Mi
       terminationGracePeriodSeconds:
       imagePullSecrets:
