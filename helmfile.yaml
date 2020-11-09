@@ -106,5 +106,9 @@ releases:
   version: 0.0.1
   name: fmtok8s-email-rest
   namespace: jx-staging
+- chart: dev/fmtok8s-api-gateway
+  version: 0.0.121
+  name: fmtok8s-api-gateway
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
