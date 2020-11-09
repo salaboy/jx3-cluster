@@ -1,0 +1,52 @@
+# Source: fmtok8s-agenda-rest/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-11-09T16:08:33Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-agenda-rest-0.0.1'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.1
+      sha: a073ec57ff6e137a6147ddf4324eab5b96da4000
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        Jenkins X build pack
+      sha: c176731af164b45ea7172af5815344e2d4d700b8
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-agenda-rest.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda-rest
+  gitOwner: salaboy
+  gitRepository: fmtok8s-agenda-rest
+  name: 'fmtok8s-agenda-rest'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda-rest/releases/tag/v0.0.1
+  version: v0.0.1
+status: {}

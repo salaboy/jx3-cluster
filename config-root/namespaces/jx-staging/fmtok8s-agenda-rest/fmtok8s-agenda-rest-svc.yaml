@@ -1,0 +1,21 @@
+# Source: fmtok8s-agenda-rest/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: fmtok8s-agenda-rest
+  labels:
+    chart: "fmtok8s-agenda-rest-0.0.1"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    fabric8.io/expose: "true"
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
+  namespace: jx-staging
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    app: fmtok8s-agenda-rest-fmtok8s-agenda-rest
