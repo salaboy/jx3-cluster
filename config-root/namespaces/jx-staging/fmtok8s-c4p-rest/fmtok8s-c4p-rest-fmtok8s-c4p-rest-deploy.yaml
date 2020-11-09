@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-c4p-rest-fmtok8s-c4p-rest
   labels:
     draft: draft-app
-    chart: "fmtok8s-c4p-rest-0.0.3"
+    chart: "fmtok8s-c4p-rest-0.0.4"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -23,11 +23,11 @@ spec:
     spec:
       containers:
         - name: fmtok8s-c4p-rest
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-c4p-rest:0.0.3"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-c4p-rest:0.0.4"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.3
+              value: 0.0.4
           envFrom: null
           ports:
             - containerPort: 8080
