@@ -13,6 +13,7 @@ spec:
     - name: fmtok8s-api-gateway
     - name: fmtok8s-app
     - name: fmtok8s-c4p
+    - name: fmtok8s-c4p-rest
     - name: fmtok8s-email
     - name: fmtok8s-monolith
     - name: fmtok8s-speakers
