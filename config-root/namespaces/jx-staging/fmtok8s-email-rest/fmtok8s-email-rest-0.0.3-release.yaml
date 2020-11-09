@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-09T16:25:49Z"
+  creationTimestamp: "2020-11-09T18:56:59Z"
   deletionTimestamp: null
-  name: 'fmtok8s-email-rest-0.0.1'
+  name: 'fmtok8s-email-rest-0.0.3'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.1
-      sha: fa1ad5c11085006d4d25d0c188d4975621eafdf6
+        release 0.0.3
+      sha: 0f66e60dd537a9c9645228fedfedefaa947bec75
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,29 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        Jenkins X build pack
-      sha: 2599cd8a74f2fee42a7c7df710002c06a35b0632
-    - author:
-        accountReference:
-          - id: salaboy-2
-            provider: jenkins.io/git-github-userid
-        email: salaboy@gmail.com
-        name: salaboy
-      branch: master
-      committer:
-        accountReference:
-          - id: salaboy-2
-            provider: jenkins.io/git-github-userid
-        email: salaboy@gmail.com
-        name: salaboy
-      message: |
-        initial commit
-      sha: 652a1dd58172b5a89a2f0428014902d338ad319f
+        setting events off by default
+      sha: 0a0c8354922d19743ea0ef4d12604e7341c3e476
   gitCloneUrl: https://github.com/salaboy/fmtok8s-email-rest.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-email-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-email-rest
   name: 'fmtok8s-email-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.1
-  version: v0.0.1
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.3
+  version: v0.0.3
 status: {}
