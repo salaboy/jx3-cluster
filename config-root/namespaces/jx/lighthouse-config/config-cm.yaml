@@ -13,6 +13,7 @@ data:
         salaboy/fmtok8s-api-gateway: true
         salaboy/fmtok8s-app: true
         salaboy/fmtok8s-app-v2: true
+        salaboy/fmtok8s-app-v3: true
         salaboy/fmtok8s-c4p: true
         salaboy/fmtok8s-c4p-rest: true
         salaboy/fmtok8s-email: true
@@ -41,6 +42,7 @@ data:
         salaboy/fmtok8s-api-gateway: merge
         salaboy/fmtok8s-app: merge
         salaboy/fmtok8s-app-v2: merge
+        salaboy/fmtok8s-app-v3: merge
         salaboy/fmtok8s-c4p: merge
         salaboy/fmtok8s-c4p-rest: merge
         salaboy/fmtok8s-email: merge
@@ -68,6 +70,7 @@ data:
         - salaboy/fmtok8s-agenda
         - salaboy/fmtok8s-api-gateway
         - salaboy/fmtok8s-app-v2
+        - salaboy/fmtok8s-app-v3
         - salaboy/fmtok8s-app
         - salaboy/fmtok8s-c4p-rest
         - salaboy/fmtok8s-c4p
@@ -94,6 +97,7 @@ data:
         - salaboy/fmtok8s-agenda
         - salaboy/fmtok8s-api-gateway
         - salaboy/fmtok8s-app-v2
+        - salaboy/fmtok8s-app-v3
         - salaboy/fmtok8s-app
         - salaboy/fmtok8s-c4p-rest
         - salaboy/fmtok8s-c4p
