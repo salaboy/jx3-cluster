@@ -110,5 +110,9 @@ releases:
   version: 0.0.124
   name: fmtok8s-api-gateway
   namespace: jx-staging
+- chart: dev/fmtok8s-app-v3
+  version: 0.0.1
+  name: fmtok8s-app-v3
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
