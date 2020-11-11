@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-09T18:56:59Z"
+  creationTimestamp: "2020-11-11T11:36:09Z"
   deletionTimestamp: null
-  name: 'fmtok8s-email-rest-0.0.3'
+  name: 'fmtok8s-email-rest-0.0.4'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.3
-      sha: 0f66e60dd537a9c9645228fedfedefaa947bec75
+        release 0.0.4
+      sha: 43ec8292f8c20c964f628445e1eb12aa517b92e1
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        setting events off by default
-      sha: 0a0c8354922d19743ea0ef4d12604e7341c3e476
+        add logging to REST endpoints
+      sha: 6571b28eefe7ca7c86132be90fdb2deea0571e11
   gitCloneUrl: https://github.com/salaboy/fmtok8s-email-rest.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-email-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-email-rest
   name: 'fmtok8s-email-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.3
-  version: v0.0.3
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.4
+  version: v0.0.4
 status: {}
