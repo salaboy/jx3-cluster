@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-10T12:00:30Z"
+  creationTimestamp: "2020-11-11T11:14:35Z"
   deletionTimestamp: null
-  name: 'fmtok8s-c4p-rest-0.0.7'
+  name: 'fmtok8s-c4p-rest-0.0.8'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.7
-      sha: f48359a301ae81f2e1407c4e4e2a65fc47572bc3
+        release 0.0.8
+      sha: 449a2d39794b5fc6a769a1c2e8c5e6be896b8aad
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        sending proposal id to agenda service
-      sha: c717dfdbfa00f42d110cd76a24e4216dc9129f42
+        improving logging
+      sha: 191bb13c066b166fa8de04aa419d97a531763ebd
   gitCloneUrl: https://github.com/salaboy/fmtok8s-c4p-rest.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-c4p-rest
   name: 'fmtok8s-c4p-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.7
-  version: v0.0.7
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.8
+  version: v0.0.8
 status: {}
