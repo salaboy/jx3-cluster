@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: fmtok8s-c4p
   labels:
-    chart: "fmtok8s-c4p-rest-0.0.9"
+    chart: "fmtok8s-c4p-rest-0.0.10"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     fabric8.io/expose: "true"
