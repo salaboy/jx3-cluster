@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-11-09T18:32:11Z"
+  creationTimestamp: "2020-11-11T11:04:17Z"
   deletionTimestamp: null
-  name: 'fmtok8s-api-gateway-0.0.124'
+  name: 'fmtok8s-api-gateway-0.0.125'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: salaboy
       message: |
-        release 0.0.124
-      sha: 6a9441c02c0544b8991ffb641ca922e08b8c21e8
+        release 0.0.125
+      sha: 786e2a20ebf0d5a4d2c27e17239990d4e1be737b
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        fixing typo in backoffice
-      sha: 844d6c84d26c9f695dee10ae6dcdf4bb407fc711
+        qcon logo
+      sha: 6588db31e871a893fffe6a8bfe8c3e906bd5a7a9
   gitCloneUrl: https://github.com/salaboy/fmtok8s-api-gateway.git
   gitHttpUrl: https://github.com/salaboy/fmtok8s-api-gateway
   gitOwner: salaboy
   gitRepository: fmtok8s-api-gateway
   name: 'fmtok8s-api-gateway'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.124
-  version: v0.0.124
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-api-gateway/releases/tag/v0.0.125
+  version: v0.0.125
 status: {}
