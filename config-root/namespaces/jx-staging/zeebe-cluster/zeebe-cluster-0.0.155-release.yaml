@@ -1,0 +1,99 @@
+# Source: zeebe-cluster/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-11-30T12:39:38Z"
+  deletionTimestamp: null
+  name: 'zeebe-cluster-0.0.155'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding chart deps
+      sha: 33d34453346a807779fd71a017c01934b61f4b6b
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding jx3
+      sha: 2779f16b05632cf6a4fdd87acd7c41bcf0fae332
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: Salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: github-0
+            provider: jenkins.io/git-github-userid
+        email: noreply@github.com
+        name: GitHub
+      message: Update README.md
+      sha: 2595b59688b7abaa6130f4c607745a3626495ca6
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        updating charts to helm3, updating to jx3
+      sha: c6f71824dec68cd219dd674588325ddf986c14a8
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        update to 0.25.0
+      sha: 8e5944f80736989dc4f5be689e5ecaa8e3410ec2
+  gitCloneUrl: https://github.com/zeebe-io/zeebe-cluster-helm.git
+  gitHttpUrl: https://github.com/zeebe-io/zeebe-cluster-helm
+  gitOwner: zeebe-io
+  gitRepository: zeebe-cluster-helm
+  name: 'zeebe-cluster'
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-cluster-helm/releases/tag/v0.0.155
+  version: v0.0.155
+status: {}
