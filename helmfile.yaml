@@ -14,9 +14,7 @@ repositories:
 - name: bitnami
   url: https://charts.bitnami.com/bitnami
 - name: external-secrets
-  url: https://godaddy.github.io/kubernetes-external-secrets
-- name: jx-labs
-  url: https://storage.googleapis.com/jenkinsxio-labs-private/charts
+  url: https://external-secrets.github.io/kubernetes-external-secrets
 - name: jx3
   url: https://storage.googleapis.com/jenkinsxio/charts
 - name: stable
@@ -25,51 +23,67 @@ repositories:
   url: http://chartmuseum-jx.35.222.17.41.nip.io/
 releases:
 - chart: jenkins-x/jxboot-helmfile-resources
-  version: 1.0.12
+  version: 1.0.16
   name: jxboot-helmfile-resources
   namespace: jx
   values:
   - versionStream/charts/jenkins-x/jxboot-helmfile-resources/values.yaml.gotmpl
+  forceNamespace: ""
+  skipDeps: null
 - chart: external-secrets/kubernetes-external-secrets
   version: 5.2.0
   name: kubernetes-external-secrets
   namespace: secret-infra
   values:
   - versionStream/charts/external-secrets/kubernetes-external-secrets/values.yaml.gotmpl
-- chart: jx-labs/jenkins-x-crds
-  version: 0.0.7
+  forceNamespace: ""
+  skipDeps: null
+- chart: jx3/jenkins-x-crds
+  version: 3.0.5
   name: jenkins-x-crds
   namespace: jx
   values:
-  - versionStream/charts/jx-labs/jenkins-x-crds/values.yaml
+  - versionStream/charts/jx3/jenkins-x-crds/values.yaml.gotmpl
+  forceNamespace: ""
+  skipDeps: null
 - chart: jx3/jx-pipelines-visualizer
-  version: 0.0.51
+  version: 0.0.52
   name: jx-pipelines-visualizer
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
+  forceNamespace: ""
+  skipDeps: null
 - chart: jx3/jx-preview
-  version: 0.0.114
+  version: 0.0.116
   name: jx-preview
   namespace: jx
+  forceNamespace: ""
+  skipDeps: null
 - chart: stable/nginx-ingress
   version: 1.39.1
   name: nginx-ingress
   namespace: nginx
   values:
   - versionStream/charts/stable/nginx-ingress/values.yaml.gotmpl
+  forceNamespace: ""
+  skipDeps: null
 - chart: cdf/tekton-pipeline
-  version: 0.17.1
+  version: 0.18.0-1
   name: tekton-pipeline
   namespace: tekton-pipelines
   values:
   - versionStream/charts/cdf/tekton-pipeline/values.yaml.gotmpl
+  forceNamespace: ""
+  skipDeps: null
 - chart: jenkins-x/lighthouse
-  version: 0.0.866
+  version: 0.0.874
   name: lighthouse
   namespace: jx
   values:
   - versionStream/charts/jenkins-x/lighthouse/values.yaml.gotmpl
+  forceNamespace: ""
+  skipDeps: null
 - chart: jenkins-x/nexus
   version: 0.1.35
   name: nexus
@@ -78,37 +92,54 @@ releases:
   - versionStream/charts/jenkins-x/nexus/values.yaml.gotmpl
   - persistence:
       size: 30Gi
-- chart: jenkins-x/chartmuseum
-  version: 1.1.7
+  forceNamespace: ""
+  skipDeps: null
+- chart: stable/chartmuseum
+  version: 2.4.1
   name: chartmuseum
   namespace: jx
   values:
-  - versionStream/charts/jenkins-x/chartmuseum/values.yaml.gotmpl
-- chart: jx-labs/pusher-wave
-  version: 1.0.0
+  - versionStream/charts/stable/chartmuseum/values.yaml.gotmpl
+  forceNamespace: ""
+  skipDeps: null
+- chart: jx3/pusher-wave
+  version: 0.4.12
   name: pusher-wave
   namespace: secret-infra
+  forceNamespace: ""
+  skipDeps: null
 - chart: jx3/jx-build-controller
   version: 0.0.14
   name: jx-build-controller
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
+  forceNamespace: ""
+  skipDeps: null
 - chart: dev/fmtok8s-c4p-rest
   version: 0.0.10
   name: fmtok8s-c4p-rest
   namespace: jx-staging
+  forceNamespace: ""
+  skipDeps: null
 - chart: dev/fmtok8s-agenda-rest
   version: 0.0.4
   name: fmtok8s-agenda-rest
   namespace: jx-staging
+  forceNamespace: ""
+  skipDeps: null
 - chart: dev/fmtok8s-email-rest
   version: 0.0.4
   name: fmtok8s-email-rest
   namespace: jx-staging
+  forceNamespace: ""
+  skipDeps: null
 - chart: dev/fmtok8s-api-gateway
   version: 0.0.125
   name: fmtok8s-api-gateway
   namespace: jx-staging
+  forceNamespace: ""
+  skipDeps: null
 templates: {}
 missingFileHandler: ""
+renderedvalues: {}

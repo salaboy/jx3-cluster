@@ -3,7 +3,7 @@ enabled: true
 engines:
   tekton: true
 
-hmacToken: "{{ .Values.secrets.hmacToken | default "123abc" }}"
+hmacToken: "{{ .Values.jx.secrets.hmacToken | default "123abc" }}"
 
 git:
   kind: {{ .Values.jxRequirements.cluster.gitKind | default "github" }}
@@ -27,9 +27,9 @@ env:
 
 image:
   repository: gcr.io/jenkinsxio/lighthouse
-  # TODO until this Pull Request merges: https://github.com/jenkins-x/lighthouse/pull/1141
-  tag: 0.0.0-SNAPSHOT-PR-1141-5
-
+  # TODO until this Pull Request merges: https://github.com/jenkins-x/lighthouse/pull/1164
+  tag: 0.0.0-SNAPSHOT-PR-1164-12
+  
 vault:
 {{- if eq .Values.jxRequirements.secretStorage "vault" }}
   enabled: true
@@ -41,8 +41,13 @@ vault:
 clusterName: "{{ .Values.jxRequirements.cluster.clusterName }}"
 {{- end }}
 
-{{- if and (hasKey .Values.jxRequirements "pipelineUser") (hasKey .Values.jxRequirements.pipelineUser "username") }}
+{{- if hasKey .Values.jxRequirements "pipelineUser" }}
+  {{- if hasKey .Values.jxRequirements.pipelineUser "username" }}
 user: "{{ .Values.jxRequirements.pipelineUser.username }}"
+  {{- end }}
 {{- end }}
 
-oauthToken: "{{ .Values.secrets.pipelineUser.token }}"
+oauthToken: "{{ .Values.jx.secrets.pipelineUser.token }}"
+
+webhooks:
+  customDeploymentTriggerCommand: "jx"

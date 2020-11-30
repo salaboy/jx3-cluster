@@ -16,7 +16,10 @@ google:
 {{- else if eq .Values.jxRequirements.cluster.provider "aks" }}
 provider: azure
 azure:
-  secretName: azure-external-dns-secret
+  resourceGroup: {{ .Values.jxRequirements.cluster.azure.dns.resourceGroup }}
+  tenantId: {{ .Values.jxRequirements.cluster.azure.dns.tenantId }}
+  subscriptionId: {{ .Values.jxRequirements.cluster.azure.dns.subscriptionId }}
+  useManagedIdentityExtension: true
 {{- end }}
 
 rbac:
@@ -28,12 +31,14 @@ serviceAccount:
 {{- else if eq .Values.jxRequirements.cluster.provider "eks" }}
 serviceAccount:
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.project }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-{{ .Values.jxRequirements.cluster.namespace }}-external-dns
+    eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.project }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-external-dns
 {{- end }}
 
 domainFilters:
+- {{ .Values.jxRequirements.ingress.domain }}
 {{- range .Values.jxRequirements.environments }}
 {{- if .ingress.domain }}
 - "{{ .ingress.domain }}"
 {{- end }}
 {{- end }}
+

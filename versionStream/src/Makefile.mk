@@ -4,6 +4,9 @@ OUTPUT_DIR := config-root
 
 VAULT_ADDR ?= https://vault.secret-infra:8200
 
+# You can disable force mode on kubectl apply by modifying this line:
+KUBECTL_APPLY_FLAGS ?= --force
+
 # NOTE to enable debug logging of 'helmfile template' to diagnose any issues with values.yaml templating
 # you can run:
 #
@@ -49,8 +52,8 @@ fetch: init
 	helm repo add jx http://chartmuseum.jenkins-x.io
 
 	# generate the yaml from the charts in helmfile.yaml and moves them to the right directory tree (cluster or namespaces/foo)
-	jx gitops helmfile template $(HELMFILE_TEMPLATE_FLAGS) --args="--include-crds --values=jx-values.yaml --values=versionStream/src/fake-secrets.yaml.gotmpl --values=imagePullSecrets.yaml" --output-dir $(OUTPUT_DIR)
-
+	jx gitops helmfile template $(HELMFILE_TEMPLATE_FLAGS) --args="--values=jx-values.yaml --values=versionStream/src/fake-secrets.yaml.gotmpl --values=imagePullSecrets.yaml" --output-dir $(OUTPUT_DIR)
+	
 	# convert k8s Secrets => ExternalSecret resources using secret mapping + schemas
 	# see: https://github.com/jenkins-x/jx-secret#mappings
 	jx secret convert --source-dir $(OUTPUT_DIR)
@@ -86,9 +89,10 @@ post-build:
 
 	# lets add the kubectl-apply prune annotations
 	#
-	# NOTE be very careful about these 2 labels as getting them wrong can remove stuff in you cluster!
-	jx gitops label --dir $(OUTPUT_DIR)/cluster    gitops.jenkins-x.io/pipeline=cluster
-	jx gitops label --dir $(OUTPUT_DIR)/namespaces gitops.jenkins-x.io/pipeline=namespaces
+	# NOTE be very careful about these 3 labels as getting them wrong can remove stuff in you cluster!
+	jx gitops label --dir $(OUTPUT_DIR)/cluster                   gitops.jenkins-x.io/pipeline=cluster
+	jx gitops label --dir $(OUTPUT_DIR)/customresourcedefinitions gitops.jenkins-x.io/pipeline=customresourcedefinitions
+	jx gitops label --dir $(OUTPUT_DIR)/namespaces                gitops.jenkins-x.io/pipeline=namespaces
 
 	# lets label all Namespace resources with the main namespace which creates them and contains the Environment resources
 	jx gitops label --dir $(OUTPUT_DIR)/cluster --kind=Namespace team=jx
@@ -114,11 +118,11 @@ lint:
 
 .PHONY: dev-ns verify-ingress
 verify-ingress:
-	jx verify ingress -b
+	jx verify ingress
 
 .PHONY: dev-ns verify-ingress-ignore
 verify-ingress-ignore:
-	-jx verify ingress -b
+	-jx verify ingress
 
 .PHONY: dev-ns verify-install
 verify-install:
@@ -164,13 +168,23 @@ regen-phase-2: verify-ingress-ignore all verify-ignore secrets-populate commit
 regen-phase-3: push secrets-wait
 
 .PHONY: apply
-apply: regen-check kubectl-apply verify
+apply: regen-check kubectl-apply verify write-completed
+
+.PHONY: write-completed
+write-completed:
+	echo completed > jx-boot-completed.txt
+	echo wrote completed file
+
+.PHONY: failed
+failed: write-completed
+	exit 1
 
 .PHONY: kubectl-apply
 kubectl-apply:
 	# NOTE be very careful about these 2 labels as getting them wrong can remove stuff in you cluster!
-	kubectl apply --prune -l=gitops.jenkins-x.io/pipeline=cluster    -R -f $(OUTPUT_DIR)/cluster
-	kubectl apply --prune -l=gitops.jenkins-x.io/pipeline=namespaces -R -f $(OUTPUT_DIR)/namespaces
+	kubectl apply $(KUBECTL_APPLY_FLAGS) --prune -l=gitops.jenkins-x.io/pipeline=customresourcedefinitions -R -f $(OUTPUT_DIR)/customresourcedefinitions
+	kubectl apply $(KUBECTL_APPLY_FLAGS) --prune -l=gitops.jenkins-x.io/pipeline=cluster                   -R -f $(OUTPUT_DIR)/cluster
+	kubectl apply $(KUBECTL_APPLY_FLAGS) --prune -l=gitops.jenkins-x.io/pipeline=namespaces                -R -f $(OUTPUT_DIR)/namespaces
 
 	# lets apply any infrastructure specific labels or annotations to enable IAM roles on ServiceAccounts etc
 	jx gitops postprocess
@@ -220,4 +234,4 @@ release: lint
 .PHONY: dev-ns
 dev-ns:
 	@echo changing to the jx namespace to verify
-	jx ns jx
+	jx ns jx --quiet

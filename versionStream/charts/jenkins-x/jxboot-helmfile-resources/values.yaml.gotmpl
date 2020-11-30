@@ -31,13 +31,15 @@ podTemplates:
 
 secrets:
 {{- if eq .Values.jxRequirements.cluster.provider "eks" }}
-  {{- if .Values.jxRequirements.cluster.registry }}
+  {{- if hasKey .Values.jxRequirements.cluster "registry" }}
+    {{- if .Values.jxRequirements.cluster.registry }}
   dockerConfig: |-
     {
       "credHelpers": {
         "{{ .Values.jxRequirements.cluster.registry }}": "ecr-login"
       }
     }
+    {{- end }}
   {{- else }}
   dockerConfig: |-
     {
@@ -45,13 +47,15 @@ secrets:
     }
   {{- end }}
 {{- else if eq .Values.jxRequirements.cluster.provider "aks" }}
-  {{- if .Values.jxRequirements.cluster.registry }}
+  {{- if hasKey .Values.jxRequirements.cluster "registry" }}
+    {{- if .Values.jxRequirements.cluster.registry }}
   dockerConfig: |-
     {
       "credHelpers": {
         "{{ .Values.jxRequirements.cluster.registry }}": "acr-env"
       }
     }
+    {{- end }}
   {{- else }}
   dockerConfig: |-
     {
@@ -105,13 +109,13 @@ secrets:
         <servers>
             <server>
                 <id>local-nexus</id>
-                <username>{{ .Values.secrets.adminUser.username }}</username>
-                <password>{{ .Values.secrets.adminUser.password }}</password>
+                <username>{{ .Values.jx.secrets.adminUser.username }}</username>
+                <password>{{ .Values.jx.secrets.adminUser.password }}</password>
             </server>
             <server>
                 <id>nexus</id>
-                <username>{{ .Values.secrets.adminUser.username }}</username>
-                <password>{{ .Values.secrets.adminUser.password }}</password>
+                <username>{{ .Values.jx.secrets.adminUser.username }}</username>
+                <password>{{ .Values.jx.secrets.adminUser.password }}</password>
             </server>
             <server>
                 <id>docker.io</id>
@@ -173,7 +177,7 @@ secrets:
                 <id>release</id>
                 <properties>
                     <gpg.executable>gpg</gpg.executable>
-                    <!-- TODO use: .Values.secrets.gpg.passphrase when it is always populated -->
+                    <!-- TODO use: .Values.jx.secrets.gpg.passphrase when it is always populated -->
                     <gpg.passphrase></gpg.passphrase>
                 </properties>
             </profile>
