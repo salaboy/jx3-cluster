@@ -26,6 +26,7 @@ data:
         salaboy/tickets-service: true
         zeebe-io/zeebe-cloud-events-router: true
         zeebe-io/zeebe-cluster-helm: true
+        zeebe-io/zeebe-operate-helm: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -56,6 +57,7 @@ data:
         salaboy/tickets-service: merge
         zeebe-io/zeebe-cloud-events-router: merge
         zeebe-io/zeebe-cluster-helm: merge
+        zeebe-io/zeebe-operate-helm: merge
       queries:
       - labels:
         - approved
@@ -85,6 +87,7 @@ data:
         - salaboy/tickets-service
         - zeebe-io/zeebe-cloud-events-router
         - zeebe-io/zeebe-cluster-helm
+        - zeebe-io/zeebe-operate-helm
       - labels:
         - updatebot
         missingLabels:
@@ -113,6 +116,7 @@ data:
         - salaboy/tickets-service
         - zeebe-io/zeebe-cloud-events-router
         - zeebe-io/zeebe-cluster-helm
+        - zeebe-io/zeebe-operate-helm
       target_url: http://dashboard-jx.35.222.17.41.nip.io
 kind: ConfigMap
 metadata:
