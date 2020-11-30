@@ -5,11 +5,11 @@ metadata:
   name: lighthouse-webhooks
   labels:
     draft: draft-app
-    chart: "lighthouse-0.0.866"
+    chart: "lighthouse-0.0.874"
     app: lighthouse-webhooks
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
-    checksum/config: db26f27a4c71b63cdd5e772b720957e8032c63ac5f8c7f51f058217ea3377ffb
+    checksum/config: 47caf41a28070c23a6e0cb91163bb8cd3ad916cb577d991faa03d8ffb52fcdf8
     wave.pusher.com/update-on-config-change: 'true'
     jenkins-x.io/hash: '364135829518c3729967f72a9ef8cb9408f41f6d344e5b6c6b2c49a3d50b683d'
   namespace: jx
@@ -28,13 +28,15 @@ spec:
       serviceAccountName: lighthouse-webhooks
       containers:
         - name: lighthouse-webhooks
-          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.0-SNAPSHOT-PR-1141-5
+          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.0-SNAPSHOT-PR-1164-12
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"
           env:
             - name: "GIT_KIND"
               value: "github"
+            - name: "LH_CUSTOM_TRIGGER_COMMAND"
+              value: "jx"
             - name: "GIT_SERVER"
               value: "https://github.com"
             - name: "GIT_USER"
