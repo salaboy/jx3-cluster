@@ -30,4 +30,5 @@ spec:
     providerKind: github
     repositories:
     - name: zeebe-cloud-events-router
+    - name: zeebe-cluster-helm
     scheduler: in-repo
