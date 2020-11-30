@@ -1,0 +1,45 @@
+# Source: zeebe-operate-helm/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zeebe-operate-helm
+  labels:
+    app: zeebe-operate-helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zeebe-operate-helm
+  template:
+    metadata:
+      labels:
+        app: zeebe-operate-helm
+    spec:
+      containers:
+        - name: zeebe-operate-helm
+          image: "gcr.io/camunda-researchanddevelopment/zeebe-operate-helm:0.0.29"
+          resources:
+            requests:
+              cpu: 500m
+              memory: 512Mi
+            limits:
+              cpu: 1000m
+              memory: 768Mi
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+          volumeMounts:
+            - name: config
+              mountPath: /usr/local/operate/config/application.yml
+              subPath: application.yml
+      volumes:
+        - name: config
+          configMap:
+            name: zeebe-operate-helm
+            defaultMode: 0744
+      securityContext: null

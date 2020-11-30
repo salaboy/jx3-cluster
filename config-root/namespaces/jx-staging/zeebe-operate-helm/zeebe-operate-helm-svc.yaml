@@ -1,0 +1,18 @@
+# Source: zeebe-operate-helm/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: zeebe-operate-helm
+  labels:
+    app: zeebe-operate-helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      name: http
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: zeebe-operate-helm

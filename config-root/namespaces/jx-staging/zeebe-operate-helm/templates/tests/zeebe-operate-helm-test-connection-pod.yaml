@@ -1,0 +1,22 @@
+# Source: zeebe-operate-helm/templates/tests/test-connection.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "zeebe-operate-helm-test-connection"
+  labels:
+    app.kubernetes.io/name: zeebe-operate-helm
+    helm.sh/chart: zeebe-operate-helm-0.0.29
+    app.kubernetes.io/instance: zeebe-operate-helm
+    app.kubernetes.io/version: "1.0"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    "helm.sh/hook": test-success
+  namespace: jx-staging
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['zeebe-operate-helm:80']
+  restartPolicy: Never
