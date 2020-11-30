@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: zeebe-operate-helm
-          image: "gcr.io/camunda-researchanddevelopment/zeebe-operate-helm:0.0.29"
+          image: "gcr.io/camunda-researchanddevelopment/zeebe-operate-helm:0.0.33"
           resources:
             requests:
               cpu: 500m
