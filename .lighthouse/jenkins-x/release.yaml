@@ -46,22 +46,7 @@ spec:
           image: gcr.io/jenkinsxio/jx-boot:3.0.755
           name: make-pr
           resources: {}
-<<<<<<< HEAD
-        volumes:
-        - emptyDir: {}
-          name: workspace-volume
-        - downwardAPI:
-            items:
-            - fieldRef:
-                fieldPath: metadata.labels
-              path: labels
-          name: podinfo
-  podTemplate:
-    hostNetwork: false
-    schedulerName: ""
-=======
   podTemplate: {}
->>>>>>> update .lighthouse (https://github.com/jenkins-x/jx3-pipeline-catalog) from master (4a22dee8a67f66e5012729808de081d2f4d0e715) to master (7ee24d404e627df93044dba4ff842398928892d7)
   serviceAccountName: tekton-bot
   timeout: 240h0m0s
 status: {}
