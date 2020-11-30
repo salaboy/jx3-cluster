@@ -44,5 +44,10 @@ spec:
     context: "release"
     source: "release.yaml"
     branches:
+<<<<<<< HEAD
     - master
     - main
+=======
+    - ^main$
+    - ^master$
+>>>>>>> update .lighthouse (https://github.com/jenkins-x/jx3-pipeline-catalog) from master (4a22dee8a67f66e5012729808de081d2f4d0e715) to master (7ee24d404e627df93044dba4ff842398928892d7)
