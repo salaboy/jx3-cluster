@@ -1,0 +1,83 @@
+# Source: zeebe-cluster/templates/gateway-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "zeebe-cluster-zeebe-gateway"
+  labels:
+    app.kubernetes.io/name: zeebe-cluster
+    app.kubernetes.io/instance: zeebe-cluster
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: gateway
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: zeebe-cluster
+      app.kubernetes.io/instance: zeebe-cluster
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/component: gateway
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: zeebe-cluster
+        app.kubernetes.io/instance: zeebe-cluster
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/component: gateway
+      annotations:
+    spec:
+      containers:
+        - name: zeebe-cluster
+          image: "gcr.io/camunda-researchanddevelopment/zeebe-cluster-helm:0.0.155"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9600
+              name: http
+            - containerPort: 26500
+              name: gateway
+            - containerPort: 26502
+              name: internal
+          env:
+            - name: ZEEBE_STANDALONE_GATEWAY
+              value: "true"
+            - name: ZEEBE_GATEWAY_CLUSTER_CLUSTERNAME
+              value: zeebe-cluster-zeebe
+            - name: ZEEBE_GATEWAY_CLUSTER_MEMBERID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: ZEEBE_LOG_LEVEL
+              value: "info"
+            - name: JAVA_TOOL_OPTIONS
+              value: "-XX:MaxRAMPercentage=25.0 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/usr/local/zeebe/data -XX:ErrorFile=/usr/local/zeebe/data/zeebe_error%p.log -XX:+ExitOnOutOfMemoryError"
+            - name: ZEEBE_GATEWAY_CLUSTER_CONTACTPOINT
+              value: zeebe-cluster-zeebe:26502
+            - name: ZEEBE_GATEWAY_NETWORK_HOST
+              value: 0.0.0.0
+            - name: ZEEBE_GATEWAY_NETWORK_PORT
+              value: "26500"
+            - name: ZEEBE_GATEWAY_CLUSTER_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: ZEEBE_GATEWAY_CLUSTER_PORT
+              value: "26502"
+            - name: ZEEBE_GATEWAY_MONITORING_HOST
+              value: 0.0.0.0
+            - name: ZEEBE_GATEWAY_MONITORING_PORT
+              value: "9600"
+          volumeMounts:
+          securityContext: null
+          readinessProbe:
+            tcpSocket:
+              port: gateway
+            initialDelaySeconds: 20
+            periodSeconds: 5
+      volumes:
+        - name: config
+          configMap:
+            name: zeebe-cluster
+            defaultMode: 0744
