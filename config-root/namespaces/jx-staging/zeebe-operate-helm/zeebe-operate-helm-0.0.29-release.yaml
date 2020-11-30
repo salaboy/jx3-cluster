@@ -1,0 +1,68 @@
+# Source: zeebe-operate-helm/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-11-30T12:58:52Z"
+  deletionTimestamp: null
+  name: 'zeebe-operate-helm-0.0.29'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        chore: added variables
+      sha: 1e7138cb5c39040e11ddf61725364ed8510a47f3
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        chore: Jenkins X build pack
+      sha: 37994e66174cb9a5686218e69d240d8eae605cf9
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        moving to jx3 and helm3
+      sha: 88c4da54bb8098532ab62733f767df14d0283e53
+  gitCloneUrl: https://github.com/zeebe-io/zeebe-operate-helm.git
+  gitHttpUrl: https://github.com/zeebe-io/zeebe-operate-helm
+  gitOwner: zeebe-io
+  gitRepository: zeebe-operate-helm
+  name: 'zeebe-operate-helm'
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-operate-helm/releases/tag/v0.0.29
+  version: v0.0.29
+status: {}
