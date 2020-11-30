@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: zeebe-io
+    provider: github
+    repository: zeebe-cluster-helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: zeebe-io-zeebe-cluster-helm
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/zeebe-io/zeebe-cluster-helm.git
+  org: zeebe-io
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: zeebe-cluster-helm
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/zeebe-io/zeebe-cluster-helm
