@@ -31,4 +31,5 @@ spec:
     repositories:
     - name: zeebe-cloud-events-router
     - name: zeebe-cluster-helm
+    - name: zeebe-operate-helm
     scheduler: in-repo
