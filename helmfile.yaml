@@ -116,30 +116,6 @@ releases:
   - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
   forceNamespace: ""
   skipDeps: null
-- chart: dev/fmtok8s-c4p-rest
-  version: 0.0.10
-  name: fmtok8s-c4p-rest
-  namespace: jx-staging
-  forceNamespace: ""
-  skipDeps: null
-- chart: dev/fmtok8s-agenda-rest
-  version: 0.0.4
-  name: fmtok8s-agenda-rest
-  namespace: jx-staging
-  forceNamespace: ""
-  skipDeps: null
-- chart: dev/fmtok8s-email-rest
-  version: 0.0.4
-  name: fmtok8s-email-rest
-  namespace: jx-staging
-  forceNamespace: ""
-  skipDeps: null
-- chart: dev/fmtok8s-api-gateway
-  version: 0.0.125
-  name: fmtok8s-api-gateway
-  namespace: jx-staging
-  forceNamespace: ""
-  skipDeps: null
 templates: {}
 missingFileHandler: ""
 renderedvalues: {}
