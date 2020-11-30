@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: zeebe-io
+    provider: github
+    repository: zeebe-full-helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: zeebe-io-zeebe-full-helm
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/zeebe-io/zeebe-full-helm.git
+  org: zeebe-io
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: zeebe-full-helm
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/zeebe-io/zeebe-full-helm

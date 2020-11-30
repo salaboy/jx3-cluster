@@ -80,6 +80,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - zeebe-io/zeebe-full-helm
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - zeebe-io/zeebe-operate-helm
       require_self_approval: true
     cat: {}
@@ -401,6 +405,22 @@ data:
       - cat
       - dog
       - pony
+      zeebe-io/zeebe-full-helm:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       zeebe-io/zeebe-operate-helm:
       - approve
       - assign
@@ -482,6 +502,9 @@ data:
       trusted_org: todo
     - repos:
       - zeebe-io/zeebe-cluster-helm
+      trusted_org: todo
+    - repos:
+      - zeebe-io/zeebe-full-helm
       trusted_org: todo
     - repos:
       - zeebe-io/zeebe-operate-helm
