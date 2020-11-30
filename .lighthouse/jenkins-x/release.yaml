@@ -1,19 +1,9 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-<<<<<<< HEAD
-  labels:
-    branch: master
-    build: "1"
-    jenkins.io/pipelineType: build
-    owner: jenkins-x-quickstarts
-    repository: node-http
-  name: jenkins-x-quickstarts-node-http-nm6dx-1
-=======
   annotations:
     lighthouse.jenkins-x.io/prependStepsURL: https://raw.githubusercontent.com/jenkins-x/jx3-pipeline-catalog/005e78cf69b643862344397a635736a51dd1bd89/tasks/git-clone/git-clone.yaml
   name: release
->>>>>>> update .lighthouse (https://github.com/jenkins-x/jx3-pipeline-catalog) from master (4a22dee8a67f66e5012729808de081d2f4d0e715) to master (7ee24d404e627df93044dba4ff842398928892d7)
 spec:
   pipelineSpec:
     params:
