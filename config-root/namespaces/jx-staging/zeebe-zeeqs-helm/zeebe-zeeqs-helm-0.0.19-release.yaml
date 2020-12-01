@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-12-01T12:16:28Z"
+  creationTimestamp: "2020-12-01T13:13:59Z"
   deletionTimestamp: null
-  name: 'zeebe-zeeqs-helm-0.0.18'
+  name: 'zeebe-zeeqs-helm-0.0.19'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -19,7 +19,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: added variables
-      sha: 1eb78508facae30902113707f7761648c1d780a0
+      sha: 7f044d2598f3b0201870c2b9de4f759285656b6d
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -28,12 +28,22 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        hazelcast own repo
-      sha: d63a429badf088a5a242198f4b1a48dabf09981e
+        touch
+      sha: 321a5249c6760354879402c4631ccf64bbbc6785
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        replacing repo and tag only at the beggining of a new line
+      sha: a89481b33d4221f9b2bb7d3adcbf7eae34f88c4c
   gitHttpUrl: https://github.com/zeebe-io/zeebe-zeeqs-helm
   gitOwner: zeebe-io
   gitRepository: zeebe-zeeqs-helm
   name: 'zeebe-zeeqs-helm'
-  releaseNotesURL: https://github.com/zeebe-io/zeebe-zeeqs-helm/releases/tag/v0.0.18
-  version: v0.0.18
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-zeeqs-helm/releases/tag/v0.0.19
+  version: v0.0.19
 status: {}

@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: zeebe-zeeqs-helm
-          image: "gcr.io/camunda-researchanddevelopment/zeebe-zeeqs-helm:0.0.18"
+          image: "camunda/zeeqs:latest"
           resources:
             limits:
               cpu: 1000m
