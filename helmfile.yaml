@@ -93,7 +93,7 @@ releases:
   values:
   - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
 - chart: dev/zeebe-cluster
-  version: 0.0.155
+  version: 0.0.184
   name: zeebe-cluster
   namespace: jx-staging
 - chart: dev/zeebe-operate-helm
