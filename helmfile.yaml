@@ -109,7 +109,7 @@ releases:
   name: zeebe-zeeqs-helm
   namespace: jx-staging
 - chart: dev/zeebe-tasklist-helm
-  version: 0.0.7
+  version: 0.0.8
   name: zeebe-tasklist-helm
   namespace: jx-staging
 - chart: dev/zeebe-full-helm

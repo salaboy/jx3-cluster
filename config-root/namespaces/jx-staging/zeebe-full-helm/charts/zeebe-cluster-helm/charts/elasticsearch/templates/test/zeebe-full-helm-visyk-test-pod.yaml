@@ -1,8 +1,8 @@
-# Source: zeebe-cluster-helm/charts/elasticsearch/templates/test/test-elasticsearch-health.yaml
+# Source: zeebe-full-helm/charts/zeebe-cluster-helm/charts/elasticsearch/templates/test/test-elasticsearch-health.yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "zeebe-cluster-helm-xvxjm-test"
+  name: "zeebe-full-helm-visyk-test"
   annotations:
     "helm.sh/hook": test
     "helm.sh/hook-delete-policy": hook-succeeded
@@ -14,7 +14,7 @@ spec:
     fsGroup: 1000
     runAsUser: 1000
   containers:
-    - name: "zeebe-cluster-helm-vauta-test"
+    - name: "zeebe-full-helm-wvtmo-test"
       image: "docker.elastic.co/elasticsearch/elasticsearch:6.8.5"
       imagePullPolicy: "IfNotPresent"
       command:

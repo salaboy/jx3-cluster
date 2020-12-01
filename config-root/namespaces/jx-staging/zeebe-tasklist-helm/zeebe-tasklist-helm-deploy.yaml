@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: zeebe-tasklist-helm
-          image: "gcr.io/camunda-researchanddevelopment/zeebe-tasklist-helm:0.0.7"
+          image: "camunda/zeebe-tasklist:SNAPSHOT"
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: "dev,dev-data,auth"
