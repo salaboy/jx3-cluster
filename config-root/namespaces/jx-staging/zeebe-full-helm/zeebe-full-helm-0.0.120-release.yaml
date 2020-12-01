@@ -1,0 +1,52 @@
+# Source: zeebe-full-helm/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-12-01T12:39:05Z"
+  deletionTimestamp: null
+  name: 'zeebe-full-helm-0.0.120'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        chore: added variables
+      sha: eace498aad04f0960cde823a823d1e50ed5351ee
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        removing no-release flag
+      sha: dbfd4ee8bab9e2c5c4c7ce840cfb4c6cce99886a
+  gitCloneUrl: https://github.com/zeebe-io/zeebe-full-helm.git
+  gitHttpUrl: https://github.com/zeebe-io/zeebe-full-helm
+  gitOwner: zeebe-io
+  gitRepository: zeebe-full-helm
+  name: 'zeebe-full-helm'
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-full-helm/releases/tag/v0.0.120
+  version: v0.0.120
+status: {}

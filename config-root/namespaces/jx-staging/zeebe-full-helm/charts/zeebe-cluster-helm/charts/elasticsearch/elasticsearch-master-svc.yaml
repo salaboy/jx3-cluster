@@ -1,0 +1,26 @@
+# Source: zeebe-full-helm/charts/zeebe-cluster-helm/charts/elasticsearch/templates/service.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: elasticsearch-master
+  labels:
+    heritage: "Helm"
+    release: "zeebe-full-helm"
+    chart: "elasticsearch"
+    app: "elasticsearch-master"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations: {}
+  namespace: jx-staging
+spec:
+  type: ClusterIP
+  selector:
+    release: "zeebe-full-helm"
+    chart: "elasticsearch"
+    app: "elasticsearch-master"
+  ports:
+    - name: http
+      protocol: TCP
+      port: 9200
+    - name: transport
+      protocol: TCP
+      port: 9300
