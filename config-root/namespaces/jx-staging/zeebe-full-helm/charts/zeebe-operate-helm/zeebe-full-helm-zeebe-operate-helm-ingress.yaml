@@ -5,7 +5,7 @@ metadata:
   name: zeebe-full-helm-zeebe-operate-helm
   labels:
     app.kubernetes.io/name: zeebe-operate-helm
-    helm.sh/chart: zeebe-operate-helm-0.0.35
+    helm.sh/chart: zeebe-operate-helm-0.0.36
     app.kubernetes.io/instance: zeebe-full-helm
     app.kubernetes.io/version: "1.0"
     app.kubernetes.io/managed-by: Helm

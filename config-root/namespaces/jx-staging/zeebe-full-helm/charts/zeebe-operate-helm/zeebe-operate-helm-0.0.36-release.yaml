@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-12-01T11:51:50Z"
+  creationTimestamp: "2020-12-01T13:05:05Z"
   deletionTimestamp: null
-  name: 'zeebe-operate-helm-0.0.35'
+  name: 'zeebe-operate-helm-0.0.36'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -25,7 +25,7 @@ spec:
         name: salaboy
       message: |
         chore: added variables
-      sha: f529ae5b4bed795ddd365d4d915eb69d6edd7b32
+      sha: c228ad0a21d111d2d7b0f0b0c80a44d6100d34c2
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        removing no-release flag
-      sha: 83cf9953e9f80df8ad0d40253175f84c832df27d
+        replacing repo and tag only at the beggining of a new line
+      sha: 2b02df931513e8a0164045f94c98eaa1e36e9924
   gitCloneUrl: https://github.com/zeebe-io/zeebe-operate-helm.git
   gitHttpUrl: https://github.com/zeebe-io/zeebe-operate-helm
   gitOwner: zeebe-io
   gitRepository: zeebe-operate-helm
   name: 'zeebe-operate-helm'
-  releaseNotesURL: https://github.com/zeebe-io/zeebe-operate-helm/releases/tag/v0.0.35
-  version: v0.0.35
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-operate-helm/releases/tag/v0.0.36
+  version: v0.0.36
 status: {}
