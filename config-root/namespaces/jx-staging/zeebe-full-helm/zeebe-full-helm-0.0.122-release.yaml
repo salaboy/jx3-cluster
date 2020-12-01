@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-12-01T13:20:09Z"
+  creationTimestamp: "2020-12-01T15:23:26Z"
   deletionTimestamp: null
-  name: 'zeebe-full-helm-0.0.121'
+  name: 'zeebe-full-helm-0.0.122'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -25,7 +25,7 @@ spec:
         name: salaboy
       message: |
         chore: added variables
-      sha: 68ae68a63f4d30834baa69460a3b3e455c129a63
+      sha: 6bbf189b2ee5bc31341a6826c32bae7699b3e19f
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        updating versions
-      sha: 1b676f4bc24ce891dc74215e17304166b5cd7db9
+        updating versions with jx crds
+      sha: 7f29b281bcfa06e7be0ec215ecc9237012b64f9f
   gitCloneUrl: https://github.com/zeebe-io/zeebe-full-helm.git
   gitHttpUrl: https://github.com/zeebe-io/zeebe-full-helm
   gitOwner: zeebe-io
   gitRepository: zeebe-full-helm
   name: 'zeebe-full-helm'
-  releaseNotesURL: https://github.com/zeebe-io/zeebe-full-helm/releases/tag/v0.0.121
-  version: v0.0.121
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-full-helm/releases/tag/v0.0.122
+  version: v0.0.122
 status: {}
