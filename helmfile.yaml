@@ -112,5 +112,9 @@ releases:
   version: 0.0.7
   name: zeebe-tasklist-helm
   namespace: jx-staging
+- chart: dev/zeebe-full-helm
+  version: 0.0.119
+  name: zeebe-full-helm
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
