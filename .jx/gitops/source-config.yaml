@@ -33,5 +33,6 @@ spec:
     - name: zeebe-cluster-helm
     - name: zeebe-full-helm
     - name: zeebe-operate-helm
+    - name: zeebe-tasklist-helm
     - name: zeebe-zeeqs-helm
     scheduler: in-repo
