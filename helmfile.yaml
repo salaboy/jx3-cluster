@@ -97,7 +97,7 @@ releases:
   name: zeebe-cluster
   namespace: jx-staging
 - chart: dev/zeebe-operate-helm
-  version: 0.0.35
+  version: 0.0.37
   name: zeebe-operate-helm
   namespace: jx-staging
 - chart: dev/zeebe-cluster-helm
