@@ -28,6 +28,7 @@ data:
         zeebe-io/zeebe-cluster-helm: true
         zeebe-io/zeebe-full-helm: true
         zeebe-io/zeebe-operate-helm: true
+        zeebe-io/zeebe-tasklist-helm: true
         zeebe-io/zeebe-zeeqs-helm: true
     plank: {}
     pod_namespace: jx
@@ -61,6 +62,7 @@ data:
         zeebe-io/zeebe-cluster-helm: merge
         zeebe-io/zeebe-full-helm: merge
         zeebe-io/zeebe-operate-helm: merge
+        zeebe-io/zeebe-tasklist-helm: merge
         zeebe-io/zeebe-zeeqs-helm: merge
       queries:
       - labels:
@@ -93,6 +95,7 @@ data:
         - zeebe-io/zeebe-cluster-helm
         - zeebe-io/zeebe-full-helm
         - zeebe-io/zeebe-operate-helm
+        - zeebe-io/zeebe-tasklist-helm
         - zeebe-io/zeebe-zeeqs-helm
       - labels:
         - updatebot
@@ -124,6 +127,7 @@ data:
         - zeebe-io/zeebe-cluster-helm
         - zeebe-io/zeebe-full-helm
         - zeebe-io/zeebe-operate-helm
+        - zeebe-io/zeebe-tasklist-helm
         - zeebe-io/zeebe-zeeqs-helm
       target_url: http://dashboard-jx.35.222.17.41.nip.io
 kind: ConfigMap
