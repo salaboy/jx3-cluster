@@ -1,0 +1,48 @@
+# Source: zeebe-zeeqs-helm/charts/hazelcast/templates/tests/test-management-center.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "zeebe-zeeqs-helm-hazelcast-mancenter-test-qtu40"
+  annotations:
+    "helm.sh/hook": test-success
+    "helm.sh/hook-delete-policy": hook-succeeded, hook-failed
+  labels:
+    app.kubernetes.io/name: hazelcast
+    helm.sh/chart: hazelcast-3.5.0
+    app.kubernetes.io/instance: "zeebe-zeeqs-helm"
+    app.kubernetes.io/managed-by: "Helm"
+    app.kubernetes.io/component: "test"
+    role: test
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+spec:
+  hostNetwork: false
+  hostPID: false
+  hostIPC: false
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1001
+    runAsGroup: 1001
+  containers:
+    - name: "zeebe-zeeqs-helm-hazelcast-mancenter-test"
+      image: "hazelcast/hazelcast:4.1"
+      command:
+        - "bash"
+        - "-c"
+        - |
+          set -ex
+          # Get the HTTP Response Code of the Health Check
+          HEALTH_CHECK_HTTP_RESPONSE_CODE=$(curl --write-out %{http_code} --silent --output /dev/null zeebe-zeeqs-helm-hazelcast-mancenter:8080/health)
+          # Test the currect number of Hazelcast members
+          test ${HEALTH_CHECK_HTTP_RESPONSE_CODE} -eq 200
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        privileged: false
+        readOnlyRootFilesystem: true
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+            - ALL
+  restartPolicy: Never
