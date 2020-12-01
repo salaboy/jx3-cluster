@@ -100,5 +100,9 @@ releases:
   version: 0.0.33
   name: zeebe-operate-helm
   namespace: jx-staging
+- chart: dev/zeebe-cluster-helm
+  version: 0.0.194
+  name: zeebe-cluster-helm
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
