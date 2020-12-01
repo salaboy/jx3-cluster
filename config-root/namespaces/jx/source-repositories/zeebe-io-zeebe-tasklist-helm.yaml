@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: zeebe-io
+    provider: github
+    repository: zeebe-tasklist-helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: zeebe-io-zeebe-tasklist-helm
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/zeebe-io/zeebe-tasklist-helm.git
+  org: zeebe-io
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: zeebe-tasklist-helm
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/zeebe-io/zeebe-tasklist-helm
