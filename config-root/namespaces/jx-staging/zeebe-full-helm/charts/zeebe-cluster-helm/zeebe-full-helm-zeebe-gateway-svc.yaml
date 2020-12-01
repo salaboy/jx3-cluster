@@ -1,0 +1,26 @@
+# Source: zeebe-full-helm/charts/zeebe-cluster-helm/templates/gateway-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: "zeebe-full-helm-zeebe-gateway"
+  labels:
+    app.kubernetes.io/name: zeebe-cluster-helm
+    app.kubernetes.io/instance: zeebe-full-helm
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: gateway
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations: null
+  namespace: jx-staging
+spec:
+  selector:
+    app.kubernetes.io/name: zeebe-cluster-helm
+    app.kubernetes.io/instance: zeebe-full-helm
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: gateway
+  ports:
+    - port: 9600
+      protocol: TCP
+      name: http
+    - port: 26500
+      protocol: TCP
+      name: gateway

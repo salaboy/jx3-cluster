@@ -1,0 +1,52 @@
+# Source: zeebe-full-helm/charts/zeebe-cluster-helm/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-12-01T11:46:28Z"
+  deletionTimestamp: null
+  name: 'zeebe-cluster-helm-0.0.200'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        chore: added variables
+      sha: 4e84caf95827109e229c88f2034d6dc7232aa863
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        removing no-release flag
+      sha: 31fe7a7f0535ffad768e9987cce6fcc18fc34f4d
+  gitCloneUrl: https://github.com/zeebe-io/zeebe-cluster-helm.git
+  gitHttpUrl: https://github.com/zeebe-io/zeebe-cluster-helm
+  gitOwner: zeebe-io
+  gitRepository: zeebe-cluster-helm
+  name: 'zeebe-cluster-helm'
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-cluster-helm/releases/tag/v0.0.200
+  version: v0.0.200
+status: {}
