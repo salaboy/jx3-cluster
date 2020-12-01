@@ -15,8 +15,6 @@ repositories:
   url: https://charts.bitnami.com/bitnami
 - name: external-secrets
   url: https://external-secrets.github.io/kubernetes-external-secrets
-- name: elastic
-  url: http://helm.elastic.co
 - name: jx3
   url: https://storage.googleapis.com/jenkinsxio/charts
 - name: stable
