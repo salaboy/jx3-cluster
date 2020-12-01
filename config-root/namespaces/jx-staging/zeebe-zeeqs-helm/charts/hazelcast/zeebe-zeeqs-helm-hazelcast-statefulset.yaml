@@ -1,0 +1,93 @@
+# Source: zeebe-zeeqs-helm/charts/hazelcast/templates/statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: zeebe-zeeqs-helm-hazelcast
+  labels:
+    app.kubernetes.io/name: hazelcast
+    helm.sh/chart: hazelcast-3.5.0
+    app.kubernetes.io/instance: "zeebe-zeeqs-helm"
+    app.kubernetes.io/managed-by: "Helm"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+spec:
+  serviceName: zeebe-zeeqs-helm-hazelcast
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hazelcast
+      app.kubernetes.io/instance: "zeebe-zeeqs-helm"
+      role: hazelcast
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hazelcast
+        helm.sh/chart: hazelcast-3.5.0
+        app.kubernetes.io/instance: "zeebe-zeeqs-helm"
+        app.kubernetes.io/managed-by: "Helm"
+        role: hazelcast
+      annotations:
+        checksum/hazelcast-config: b6d39a9c43a56af9ebb59e1a70e6467460996d848dabf9789e06e7e817f5ff37
+    spec:
+      terminationGracePeriodSeconds: 600
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65534
+        runAsGroup: 65534
+        fsGroup: 65534
+      containers:
+        - name: zeebe-zeeqs-helm-hazelcast
+          image: "hazelcast/hazelcast:4.1"
+          imagePullPolicy: "IfNotPresent"
+          resources: null
+          ports:
+            - name: hazelcast
+              containerPort: 5701
+              hostPort:
+          livenessProbe:
+            httpGet:
+              path: /hazelcast/health/node-state
+              port: 5701
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+          readinessProbe:
+            httpGet:
+              path: /hazelcast/health/ready
+              port: 5701
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 10
+          volumeMounts:
+            - name: hazelcast-storage
+              mountPath: /data/hazelcast
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: JAVA_OPTS
+              value: "-Dhazelcast.config=/data/hazelcast/hazelcast.yaml -DserviceName=zeebe-zeeqs-helm-hazelcast -Dnamespace=jx-staging -Dhazelcast.shutdownhook.policy=GRACEFUL -Dhazelcast.shutdownhook.enabled=true -Dhazelcast.graceful.shutdown.max.wait=600   "
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 65534
+            runAsGroup: 65534
+            privileged: false
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+      serviceAccountName: zeebe-zeeqs-helm-hazelcast
+      automountServiceAccountToken: true
+      volumes:
+        - name: hazelcast-storage
+          configMap:
+            name: zeebe-zeeqs-helm-hazelcast-configuration

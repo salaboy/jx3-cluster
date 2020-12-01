@@ -1,0 +1,19 @@
+# Source: zeebe-zeeqs-helm/charts/hazelcast/templates/rolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: zeebe-zeeqs-helm-hazelcast-jx-staging
+  labels:
+    app.kubernetes.io/name: hazelcast
+    helm.sh/chart: hazelcast-3.5.0
+    app.kubernetes.io/instance: "zeebe-zeeqs-helm"
+    app.kubernetes.io/managed-by: "Helm"
+    gitops.jenkins-x.io/pipeline: 'cluster'
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: zeebe-zeeqs-helm-hazelcast-jx-staging
+subjects:
+  - kind: ServiceAccount
+    name: zeebe-zeeqs-helm-hazelcast
+    namespace: jx-staging

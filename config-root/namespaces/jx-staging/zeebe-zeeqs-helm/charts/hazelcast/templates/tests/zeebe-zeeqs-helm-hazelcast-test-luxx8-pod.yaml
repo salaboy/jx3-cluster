@@ -1,0 +1,48 @@
+# Source: zeebe-zeeqs-helm/charts/hazelcast/templates/tests/test-hazelcast.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "zeebe-zeeqs-helm-hazelcast-test-luxx8"
+  annotations:
+    "helm.sh/hook": test-success
+    "helm.sh/hook-delete-policy": hook-succeeded, hook-failed
+  labels:
+    app.kubernetes.io/name: hazelcast
+    helm.sh/chart: hazelcast-3.5.0
+    app.kubernetes.io/instance: "zeebe-zeeqs-helm"
+    app.kubernetes.io/managed-by: "Helm"
+    app.kubernetes.io/component: "test"
+    role: test
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+spec:
+  hostNetwork: false
+  hostPID: false
+  hostIPC: false
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1001
+    runAsGroup: 1001
+  containers:
+    - name: "zeebe-zeeqs-helm-hazelcast-test"
+      image: "hazelcast/hazelcast:4.1"
+      command:
+        - "bash"
+        - "-c"
+        - |
+          set -ex
+          # Get the number of Hazelcast members in the cluster
+          CLUSTER_SIZE=$(curl zeebe-zeeqs-helm-hazelcast:5701/hazelcast/health/cluster-size)
+          # Test the currect number of Hazelcast members
+          test ${CLUSTER_SIZE} -eq 3
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        privileged: false
+        readOnlyRootFilesystem: true
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+            - ALL
+  restartPolicy: Never

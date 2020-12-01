@@ -1,0 +1,24 @@
+# Source: zeebe-zeeqs-helm/charts/hazelcast/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: zeebe-zeeqs-helm-hazelcast
+  labels:
+    app.kubernetes.io/name: hazelcast
+    helm.sh/chart: hazelcast-3.5.0
+    app.kubernetes.io/instance: "zeebe-zeeqs-helm"
+    app.kubernetes.io/managed-by: "Helm"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+spec:
+  type: ClusterIP
+  clusterIP: None
+  selector:
+    app.kubernetes.io/name: hazelcast
+    app.kubernetes.io/instance: "zeebe-zeeqs-helm"
+    role: hazelcast
+  ports:
+    - protocol: TCP
+      port: 5701
+      targetPort: hazelcast
+      name: hzport
