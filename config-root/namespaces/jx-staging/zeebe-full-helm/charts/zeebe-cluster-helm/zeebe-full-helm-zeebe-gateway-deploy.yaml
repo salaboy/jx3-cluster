@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: zeebe-cluster-helm
-          image: "gcr.io/camunda-researchanddevelopment/zeebe-cluster-helm:0.0.200"
+          image: "camunda/zeebe:0.25.0"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9600
