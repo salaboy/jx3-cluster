@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-12-01T13:01:40Z"
+  creationTimestamp: "2020-12-01T15:11:03Z"
   deletionTimestamp: null
-  name: 'zeebe-cluster-helm-0.0.201'
+  name: 'zeebe-cluster-helm-0.0.204'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -25,7 +25,7 @@ spec:
         name: salaboy
       message: |
         chore: added variables
-      sha: fb12167e6b9d2dead69a2d35c29ce7d7c62cac65
+      sha: 779225bdc6e7af0e56c0fe04e809065f636bf4ba
     - author:
         accountReference:
           - id: salaboy-2
@@ -40,13 +40,13 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        replace tag only at begining of line
-      sha: a9ac695e4126dd1c6f47d5676629716477546423
+        removing repo name
+      sha: 095c3299a082af262fb51792a0dcfc82b9b6c816
   gitCloneUrl: https://github.com/zeebe-io/zeebe-cluster-helm.git
   gitHttpUrl: https://github.com/zeebe-io/zeebe-cluster-helm
   gitOwner: zeebe-io
   gitRepository: zeebe-cluster-helm
   name: 'zeebe-cluster-helm'
-  releaseNotesURL: https://github.com/zeebe-io/zeebe-cluster-helm/releases/tag/v0.0.201
-  version: v0.0.201
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-cluster-helm/releases/tag/v0.0.204
+  version: v0.0.204
 status: {}
