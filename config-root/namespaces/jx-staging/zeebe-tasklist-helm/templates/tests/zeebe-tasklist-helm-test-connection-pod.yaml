@@ -1,0 +1,22 @@
+# Source: zeebe-tasklist-helm/templates/tests/test-connection.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "zeebe-tasklist-helm-test-connection"
+  labels:
+    app.kubernetes.io/name: zeebe-tasklist-helm
+    helm.sh/chart: zeebe-tasklist-helm-0.0.7
+    app.kubernetes.io/instance: zeebe-tasklist-helm
+    app.kubernetes.io/version: "1.0"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    "helm.sh/hook": test-success
+  namespace: jx-staging
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['zeebe-tasklist-helm:80']
+  restartPolicy: Never
