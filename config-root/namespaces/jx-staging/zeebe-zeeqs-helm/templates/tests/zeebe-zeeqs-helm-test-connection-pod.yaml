@@ -5,7 +5,7 @@ metadata:
   name: "zeebe-zeeqs-helm-test-connection"
   labels:
     app.kubernetes.io/name: zeebe-zeeqs-helm
-    helm.sh/chart: zeebe-zeeqs-helm-0.0.18
+    helm.sh/chart: zeebe-zeeqs-helm-0.0.21
     app.kubernetes.io/instance: zeebe-zeeqs-helm
     app.kubernetes.io/version: "1.0"
     app.kubernetes.io/managed-by: Helm

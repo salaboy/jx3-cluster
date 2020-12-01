@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-12-01T12:16:28Z"
+  creationTimestamp: "2020-12-01T15:18:52Z"
   deletionTimestamp: null
-  name: 'zeebe-zeeqs-helm-0.0.18'
+  name: 'zeebe-zeeqs-helm-0.0.21'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -19,7 +19,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: added variables
-      sha: 1eb78508facae30902113707f7761648c1d780a0
+      sha: 9ea5c65bad97d8df7a50c6da5374d63f26f49fe5
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -28,12 +28,12 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        hazelcast own repo
-      sha: d63a429badf088a5a242198f4b1a48dabf09981e
+        adding jx crd dep
+      sha: 7887f04f23d2670eb2a3a6148e8dd17e1c41acf9
   gitHttpUrl: https://github.com/zeebe-io/zeebe-zeeqs-helm
   gitOwner: zeebe-io
   gitRepository: zeebe-zeeqs-helm
   name: 'zeebe-zeeqs-helm'
-  releaseNotesURL: https://github.com/zeebe-io/zeebe-zeeqs-helm/releases/tag/v0.0.18
-  version: v0.0.18
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-zeeqs-helm/releases/tag/v0.0.21
+  version: v0.0.21
 status: {}
