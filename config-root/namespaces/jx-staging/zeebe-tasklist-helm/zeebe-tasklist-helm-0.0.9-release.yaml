@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-12-01T13:07:38Z"
+  creationTimestamp: "2020-12-01T15:16:26Z"
   deletionTimestamp: null
-  name: 'zeebe-tasklist-helm-0.0.8'
+  name: 'zeebe-tasklist-helm-0.0.9'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -19,7 +19,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: added variables
-      sha: b18e06dcf520f5895849d1c7486beba60cb29332
+      sha: b67a84f6da2b78d02b4ccf04a47499dd35d9e69d
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -28,12 +28,12 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        replacing repo and tag only at the beggining of a new line
-      sha: 0202ae6bd1aac1271c61f1f84a11dc64c570672c
+        adding jx crds dep
+      sha: a11ab60e7cf47a129d507be1bfdc98c8c34fe6c1
   gitHttpUrl: https://github.com/zeebe-io/zeebe-tasklist-helm
   gitOwner: zeebe-io
   gitRepository: zeebe-tasklist-helm
   name: 'zeebe-tasklist-helm'
-  releaseNotesURL: https://github.com/zeebe-io/zeebe-tasklist-helm/releases/tag/v0.0.8
-  version: v0.0.8
+  releaseNotesURL: https://github.com/zeebe-io/zeebe-tasklist-helm/releases/tag/v0.0.9
+  version: v0.0.9
 status: {}

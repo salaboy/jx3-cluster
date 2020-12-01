@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "zeebe-zeeqs-helm-hazelcast-mancenter-test-ikox3"
+  name: "zeebe-zeeqs-helm-hazelcast-mancenter-test-a28w7"
   annotations:
     "helm.sh/hook": test-success
     "helm.sh/hook-delete-policy": hook-succeeded, hook-failed
