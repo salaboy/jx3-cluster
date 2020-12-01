@@ -108,5 +108,9 @@ releases:
   version: 0.0.18
   name: zeebe-zeeqs-helm
   namespace: jx-staging
+- chart: dev/zeebe-full-helm
+  version: 0.0.118
+  name: zeebe-full-helm
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
