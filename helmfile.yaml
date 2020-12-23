@@ -92,29 +92,5 @@ releases:
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
-- chart: dev/zeebe-cluster
-  version: 0.0.155
-  name: zeebe-cluster
-  namespace: jx-staging
-- chart: dev/zeebe-operate-helm
-  version: 0.0.35
-  name: zeebe-operate-helm
-  namespace: jx-staging
-- chart: dev/zeebe-cluster-helm
-  version: 0.0.204
-  name: zeebe-cluster-helm
-  namespace: jx-staging
-- chart: dev/zeebe-zeeqs-helm
-  version: 0.0.21
-  name: zeebe-zeeqs-helm
-  namespace: jx-staging
-- chart: dev/zeebe-tasklist-helm
-  version: 0.0.8
-  name: zeebe-tasklist-helm
-  namespace: jx-staging
-- chart: dev/zeebe-full-helm
-  version: 0.0.121
-  name: zeebe-full-helm
-  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
