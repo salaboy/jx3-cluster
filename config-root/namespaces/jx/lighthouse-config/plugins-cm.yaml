@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - salaboy/cd-flow
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - salaboy/customer-waiting-room-app
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -108,6 +112,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      salaboy/cd-flow:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       salaboy/customer-waiting-room-app:
       - approve
       - assign
@@ -488,6 +508,9 @@ data:
     triggers:
     - repos:
       - salaboy/jx3-cluster
+      trusted_org: todo
+    - repos:
+      - salaboy/cd-flow
       trusted_org: todo
     - repos:
       - salaboy/customer-waiting-room-app
