@@ -7,6 +7,9 @@ VAULT_ADDR ?= https://vault.secret-infra:8200
 # You can disable force mode on kubectl apply by modifying this line:
 KUBECTL_APPLY_FLAGS ?= --force
 
+SOURCE_DIR ?= /workspace/source
+
+
 # NOTE to enable debug logging of 'helmfile template' to diagnose any issues with values.yaml templating
 # you can run:
 #
@@ -39,6 +42,9 @@ fetch: init
 	# lets configure the cluster gitops repository URL on the requirements if its missing
 	jx gitops repository resolve --source-dir $(OUTPUT_DIR)/namespaces
 
+	# lets generate any jenkins job-values.yaml files to import projects into Jenkins
+	jx gitops jenkins jobs
+
 	# set any missing defaults in the secrets mapping file
 	jx secret convert edit
 
@@ -52,8 +58,12 @@ fetch: init
 	helm repo add jx http://chartmuseum.jenkins-x.io
 
 	# generate the yaml from the charts in helmfile.yaml and moves them to the right directory tree (cluster or namespaces/foo)
-	jx gitops helmfile template $(HELMFILE_TEMPLATE_FLAGS) --args="--values=jx-values.yaml --values=versionStream/src/fake-secrets.yaml.gotmpl --values=imagePullSecrets.yaml" --output-dir $(OUTPUT_DIR)
-	
+	helmfile --file helmfile.yaml template --include-crds --output-dir-template /tmp/generate/{{.Release.Namespace}}
+
+	jx gitops split --dir /tmp/generate
+	jx gitops rename --dir /tmp/generate
+	jx gitops helmfile move --output-dir config-root --dir /tmp/generate
+
 	# convert k8s Secrets => ExternalSecret resources using secret mapping + schemas
 	# see: https://github.com/jenkins-x/jx-secret#mappings
 	jx secret convert --source-dir $(OUTPUT_DIR)
@@ -63,9 +73,6 @@ fetch: init
 
 	# lets make sure all the namespaces exist for environments of the replicated secrets
 	jx gitops namespace --dir-mode --dir $(OUTPUT_DIR)/namespaces
-
-	# lets publish the requirements metadata into the dev Environment.Spec.TeamSettings.BootRequirements so its easy to access them via CRDs
-	jx gitops requirements publish
 
 .PHONY: build
 # uncomment this line to enable kustomize
@@ -99,7 +106,7 @@ post-build:
 
 	# lets enable pusher-wave to perform rolling updates of any Deployment when its underlying Secrets get modified
 	# by modifying the underlying secret store (e.g. vault / GSM / ASM) which then causes External Secrets to modify the k8s Secrets
-	jx gitops annotate --dir  $(OUTPUT_DIR)/namespaces --kind Deployment wave.pusher.com/update-on-config-change=true
+	jx gitops annotate --dir  $(OUTPUT_DIR)/namespaces --kind Deployment --selector app=pusher-wave --invert-selector wave.pusher.com/update-on-config-change=true
 
 	# lets force a rolling upgrade of lighthouse pods whenever we update the lighthouse config...
 	jx gitops hash -s config-root/namespaces/jx/lighthouse-config/config-cm.yaml -s config-root/namespaces/jx/lighthouse-config/plugins-cm.yaml -d config-root/namespaces/jx/lighthouse
@@ -118,11 +125,11 @@ lint:
 
 .PHONY: dev-ns verify-ingress
 verify-ingress:
-	jx verify ingress
+	jx verify ingress --ingress-service ingress-nginx-controller
 
 .PHONY: dev-ns verify-ingress-ignore
 verify-ingress-ignore:
-	-jx verify ingress
+	-jx verify ingress --ingress-service ingress-nginx-controller
 
 .PHONY: dev-ns verify-install
 verify-install:
@@ -141,7 +148,7 @@ verify-ignore: verify-ingress-ignore
 secrets-populate:
 	# lets populate any missing secrets we have a generator in `charts/repoName/chartName/secret-schema.yaml`
 	# they can be modified/regenerated at any time via `jx secret edit`
-	-VAULT_ADDR=$(VAULT_ADDR) jx secret populate -n jx
+	-VAULT_ADDR=$(VAULT_ADDR) jx secret populate
 
 .PHONY: secrets-wait
 secrets-wait:
@@ -167,8 +174,12 @@ regen-phase-2: verify-ingress-ignore all verify-ignore secrets-populate commit
 .PHONY: regen-phase-3
 regen-phase-3: push secrets-wait
 
+.PHONY: regen-none
+regen-none:
+	# we just merged a PR so lets perform any extra checks after the merge but before the kubectl apply
+
 .PHONY: apply
-apply: regen-check kubectl-apply verify write-completed
+apply: regen-check kubectl-apply secrets-populate verify write-completed
 
 .PHONY: write-completed
 write-completed:
