@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        salaboy/cd-flow: true
         salaboy/customer-waiting-room-app: true
         salaboy/fmtok8s-agenda: true
         salaboy/fmtok8s-agenda-rest: true
@@ -41,6 +42,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        salaboy/cd-flow: merge
         salaboy/customer-waiting-room-app: merge
         salaboy/fmtok8s-agenda: merge
         salaboy/fmtok8s-agenda-rest: merge
@@ -75,6 +77,7 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/cd-flow
         - salaboy/customer-waiting-room-app
         - salaboy/fmtok8s-agenda-rest
         - salaboy/fmtok8s-agenda
@@ -107,6 +110,7 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/cd-flow
         - salaboy/customer-waiting-room-app
         - salaboy/fmtok8s-agenda-rest
         - salaboy/fmtok8s-agenda

@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: salaboy
+    provider: github
+    repository: cd-flow
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: salaboy-cd-flow
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/salaboy/cd-flow.git
+  org: salaboy
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: cd-flow
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/salaboy/cd-flow
