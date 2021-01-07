@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         salaboy/cd-flow: true
+        salaboy/cd-flow-backend: true
         salaboy/cd-flow-ui: true
         salaboy/customer-waiting-room-app: true
         salaboy/fmtok8s-agenda: true
@@ -44,6 +45,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         salaboy/cd-flow: merge
+        salaboy/cd-flow-backend: merge
         salaboy/cd-flow-ui: merge
         salaboy/customer-waiting-room-app: merge
         salaboy/fmtok8s-agenda: merge
@@ -79,6 +81,7 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/cd-flow-backend
         - salaboy/cd-flow-ui
         - salaboy/cd-flow
         - salaboy/customer-waiting-room-app
@@ -113,6 +116,7 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/cd-flow-backend
         - salaboy/cd-flow-ui
         - salaboy/cd-flow
         - salaboy/customer-waiting-room-app
