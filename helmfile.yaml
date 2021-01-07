@@ -92,17 +92,5 @@ releases:
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
-- chart: dev/fmtok8s-api-gateway
-  version: 0.0.126
-  name: fmtok8s-api-gateway
-  namespace: jx-staging
-- chart: dev/cd-flow-ui
-  version: 0.1.1
-  name: cd-flow-ui
-  namespace: jx-staging
-- chart: dev/cd-flow-backend
-  version: 0.0.2
-  name: cd-flow-backend
-  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
