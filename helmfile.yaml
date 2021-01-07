@@ -96,5 +96,9 @@ releases:
   version: 0.0.126
   name: fmtok8s-api-gateway
   namespace: jx-staging
+- chart: dev/cd-flow-ui
+  version: 0.1.1
+  name: cd-flow-ui
+  namespace: jx-production
 templates: {}
-missingFileHandler: ""
+renderedvalues: {}
