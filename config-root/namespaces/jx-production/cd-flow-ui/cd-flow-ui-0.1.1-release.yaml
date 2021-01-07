@@ -1,0 +1,169 @@
+# Source: cd-flow-ui/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-07T16:23:27Z"
+  deletionTimestamp: null
+  name: 'cd-flow-ui-0.1.1'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.1.1
+      sha: 8aa36e9670bd61fb5487b291d9c11577f19aef5d
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 4300e41ec79ede8e446fbbef6c60cc942f5f14da
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        commenting test
+      sha: ca808c09b547473797a2b44beea4f7aea41f641a
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        chore: Jenkins X build pack
+      sha: d4c07af3f3161471ff8312d7319fad1371c67f1b
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        add projects table
+      sha: 863ca6d17d5f25b37eb008147e499aabc9195948
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        filtering v 1.0 CE
+      sha: 32cbebe3b2a0e82b081b0920fe607a8dc35c691d
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding terminal
+      sha: d08d67f29f3b8eb230af9fe998499f20222a33d3
+    - author:
+        email: ezequiel.salatino@gmail.com
+        name: Ezequiel
+      branch: master
+      committer:
+        email: ezequiel.salatino@gmail.com
+        name: Ezequiel
+      message: |
+        Fonts range import
+      sha: 323b5960c9017f95c0f44bcc63ce1b9599c595d0
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        updating props
+      sha: c43ef0b3d0e4e6c3422ff0c2a9e0655877eae086
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding projects and project
+      sha: f9956bba4a33f0b31a78f70c49ccc9953c84ad86
+    - author:
+        email: ezequiel.salatino@gmail.com
+        name: Ezequiel
+      branch: master
+      committer:
+        email: ezequiel.salatino@gmail.com
+        name: Ezequiel
+      message: |
+        Basic styles structure
+      sha: 514bf98705f8e5d78188eacc4e5ab3e39572e7fb
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding projects component
+      sha: 24156e7be9885c31efab16951a482d968865c250
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        updating sass
+      sha: 8ede10122b0f8db662d196c7b849718f150fc2c0
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        initial commit react + sass
+      sha: af794e69afb85e37088ac41e8a0decbcc39de248
+    - author:
+        email: ezequiel.salatino@gmail.com
+        name: Ezequiel
+      branch: master
+      committer:
+        email: ezequiel.salatino@gmail.com
+        name: Ezequiel
+      message: |
+        import font
+      sha: 281416c747572e99fa03a9f9a6c30afbd25a234b
+  gitHttpUrl: https://github.com/salaboy/cd-flow-ui
+  gitOwner: salaboy
+  gitRepository: cd-flow-ui
+  name: 'cd-flow-ui'
+  releaseNotesURL: https://github.com/salaboy/cd-flow-ui/releases/tag/v0.1.1
+  version: v0.1.1
+status: {}
