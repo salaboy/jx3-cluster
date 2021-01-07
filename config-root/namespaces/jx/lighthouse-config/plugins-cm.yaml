@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - salaboy/cd-flow-ui
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - salaboy/cd-flow
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -113,6 +117,22 @@ data:
     owners: {}
     plugins:
       salaboy/cd-flow:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      salaboy/cd-flow-ui:
       - approve
       - assign
       - blunderbuss
@@ -508,6 +528,9 @@ data:
     triggers:
     - repos:
       - salaboy/jx3-cluster
+      trusted_org: todo
+    - repos:
+      - salaboy/cd-flow-ui
       trusted_org: todo
     - repos:
       - salaboy/cd-flow

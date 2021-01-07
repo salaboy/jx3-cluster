@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: cd-flow
+    - name: cd-flow-ui
     - name: customer-waiting-room-app
     - name: fmtok8s-agenda
     - name: fmtok8s-agenda-rest
