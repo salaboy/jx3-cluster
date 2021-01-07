@@ -100,5 +100,9 @@ releases:
   version: 0.1.1
   name: cd-flow-ui
   namespace: jx-staging
+- chart: dev/cd-flow-backend
+  version: 0.0.2
+  name: cd-flow-backend
+  namespace: jx-production
 templates: {}
-missingFileHandler: ""
+renderedvalues: {}
