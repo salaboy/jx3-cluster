@@ -1,0 +1,129 @@
+# Source: cd-flow-backend/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-07T17:38:04Z"
+  deletionTimestamp: null
+  name: 'cd-flow-backend-0.0.2'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.2
+      sha: 7ece594e2f611ca9fa1dca93cf3aff0c11c7fbf7
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 360bb117ece9b1d3d7f50e227e8e6e601647ce2b
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        using milestone
+      sha: cdd1ed9be793eda2d0c4cc77f598b6d0124bc84a
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        touching
+      sha: 9a674aef821a50c29f256b010a19bb8c629ac577
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        touch again
+      sha: 245c3617abe68312388666798b6f7acb727ab6f1
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        touch again
+      sha: 3836d896d58bfd20e64e567e2aad73546d6bb729
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        touch
+      sha: 93b7303fcca3a7dc236d9a00fad2b83045aff920
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        fix(plugins): use a better version of maven plugins
+      sha: 34903ac55f7fdc6d13359231e6ebfb1d47ca753a
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        chore: Jenkins X build pack
+      sha: 0f08e22ae748a1b7e9e50333ef66e2f6dee4a961
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        add projects endpoint
+      sha: 68b8500f9ac529815910cd4bc4233741654f300e
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        initial commit
+      sha: e85365a896f565f5f9c2896794f1970c78cdf5f6
+  gitHttpUrl: https://github.com/salaboy/cd-flow-backend
+  gitOwner: salaboy
+  gitRepository: cd-flow-backend
+  name: 'cd-flow-backend'
+  releaseNotesURL: https://github.com/salaboy/cd-flow-backend/releases/tag/v0.0.2
+  version: v0.0.2
+status: {}
