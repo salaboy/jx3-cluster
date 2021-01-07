@@ -1,0 +1,8 @@
+# Source: cd-flow-ui/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: cd-flow-ui-cd-flow-ui
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
