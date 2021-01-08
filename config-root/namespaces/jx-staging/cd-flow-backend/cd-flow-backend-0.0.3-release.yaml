@@ -1,0 +1,49 @@
+# Source: cd-flow-backend/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-08T15:56:50Z"
+  deletionTimestamp: null
+  name: 'cd-flow-backend-0.0.3'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.3
+      sha: 8a30e0f6c332137737df91467db57c8734abe48f
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 813e11ddf602cafda50af0ca26b8614e91a597bf
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        setting resources and probes path
+      sha: 6bf7b12d0627eb2fbdb57c3067915109efa159ed
+  gitHttpUrl: https://github.com/salaboy/cd-flow-backend
+  gitOwner: salaboy
+  gitRepository: cd-flow-backend
+  name: 'cd-flow-backend'
+  releaseNotesURL: https://github.com/salaboy/cd-flow-backend/releases/tag/v0.0.3
+  version: v0.0.3
+status: {}
