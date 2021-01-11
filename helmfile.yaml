@@ -96,5 +96,9 @@ releases:
   version: 0.0.3
   name: cd-flow-backend
   namespace: jx-staging
+- chart: dev/fmtok8s-agenda-rest
+  version: 0.0.5
+  name: fmtok8s-agenda-rest
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
