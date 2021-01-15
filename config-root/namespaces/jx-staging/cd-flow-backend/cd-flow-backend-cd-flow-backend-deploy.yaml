@@ -5,7 +5,7 @@ metadata:
   name: cd-flow-backend-cd-flow-backend
   labels:
     draft: draft-app
-    chart: "cd-flow-backend-0.0.3"
+    chart: "cd-flow-backend-0.0.4"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -24,11 +24,11 @@ spec:
       serviceAccountName: cd-flow-backend-cd-flow-backend
       containers:
         - name: cd-flow-backend
-          image: "gcr.io/camunda-researchanddevelopment/cd-flow-backend:0.0.3"
+          image: "gcr.io/camunda-researchanddevelopment/cd-flow-backend:0.0.4"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.3
+              value: 0.0.4
           envFrom: null
           ports:
             - containerPort: 8080
