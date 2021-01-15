@@ -1,0 +1,16 @@
+# Source: cd-flow-backend/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: backend
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: cd-flow-backend
+              servicePort: 80

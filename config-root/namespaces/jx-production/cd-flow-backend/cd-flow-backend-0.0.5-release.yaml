@@ -1,0 +1,49 @@
+# Source: cd-flow-backend/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-15T11:07:59Z"
+  deletionTimestamp: null
+  name: 'cd-flow-backend-0.0.5'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.5
+      sha: a7c15618011aa9d4f00eb6dc6e5827c63a027376
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: ac7885a641b25b63bde277e816acc2f9c7fdd338
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        returning session to client
+      sha: 57179bd6b2e51c486699385bc36886096513fbd1
+  gitHttpUrl: https://github.com/salaboy/cd-flow-backend
+  gitOwner: salaboy
+  gitRepository: cd-flow-backend
+  name: 'cd-flow-backend'
+  releaseNotesURL: https://github.com/salaboy/cd-flow-backend/releases/tag/v0.0.5
+  version: v0.0.5
+status: {}
