@@ -1,0 +1,68 @@
+# Source: fmtok8s-email-rest/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-20T10:18:57Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-email-rest-0.0.5'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: jenkins-x-bot
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: salaboy
+      message: |
+        release 0.0.5
+      sha: 81a07ed93e62b63fea839ffd947ad89d80bd75e6
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        updating email service
+      sha: 874489c35063e093750ff657e4379744769881b4
+    - author:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        accountReference:
+          - id: salaboy-2
+            provider: jenkins.io/git-github-userid
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding pod, worker, ns and new info controller
+      sha: dfb17cebe65408d955be970dbde800611f933c42
+  gitCloneUrl: https://github.com/salaboy/fmtok8s-email-rest.git
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-email-rest
+  gitOwner: salaboy
+  gitRepository: fmtok8s-email-rest
+  name: 'fmtok8s-email-rest'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.5
+  version: v0.0.5
+status: {}
