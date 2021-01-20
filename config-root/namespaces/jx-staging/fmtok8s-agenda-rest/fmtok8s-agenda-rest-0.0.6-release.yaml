@@ -1,0 +1,69 @@
+# Source: fmtok8s-agenda-rest/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-20T09:17:10Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-agenda-rest-0.0.6'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.6
+      sha: 1da7665e37785a23263c865c9c0860512aec4c4d
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 21b114eefac7d96df8487e875b94aef84a3c7449
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        update charts (https://github.com/jenkins-x/jx3-gitops-template) from master (32e5b38dc265781b9d14c777c88f88a0a948bfb0) to master (cd501cf5c185c592663d68273b60e3413c0278fb)
+      sha: 0442f90dd5349c81f69e9037e5ab66ba6ef97998
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        update jenkins-x (https://github.com/jenkins-x/jx3-pipeline-catalog) from master (bc0d365dd4a8dc164fe65fb1539c87503d78fe3f) to master (1d39235ee9235d7d52d4025a8e59cb8bda04306a)
+      sha: f8e6a30d7be5156b6f3b863c55e10f4b40762be6
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding env vars for knative
+      sha: 0c2f24fe2b8755910757b0cbd082fb8924ca0e28
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda-rest
+  gitOwner: salaboy
+  gitRepository: fmtok8s-agenda-rest
+  name: 'fmtok8s-agenda-rest'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda-rest/releases/tag/v0.0.6
+  version: v0.0.6
+status: {}
