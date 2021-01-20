@@ -1,0 +1,21 @@
+# Source: fmtok8s-email-rest/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: fmtok8s-email
+  labels:
+    chart: "fmtok8s-email-rest-0.0.6"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    fabric8.io/expose: "true"
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
+  namespace: jx-production
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    app: fmtok8s-email-rest-fmtok8s-email-rest
