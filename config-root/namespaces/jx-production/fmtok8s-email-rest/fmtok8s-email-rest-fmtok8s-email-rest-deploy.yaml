@@ -1,0 +1,70 @@
+# Source: fmtok8s-email-rest/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fmtok8s-email-rest-fmtok8s-email-rest
+  labels:
+    draft: draft-app
+    chart: "fmtok8s-email-rest-0.0.7"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-production
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: fmtok8s-email-rest-fmtok8s-email-rest
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: fmtok8s-email-rest-fmtok8s-email-rest
+    spec:
+      serviceAccountName: fmtok8s-email-rest-fmtok8s-email-rest
+      containers:
+        - name: fmtok8s-email-rest
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-email-rest:0.0.7"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: VERSION
+              value: 0.0.7
+            - name: POD_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: POD_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          envFrom: null
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 1768Mi
+            requests:
+              cpu: 650m
+              memory: 1024Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
