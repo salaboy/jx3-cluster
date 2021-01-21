@@ -99,7 +99,7 @@ releases:
   name: cd-flow-backend
   namespace: jx-staging
 - chart: dev/fmtok8s-agenda-rest
-  version: 0.0.6
+  version: 0.0.8
   name: fmtok8s-agenda-rest
   namespace: jx-staging
 - chart: dev2/fmtok8s-c4p-rest
