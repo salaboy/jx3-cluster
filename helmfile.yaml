@@ -103,7 +103,7 @@ releases:
   name: fmtok8s-agenda-rest
   namespace: jx-staging
 - chart: dev2/fmtok8s-c4p-rest
-  version: 0.0.12
+  version: 0.0.13
   name: fmtok8s-c4p-rest
   namespace: jx-staging
 - chart: dev2/fmtok8s-email-rest
@@ -111,4 +111,4 @@ releases:
   name: fmtok8s-email-rest
   namespace: jx-staging
 templates: {}
-missingFileHandler: ""
+renderedvalues: {}
