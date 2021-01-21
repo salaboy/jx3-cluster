@@ -107,7 +107,7 @@ releases:
   name: fmtok8s-c4p-rest
   namespace: jx-staging
 - chart: dev2/fmtok8s-email-rest
-  version: 0.0.6
+  version: 0.0.7
   name: fmtok8s-email-rest
   namespace: jx-staging
 templates: {}
