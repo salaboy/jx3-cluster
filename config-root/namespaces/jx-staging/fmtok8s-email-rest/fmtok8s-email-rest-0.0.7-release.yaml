@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2021-01-20T10:25:35Z"
+  creationTimestamp: "2021-01-21T18:17:32Z"
   deletionTimestamp: null
-  name: 'fmtok8s-email-rest-0.0.6'
+  name: 'fmtok8s-email-rest-0.0.7'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -18,8 +18,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
       message: |
-        chore: release 0.0.6
-      sha: 42b0dbb73c61bff7d852b16e8b253beae5e7f09d
+        chore: release 0.0.7
+      sha: 8eb77c1c7c030dee54fbd306bd881a8d8a98b34d
     - author:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
@@ -29,7 +29,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: add variables
-      sha: 0be02d3ac6ae2ab823977be6835c679da44dd5d4
+      sha: c071d4c09227354d87807a6e319767993b1711d4
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -38,22 +38,12 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        update charts (https://github.com/jenkins-x/jx3-gitops-template) from master (32e5b38dc265781b9d14c777c88f88a0a948bfb0) to master (cd501cf5c185c592663d68273b60e3413c0278fb)
-      sha: e7ee51d59dbcfea95529ad1e239585a997d80a49
-    - author:
-        email: salaboy@gmail.com
-        name: salaboy
-      branch: master
-      committer:
-        email: salaboy@gmail.com
-        name: salaboy
-      message: |
-        update jenkins-x (https://github.com/jenkins-x/jx3-pipeline-catalog) from master (bc0d365dd4a8dc164fe65fb1539c87503d78fe3f) to master (0f4869deab149e13d1fbb948f70e8e68513ecd96)
-      sha: a89aaa431b904a46ed2cc96d7728b0ab9b48e09b
+        adding prometheus metrics collector
+      sha: 36fdf13a8982b5ce3e079691ebc010140e09d09f
   gitHttpUrl: https://github.com/salaboy/fmtok8s-email-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-email-rest
   name: 'fmtok8s-email-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.6
-  version: v0.0.6
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.7
+  version: v0.0.7
 status: {}
