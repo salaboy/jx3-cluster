@@ -1,0 +1,8 @@
+# Source: fmtok8s-agenda-rest/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: fmtok8s-agenda-rest-fmtok8s-agenda-rest
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
