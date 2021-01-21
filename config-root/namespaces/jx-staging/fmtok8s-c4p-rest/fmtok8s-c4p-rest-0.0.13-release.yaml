@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2021-01-20T14:54:00Z"
+  creationTimestamp: "2021-01-21T18:19:58Z"
   deletionTimestamp: null
-  name: 'fmtok8s-c4p-rest-0.0.12'
+  name: 'fmtok8s-c4p-rest-0.0.13'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -18,8 +18,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
       message: |
-        chore: release 0.0.12
-      sha: b73780741f9d1310f79edd7a933ccf647e246b17
+        chore: release 0.0.13
+      sha: b9fd272905abf592588524ffca4a0c36edf1b1a0
     - author:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
@@ -29,7 +29,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: add variables
-      sha: 9c566e6a6d563c1d9ec54dc0391b707aea0f1565
+      sha: 26852054ea8a65a75c93522e483b719751fc025f
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -38,12 +38,12 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        adding mysql driver
-      sha: 898aec1ee9927ab1d9978f72142f3b6d1be71554
+        adding prometheus metrics collector
+      sha: 3c980d7e4c07ba8f54fcfd9a9619f8b254eb2464
   gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-c4p-rest
   name: 'fmtok8s-c4p-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.12
-  version: v0.0.12
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.13
+  version: v0.0.13
 status: {}
