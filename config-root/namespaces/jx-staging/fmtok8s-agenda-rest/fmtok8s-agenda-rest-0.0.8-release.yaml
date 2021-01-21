@@ -1,0 +1,49 @@
+# Source: fmtok8s-agenda-rest/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-21T18:25:50Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-agenda-rest-0.0.8'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.8
+      sha: ad28e56ef05c60e7ad7e63d0d56d498ade500b6c
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: cd088d5a83baa3876a4530917d228d126f3b605f
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        adding prometheus metrics collector
+      sha: 8a4062523d04dde6d121cca50eade55759ef1aba
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda-rest
+  gitOwner: salaboy
+  gitRepository: fmtok8s-agenda-rest
+  name: 'fmtok8s-agenda-rest'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda-rest/releases/tag/v0.0.8
+  version: v0.0.8
+status: {}
