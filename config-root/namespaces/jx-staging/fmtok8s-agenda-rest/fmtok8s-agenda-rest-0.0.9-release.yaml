@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2021-01-21T18:25:50Z"
+  creationTimestamp: "2021-01-23T10:48:53Z"
   deletionTimestamp: null
-  name: 'fmtok8s-agenda-rest-0.0.8'
+  name: 'fmtok8s-agenda-rest-0.0.9'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -18,8 +18,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
       message: |
-        chore: release 0.0.8
-      sha: ad28e56ef05c60e7ad7e63d0d56d498ade500b6c
+        chore: release 0.0.9
+      sha: b9b0a7a69e1bcbfce07da7efea10d8a996fdf8e8
     - author:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
@@ -29,7 +29,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: add variables
-      sha: cd088d5a83baa3876a4530917d228d126f3b605f
+      sha: 90dba683ab0cde7fe52f74bba5b2bd8b4985c506
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -38,12 +38,12 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        adding prometheus metrics collector
-      sha: 8a4062523d04dde6d121cca50eade55759ef1aba
+        adding jaeger and spring boot name
+      sha: 359956a3bfc3582dfdcbd5c150d69db598938741
   gitHttpUrl: https://github.com/salaboy/fmtok8s-agenda-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-agenda-rest
   name: 'fmtok8s-agenda-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda-rest/releases/tag/v0.0.8
-  version: v0.0.8
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-agenda-rest/releases/tag/v0.0.9
+  version: v0.0.9
 status: {}
