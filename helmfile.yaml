@@ -110,5 +110,9 @@ releases:
   version: 0.0.9
   name: fmtok8s-email-rest
   namespace: jx-staging
+- chart: dev2/fmtok8s-c4p-rest
+  version: 0.0.14
+  name: fmtok8s-c4p-rest
+  namespace: jx-production
 templates: {}
-missingFileHandler: ""
+renderedvalues: {}
