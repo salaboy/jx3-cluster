@@ -5,7 +5,7 @@ metadata:
   name: fmtok8s-email-rest-fmtok8s-email-rest
   labels:
     draft: draft-app
-    chart: "fmtok8s-email-rest-0.0.8"
+    chart: "fmtok8s-email-rest-0.0.9"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -24,11 +24,11 @@ spec:
       serviceAccountName: fmtok8s-email-rest-fmtok8s-email-rest
       containers:
         - name: fmtok8s-email-rest
-          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-email-rest:0.0.8"
+          image: "gcr.io/camunda-researchanddevelopment/fmtok8s-email-rest:0.0.9"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.8
+              value: 0.0.9
             - name: POD_NODE_NAME
               valueFrom:
                 fieldRef:

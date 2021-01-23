@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2021-01-22T13:43:22Z"
+  creationTimestamp: "2021-01-23T10:41:58Z"
   deletionTimestamp: null
-  name: 'fmtok8s-email-rest-0.0.8'
+  name: 'fmtok8s-email-rest-0.0.9'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -18,8 +18,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
       message: |
-        chore: release 0.0.8
-      sha: 5f59a305f230ba4e16b9c78027818228236dc933
+        chore: release 0.0.9
+      sha: cdc80ca3fb20e7f1ccdd134603cc1aca02a14c00
     - author:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
@@ -29,7 +29,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: add variables
-      sha: f8449eb49ca2ba1236f5c9f6eed87c7698dc41b5
+      sha: 535d7e1143d35274e3efff4d395aa0a79a63d02d
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -38,12 +38,12 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        adding opentracing jaeger
-      sha: e5aa01073fae68429947eefd93e74213f99dd9c4
+        setting springboot app name
+      sha: bb0f61147970ab2b3f437ace8a567296cbcddabf
   gitHttpUrl: https://github.com/salaboy/fmtok8s-email-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-email-rest
   name: 'fmtok8s-email-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.8
-  version: v0.0.8
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-email-rest/releases/tag/v0.0.9
+  version: v0.0.9
 status: {}
