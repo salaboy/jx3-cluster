@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2021-01-23T10:44:58Z"
+  creationTimestamp: "2021-01-24T12:56:02Z"
   deletionTimestamp: null
-  name: 'fmtok8s-c4p-rest-0.0.14'
+  name: 'fmtok8s-c4p-rest-0.0.15'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -18,8 +18,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
       message: |
-        chore: release 0.0.14
-      sha: 73c77837c292c0675b0787ef24d410393f8f337c
+        chore: release 0.0.15
+      sha: 7bfa1bd47bb7256f33073f3516f8cbb7f8384d56
     - author:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
@@ -29,7 +29,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: add variables
-      sha: ef4cd8421112b7cbd72a71cfdf362c232afdebf1
+      sha: 655a30e3d4e4683e950050dc62a752443727567d
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -38,12 +38,22 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        adding jaeger and springboot name
-      sha: 6e5dc90232b0a53138ea705c06d1dae7ca642d59
+        using webclient.. removing rest template
+      sha: f2f8dcdbf1857fffdc11766f522d4195201bb2cd
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        autowiring resttempalte to propagate span for opentracing
+      sha: 91574d73080282abeaf7bda18d05f599d76fd5ad
   gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-c4p-rest
   name: 'fmtok8s-c4p-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.14
-  version: v0.0.14
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.15
+  version: v0.0.15
 status: {}
