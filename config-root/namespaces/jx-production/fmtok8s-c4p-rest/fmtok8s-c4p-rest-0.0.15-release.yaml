@@ -1,0 +1,59 @@
+# Source: fmtok8s-c4p-rest/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-01-24T12:56:02Z"
+  deletionTimestamp: null
+  name: 'fmtok8s-c4p-rest-0.0.15'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.15
+      sha: 7bfa1bd47bb7256f33073f3516f8cbb7f8384d56
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 655a30e3d4e4683e950050dc62a752443727567d
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        using webclient.. removing rest template
+      sha: f2f8dcdbf1857fffdc11766f522d4195201bb2cd
+    - author:
+        email: salaboy@gmail.com
+        name: salaboy
+      branch: master
+      committer:
+        email: salaboy@gmail.com
+        name: salaboy
+      message: |
+        autowiring resttempalte to propagate span for opentracing
+      sha: 91574d73080282abeaf7bda18d05f599d76fd5ad
+  gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p-rest
+  gitOwner: salaboy
+  gitRepository: fmtok8s-c4p-rest
+  name: 'fmtok8s-c4p-rest'
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.15
+  version: v0.0.15
+status: {}
