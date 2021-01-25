@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2021-01-24T12:56:02Z"
+  creationTimestamp: "2021-01-25T08:54:07Z"
   deletionTimestamp: null
-  name: 'fmtok8s-c4p-rest-0.0.15'
+  name: 'fmtok8s-c4p-rest-0.0.16'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -18,8 +18,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
       message: |
-        chore: release 0.0.15
-      sha: 7bfa1bd47bb7256f33073f3516f8cbb7f8384d56
+        chore: release 0.0.16
+      sha: bc8e46c5588e54e73814e8d230f2b65567b470ef
     - author:
         email: jenkins-x@googlegroups.com
         name: jenkins-x-bot
@@ -29,7 +29,7 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: add variables
-      sha: 655a30e3d4e4683e950050dc62a752443727567d
+      sha: f4197b40da12fabec5d5780e4e993eb735e32088
     - author:
         email: salaboy@gmail.com
         name: salaboy
@@ -38,22 +38,12 @@ spec:
         email: salaboy@gmail.com
         name: salaboy
       message: |
-        using webclient.. removing rest template
-      sha: f2f8dcdbf1857fffdc11766f522d4195201bb2cd
-    - author:
-        email: salaboy@gmail.com
-        name: salaboy
-      branch: master
-      committer:
-        email: salaboy@gmail.com
-        name: salaboy
-      message: |
-        autowiring resttempalte to propagate span for opentracing
-      sha: 91574d73080282abeaf7bda18d05f599d76fd5ad
+        injecting span filter to webclient
+      sha: 45bf9f862c30852b15031b3d31912bc4f3190756
   gitHttpUrl: https://github.com/salaboy/fmtok8s-c4p-rest
   gitOwner: salaboy
   gitRepository: fmtok8s-c4p-rest
   name: 'fmtok8s-c4p-rest'
-  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.15
-  version: v0.0.15
+  releaseNotesURL: https://github.com/salaboy/fmtok8s-c4p-rest/releases/tag/v0.0.16
+  version: v0.0.16
 status: {}
