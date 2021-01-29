@@ -29,7 +29,7 @@
     <tr>
 	      <td><a href='https://github.com/jenkins-x/jx-pipelines-visualizer' title='Web UI for Jenkins X, with a clear goal - visualize the pipelines - and their logs.'> <img src='' width='24px' height='24px'> jx-pipelines-visualizer </a></td>
 	      <td>1.1.2</td>
-	      <td><a href='http://dashboard-jx.35.222.17.41.nip.io'>view</a></td>
+	      <td><a href='http://dashboard-jx.104.154.179.98.nip.io'>view</a></td>
 	      <td><a href='https://github.com/jenkins-x/jx-pipelines-visualizer'>source</a></td>
 	    </tr>
     <tr>
@@ -70,7 +70,7 @@
 	    <tr>
 	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> learnk10s </a></td>
 	      <td>0.0.1</td>
-	      <td><a href='http://learnk10s-jx-staging.35.222.17.41.nip.io'>view</a></td>
+	      <td><a href='http://learnk10s-jx-staging.104.154.179.98.nip.io'>view</a></td>
 	      <td></td>
 	    </tr>
     <tr>
