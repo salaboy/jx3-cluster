@@ -5,11 +5,11 @@ metadata:
   name: lighthouse-webhooks
   labels:
     draft: draft-app
-    chart: "lighthouse-0.0.874"
+    chart: "lighthouse-0.0.922"
     app: lighthouse-webhooks
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
-    checksum/config: 47caf41a28070c23a6e0cb91163bb8cd3ad916cb577d991faa03d8ffb52fcdf8
+    checksum/config: 64fa262293a171f7effd6afe291f3cd5753e1db5b0140784afd45f9f95e196f6
     wave.pusher.com/update-on-config-change: 'true'
     jenkins-x.io/hash: 'f523aff08164d84d8ed77527cebe63962cca4ee2c5da94285d0b567fa0fd7455'
   namespace: jx
@@ -28,7 +28,7 @@ spec:
       serviceAccountName: lighthouse-webhooks
       containers:
         - name: lighthouse-webhooks
-          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.0-SNAPSHOT-PR-1164-12
+          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.922
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"
@@ -59,10 +59,14 @@ spec:
               value: "tekton-bot"
             - name: DEFAULT_PIPELINE_RUN_TIMEOUT
               value: "2h0m0s"
+            - name: FILE_BROWSER
+              value: "git"
             - name: JX_DEFAULT_IMAGE
               value: "gcr.io/jenkinsxio/builder-maven:2.1.142-761"
             - name: LIGHTHOUSE_DASHBOARD_TEMPLATE
               value: "namespaces/{{ .Namespace }}/pipelineruns/{{ .PipelineRun }}"
+            - name: LIGHTHOUSE_VERSIONSTREAM_JENKINS_X_JX3_PIPELINE_CATALOG
+              value: "982863bf259592950973c8d0a07d5e22a51e819e"
           ports:
             - containerPort: 8080
           livenessProbe:

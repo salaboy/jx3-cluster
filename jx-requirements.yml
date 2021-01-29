@@ -50,6 +50,7 @@ spec:
   ingress:
     domain: 35.222.17.41.nip.io
     externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""

@@ -11,7 +11,7 @@ metadata:
   name: pusher-wave-pusher-wave
   namespace: secret-infra
   annotations:
-    wave.pusher.com/update-on-config-change: 'true'
+    kapp.k14s.io/change-group: 'apps.jenkins-x.io/pusher-wave'
 spec:
   replicas: 1
   selector:
