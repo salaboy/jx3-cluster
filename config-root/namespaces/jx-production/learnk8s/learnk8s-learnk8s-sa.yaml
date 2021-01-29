@@ -1,0 +1,8 @@
+# Source: learnk8s/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: learnk8s-learnk8s
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
