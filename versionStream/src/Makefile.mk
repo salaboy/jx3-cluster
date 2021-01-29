@@ -1,7 +1,7 @@
 FETCH_DIR := build/base
 TMP_TEMPLATE_DIR := build/tmp
 OUTPUT_DIR := config-root
-
+KUBEAPPLY ?= kubectl-apply
 VAULT_ADDR ?= https://vault.secret-infra:8200
 
 # You can disable force mode on kubectl apply by modifying this line:
@@ -58,11 +58,11 @@ fetch: init
 	helm repo add jx http://chartmuseum.jenkins-x.io
 
 	# generate the yaml from the charts in helmfile.yaml and moves them to the right directory tree (cluster or namespaces/foo)
-	helmfile --file helmfile.yaml template --include-crds --output-dir-template /tmp/generate/{{.Release.Namespace}}
+	helmfile --file helmfile.yaml template --include-crds --output-dir-template /tmp/generate/{{.Release.Namespace}}/{{.Release.Name}}
 
 	jx gitops split --dir /tmp/generate
 	jx gitops rename --dir /tmp/generate
-	jx gitops helmfile move --output-dir config-root --dir /tmp/generate
+	jx gitops helmfile move --output-dir config-root --dir /tmp/generate --dir-includes-release-name
 
 	# convert k8s Secrets => ExternalSecret resources using secret mapping + schemas
 	# see: https://github.com/jenkins-x/jx-secret#mappings
@@ -100,6 +100,10 @@ post-build:
 	jx gitops label --dir $(OUTPUT_DIR)/cluster                   gitops.jenkins-x.io/pipeline=cluster
 	jx gitops label --dir $(OUTPUT_DIR)/customresourcedefinitions gitops.jenkins-x.io/pipeline=customresourcedefinitions
 	jx gitops label --dir $(OUTPUT_DIR)/namespaces                gitops.jenkins-x.io/pipeline=namespaces
+
+	# lets add kapp friendly change group identifiers to nginx-ingress and pusher-wave so we can write rules against them
+	jx gitops annotate --dir $(OUTPUT_DIR) --selector app=pusher-wave kapp.k14s.io/change-group=apps.jenkins-x.io/pusher-wave
+	jx gitops annotate --dir $(OUTPUT_DIR) --selector app.kubernetes.io/name=ingress-nginx kapp.k14s.io/change-group=apps.jenkins-x.io/ingress-nginx
 
 	# lets label all Namespace resources with the main namespace which creates them and contains the Environment resources
 	jx gitops label --dir $(OUTPUT_DIR)/cluster --kind=Namespace team=jx
@@ -166,10 +170,10 @@ regen-check:
 	jx gitops apply
 
 .PHONY: regen-phase-1
-regen-phase-1: git-setup resolve-metadata all kubectl-apply verify-ingress-ignore commit
+regen-phase-1: git-setup resolve-metadata all $(KUBEAPPLY) verify-ingress-ignore commit
 
 .PHONY: regen-phase-2
-regen-phase-2: verify-ingress-ignore all verify-ignore secrets-populate commit
+regen-phase-2: verify-ingress-ignore all verify-ignore secrets-populate report commit
 
 .PHONY: regen-phase-3
 regen-phase-3: push secrets-wait
@@ -180,6 +184,10 @@ regen-none:
 
 .PHONY: apply
 apply: regen-check kubectl-apply secrets-populate verify write-completed
+	
+.PHONY: report
+report:
+	jx gitops helmfile report
 
 .PHONY: write-completed
 write-completed:
@@ -196,6 +204,14 @@ kubectl-apply:
 	kubectl apply $(KUBECTL_APPLY_FLAGS) --prune -l=gitops.jenkins-x.io/pipeline=customresourcedefinitions -R -f $(OUTPUT_DIR)/customresourcedefinitions
 	kubectl apply $(KUBECTL_APPLY_FLAGS) --prune -l=gitops.jenkins-x.io/pipeline=cluster                   -R -f $(OUTPUT_DIR)/cluster
 	kubectl apply $(KUBECTL_APPLY_FLAGS) --prune -l=gitops.jenkins-x.io/pipeline=namespaces                -R -f $(OUTPUT_DIR)/namespaces
+
+	# lets apply any infrastructure specific labels or annotations to enable IAM roles on ServiceAccounts etc
+	jx gitops postprocess
+
+.PHONY: kapp-apply
+kapp-apply:
+
+	kapp deploy -a jx -f $(OUTPUT_DIR) -y
 
 	# lets apply any infrastructure specific labels or annotations to enable IAM roles on ServiceAccounts etc
 	jx gitops postprocess

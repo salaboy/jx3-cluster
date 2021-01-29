@@ -1,0 +1,17 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: jx-staging
+repositories:
+- name: dev2
+  url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+releases:
+- chart: dev2/learnk10s
+  version: 0.0.1
+  name: learnk10s
+  values:
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}
