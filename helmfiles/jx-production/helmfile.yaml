@@ -1,0 +1,17 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: jx-production
+repositories:
+- name: dev
+  url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+releases:
+- chart: dev/learnk10s
+  version: 0.0.4
+  name: learnk10s
+  values:
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}
