@@ -1,0 +1,58 @@
+# Source: learnk8s/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learnk8s-learnk8s
+  labels:
+    draft: draft-app
+    chart: "learnk8s-0.0.1"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: learnk8s-learnk8s
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: learnk8s-learnk8s
+    spec:
+      serviceAccountName: learnk8s-learnk8s
+      containers:
+        - name: learnk8s
+          image: "gcr.io/camunda-researchanddevelopment/learnk8s:0.0.1"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: VERSION
+              value: 0.0.1
+          envFrom: null
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:

@@ -13,5 +13,10 @@ releases:
   name: learnk10s
   values:
   - jx-values.yaml
+- chart: dev2/learnk8s
+  version: 0.0.1
+  name: learnk8s
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
