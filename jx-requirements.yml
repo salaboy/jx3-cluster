@@ -19,7 +19,7 @@ spec:
     zone: us-central1-a
   environments:
   - ingress:
-      domain: ""
+      domain: "104.154.179.98.nip.io"
       externalDNS: false
       namespaceSubDomain: ""
       tls:
@@ -30,7 +30,7 @@ spec:
     owner: salaboy
     repository: jx3-cluster
   - ingress:
-      domain: ""
+      domain: "104.154.179.98.nip.io"
       externalDNS: false
       namespaceSubDomain: ""
       tls:
