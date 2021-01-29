@@ -25,7 +25,6 @@ spec:
     - name: fmtok8s-monolith
     - name: fmtok8s-speakers
     - name: learnk10s
-    - name: learnk9s
     - name: payments-service
     - name: queue-service
     - name: tickets-service
