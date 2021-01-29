@@ -1,0 +1,11 @@
+filepath: ""
+namespace: jx-production
+repositories:
+- name: dev
+  url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+releases:
+- chart: dev/learnk8s
+  version: 0.0.2
+  name: learnk8s
+templates: {}
+renderedvalues: {}
