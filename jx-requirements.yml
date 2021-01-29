@@ -48,7 +48,7 @@ spec:
         production: false
     key: production
   ingress:
-    domain: "104.154.179.98.nip.io"
+    domain: 104.154.179.98.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -jx.
@@ -69,4 +69,3 @@ spec:
     url: gs://repository-tf-jx-saved-worm-0e4cf2b8dca6
   vault: {}
   webhook: lighthouse
-

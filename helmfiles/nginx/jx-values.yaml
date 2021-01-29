@@ -61,7 +61,7 @@ jxRequirements:
         production: false
     key: production
   ingress:
-    domain: 35.222.17.41.nip.io
+    domain: 104.154.179.98.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -nginx.

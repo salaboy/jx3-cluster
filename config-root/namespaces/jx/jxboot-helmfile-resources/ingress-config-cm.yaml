@@ -1,7 +1,7 @@
 # Source: jxboot-helmfile-resources/templates/ingress-config-configmap.yaml
 apiVersion: v1
 data:
-  domain: "35.222.17.41.nip.io"
+  domain: "104.154.179.98.nip.io"
   email: ""
   exposer: "Ingress"
   issuer: ""

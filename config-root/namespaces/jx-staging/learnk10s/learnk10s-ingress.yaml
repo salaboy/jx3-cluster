@@ -15,4 +15,4 @@ spec:
           - backend:
               serviceName: learnk10s
               servicePort: 80
-      host: learnk10s-jx-staging.35.222.17.41.nip.io
+      host: learnk10s-jx-staging.104.154.179.98.nip.io

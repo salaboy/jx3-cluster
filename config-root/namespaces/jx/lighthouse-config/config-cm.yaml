@@ -145,7 +145,7 @@ data:
         - zeebe-io/zeebe-operate-helm
         - zeebe-io/zeebe-tasklist-helm
         - zeebe-io/zeebe-zeeqs-helm
-      target_url: http://dashboard-jx.35.222.17.41.nip.io
+      target_url: http://dashboard-jx.104.154.179.98.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null
