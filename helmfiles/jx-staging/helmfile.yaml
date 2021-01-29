@@ -9,7 +9,7 @@ repositories:
   url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
 releases:
 - chart: dev2/learnk10s
-  version: 0.0.3
+  version: 0.0.4
   name: learnk10s
   values:
   - jx-values.yaml
