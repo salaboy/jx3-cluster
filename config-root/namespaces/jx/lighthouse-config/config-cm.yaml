@@ -24,7 +24,6 @@ data:
         salaboy/fmtok8s-monolith: true
         salaboy/fmtok8s-speakers: true
         salaboy/jx3-cluster: true
-        salaboy/learnk9s: true
         salaboy/learnk10s: true
         salaboy/payments-service: true
         salaboy/queue-service: true
@@ -63,7 +62,6 @@ data:
         salaboy/fmtok8s-monolith: merge
         salaboy/fmtok8s-speakers: merge
         salaboy/jx3-cluster: merge
-        salaboy/learnk9s: merge
         salaboy/learnk10s: merge
         salaboy/payments-service: merge
         salaboy/queue-service: merge
@@ -102,7 +100,6 @@ data:
         - salaboy/fmtok8s-monolith
         - salaboy/fmtok8s-speakers
         - salaboy/learnk10s
-        - salaboy/learnk9s
         - salaboy/payments-service
         - salaboy/queue-service
         - salaboy/tickets-service
@@ -139,7 +136,6 @@ data:
         - salaboy/fmtok8s-monolith
         - salaboy/fmtok8s-speakers
         - salaboy/learnk10s
-        - salaboy/learnk9s
         - salaboy/payments-service
         - salaboy/queue-service
         - salaboy/tickets-service
