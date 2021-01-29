@@ -39,7 +39,7 @@ spec:
         production: false
     key: staging
   - ingress:
-      domain: ""
+      domain: "104.154.179.98.nip.io"
       externalDNS: false
       namespaceSubDomain: ""
       tls:
