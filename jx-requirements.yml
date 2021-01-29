@@ -48,7 +48,7 @@ spec:
         production: false
     key: production
   ingress:
-    domain: 35.222.17.41.nip.io
+    domain: 
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -jx.
