@@ -1,4 +1,8 @@
 filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
 namespace: jx-production
 repositories:
 - name: dev
@@ -7,5 +11,7 @@ releases:
 - chart: dev/learnk10s
   version: 0.0.5
   name: learnk10s
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

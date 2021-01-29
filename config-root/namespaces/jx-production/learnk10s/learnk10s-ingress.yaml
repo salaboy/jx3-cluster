@@ -1,0 +1,18 @@
+# Source: learnk10s/templates/ingress.yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: learnk10s
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              serviceName: learnk10s
+              servicePort: 80
+      host: learnk10s-jx-production.104.154.179.98.nip.io

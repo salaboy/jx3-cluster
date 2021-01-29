@@ -1,0 +1,58 @@
+# Source: learnk10s/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learnk10s-learnk10s
+  labels:
+    draft: draft-app
+    chart: "learnk10s-0.0.5"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-production
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: learnk10s-learnk10s
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: learnk10s-learnk10s
+    spec:
+      serviceAccountName: learnk10s-learnk10s
+      containers:
+        - name: learnk10s
+          image: "gcr.io/camunda-researchanddevelopment/learnk10s:0.0.5"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: VERSION
+              value: 0.0.5
+          envFrom: null
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
