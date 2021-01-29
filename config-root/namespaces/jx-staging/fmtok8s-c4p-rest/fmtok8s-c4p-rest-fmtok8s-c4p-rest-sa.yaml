@@ -1,8 +1,0 @@
-# Source: fmtok8s-c4p-rest/templates/sa.yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: fmtok8s-c4p-rest-fmtok8s-c4p-rest
-  namespace: jx-staging
-  labels:
-    gitops.jenkins-x.io/pipeline: 'namespaces'
