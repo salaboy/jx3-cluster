@@ -14,7 +14,7 @@ releases:
   values:
   - jx-values.yaml
 - chart: dev2/learnk8s
-  version: 0.0.1
+  version: 0.0.2
   name: learnk8s
   values:
   - jx-values.yaml
