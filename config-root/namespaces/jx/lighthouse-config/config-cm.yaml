@@ -8,6 +8,8 @@ data:
     in_repo_config:
       enabled:
         salaboy/cd-flow: true
+        salaboy/cd-flow-backend: true
+        salaboy/cd-flow-ui: true
         salaboy/customer-waiting-room-app: true
         salaboy/fmtok8s-agenda: true
         salaboy/fmtok8s-agenda-rest: true
@@ -22,6 +24,7 @@ data:
         salaboy/fmtok8s-monolith: true
         salaboy/fmtok8s-speakers: true
         salaboy/jx3-cluster: true
+        salaboy/learnk10s: true
         salaboy/payments-service: true
         salaboy/queue-service: true
         salaboy/tickets-service: true
@@ -43,6 +46,8 @@ data:
         skip-unknown-contexts: false
       merge_method:
         salaboy/cd-flow: merge
+        salaboy/cd-flow-backend: merge
+        salaboy/cd-flow-ui: merge
         salaboy/customer-waiting-room-app: merge
         salaboy/fmtok8s-agenda: merge
         salaboy/fmtok8s-agenda-rest: merge
@@ -57,6 +62,7 @@ data:
         salaboy/fmtok8s-monolith: merge
         salaboy/fmtok8s-speakers: merge
         salaboy/jx3-cluster: merge
+        salaboy/learnk10s: merge
         salaboy/payments-service: merge
         salaboy/queue-service: merge
         salaboy/tickets-service: merge
@@ -77,6 +83,8 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/cd-flow-backend
+        - salaboy/cd-flow-ui
         - salaboy/cd-flow
         - salaboy/customer-waiting-room-app
         - salaboy/fmtok8s-agenda-rest
@@ -91,6 +99,7 @@ data:
         - salaboy/fmtok8s-email
         - salaboy/fmtok8s-monolith
         - salaboy/fmtok8s-speakers
+        - salaboy/learnk10s
         - salaboy/payments-service
         - salaboy/queue-service
         - salaboy/tickets-service
@@ -110,6 +119,8 @@ data:
         - needs-rebase
         repos:
         - salaboy/jx3-cluster
+        - salaboy/cd-flow-backend
+        - salaboy/cd-flow-ui
         - salaboy/cd-flow
         - salaboy/customer-waiting-room-app
         - salaboy/fmtok8s-agenda-rest
@@ -124,6 +135,7 @@ data:
         - salaboy/fmtok8s-email
         - salaboy/fmtok8s-monolith
         - salaboy/fmtok8s-speakers
+        - salaboy/learnk10s
         - salaboy/payments-service
         - salaboy/queue-service
         - salaboy/tickets-service

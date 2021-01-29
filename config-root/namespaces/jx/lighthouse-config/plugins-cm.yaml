@@ -8,6 +8,14 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - salaboy/cd-flow-backend
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - salaboy/cd-flow-ui
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - salaboy/cd-flow
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -64,6 +72,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - salaboy/learnk10s
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - salaboy/payments-service
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -113,6 +125,38 @@ data:
     owners: {}
     plugins:
       salaboy/cd-flow:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      salaboy/cd-flow-backend:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      salaboy/cd-flow-ui:
       - approve
       - assign
       - blunderbuss
@@ -353,6 +397,22 @@ data:
       - cat
       - dog
       - pony
+      salaboy/learnk10s:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       salaboy/payments-service:
       - approve
       - assign
@@ -510,6 +570,12 @@ data:
       - salaboy/jx3-cluster
       trusted_org: todo
     - repos:
+      - salaboy/cd-flow-backend
+      trusted_org: todo
+    - repos:
+      - salaboy/cd-flow-ui
+      trusted_org: todo
+    - repos:
       - salaboy/cd-flow
       trusted_org: todo
     - repos:
@@ -550,6 +616,9 @@ data:
       trusted_org: todo
     - repos:
       - salaboy/fmtok8s-speakers
+      trusted_org: todo
+    - repos:
+      - salaboy/learnk10s
       trusted_org: todo
     - repos:
       - salaboy/payments-service
