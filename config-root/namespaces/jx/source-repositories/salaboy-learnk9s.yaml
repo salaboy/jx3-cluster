@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: salaboy
+    provider: github
+    repository: learnk9s
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: salaboy-learnk9s
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/salaboy/learnk9s.git
+  org: salaboy
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: learnk9s
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/salaboy/learnk9s
