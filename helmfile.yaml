@@ -94,21 +94,5 @@ releases:
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
-- chart: dev/cd-flow-backend
-  version: 0.0.5
-  name: cd-flow-backend
-  namespace: jx-staging
-- chart: dev/fmtok8s-agenda-rest
-  version: 0.0.9
-  name: fmtok8s-agenda-rest
-  namespace: jx-staging
-- chart: dev2/fmtok8s-c4p-rest
-  version: 0.0.16
-  name: fmtok8s-c4p-rest
-  namespace: jx-staging
-- chart: dev2/fmtok8s-email-rest
-  version: 0.0.9
-  name: fmtok8s-email-rest
-  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
