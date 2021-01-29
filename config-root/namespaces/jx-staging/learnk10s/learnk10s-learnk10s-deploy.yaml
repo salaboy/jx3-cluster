@@ -5,7 +5,7 @@ metadata:
   name: learnk10s-learnk10s
   labels:
     draft: draft-app
-    chart: "learnk10s-0.0.3"
+    chart: "learnk10s-0.0.4"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -24,11 +24,11 @@ spec:
       serviceAccountName: learnk10s-learnk10s
       containers:
         - name: learnk10s
-          image: "gcr.io/camunda-researchanddevelopment/learnk10s:0.0.3"
+          image: "gcr.io/camunda-researchanddevelopment/learnk10s:0.0.4"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.3
+              value: 0.0.4
           envFrom: null
           ports:
             - containerPort: 8080

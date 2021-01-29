@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: learnk10s
   labels:
-    chart: "learnk10s-0.0.3"
+    chart: "learnk10s-0.0.4"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     fabric8.io/expose: "true"
