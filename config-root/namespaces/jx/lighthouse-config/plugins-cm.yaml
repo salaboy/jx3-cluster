@@ -76,10 +76,6 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - salaboy/learnk9s
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
       - salaboy/payments-service
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -401,22 +397,6 @@ data:
       - cat
       - dog
       - pony
-      salaboy/learnk9s:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
       salaboy/learnk10s:
       - approve
       - assign
@@ -639,9 +619,6 @@ data:
       trusted_org: todo
     - repos:
       - salaboy/learnk10s
-      trusted_org: todo
-    - repos:
-      - salaboy/learnk9s
       trusted_org: todo
     - repos:
       - salaboy/payments-service
