@@ -1,8 +1,0 @@
-# Source: learnk10s/templates/sa.yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: learnk10s-learnk10s
-  namespace: jx-staging
-  labels:
-    gitops.jenkins-x.io/pipeline: 'namespaces'
