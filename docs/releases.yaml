@@ -112,19 +112,6 @@
     version: 0.0.28
 - namespace: jx-staging
   path: helmfiles/jx-staging/helmfile.yaml
-  releases:
-  - apiVersion: v1
-    applicationUrl: http://learnk10s-jx-staging.104.154.179.98.nip.io
-    description: A Helm chart for Kubernetes
-    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    ingresses:
-    - name: learnk10s
-      url: http://learnk10s-jx-staging.104.154.179.98.nip.io
-    name: learnk10s
-    repositoryName: dev2
-    repositoryUrl: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-    resourcePath: config-root/namespaces/jx-staging/learnk10s
-    version: 0.0.1
 - namespace: nginx
   path: helmfiles/nginx/helmfile.yaml
   releases:
