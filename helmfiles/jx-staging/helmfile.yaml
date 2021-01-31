@@ -8,15 +8,5 @@ repositories:
 - name: dev2
   url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
 releases:
-- chart: dev2/learnk10s
-  version: 0.0.4
-  name: learnk10s
-  values:
-  - jx-values.yaml
-- chart: dev2/learnk8s
-  version: 0.0.2
-  name: learnk8s
-  values:
-  - jx-values.yaml
 templates: {}
 renderedvalues: {}
