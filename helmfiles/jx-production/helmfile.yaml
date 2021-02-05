@@ -1,4 +1,8 @@
 filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
 namespace: jx-production
 repositories:
 - name: dev
@@ -7,5 +11,7 @@ releases:
 - chart: dev/zeebe-operator
   version: 0.0.100
   name: zeebe-operator
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

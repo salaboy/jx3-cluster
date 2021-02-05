@@ -1,0 +1,61 @@
+# Source: zeebe-operator/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zeebe-operator-zeebe-operator
+  labels:
+    draft: draft-app
+    chart: "zeebe-operator-0.0.100"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-production
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: zeebe-operator-zeebe-operator
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: zeebe-operator-zeebe-operator
+    spec:
+      containers:
+        - name: zeebe-operator
+          image: "gcr.io/camunda-researchanddevelopment/zeebe-operator:0.0.100"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: BUILDER_IMAGE
+              value: "gcr.io/camunda-consulting-de/helm-builder:0.0.1"
+            - name: PIPELINES_NAMESPACE
+              value: "default"
+            - name: PIPELINES_SA
+              value: "tekton-bot"
+            - name: VERSION_STREAM
+              value: "http://github.com/zeebe-io/zeebe-version-stream-helm"
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /metrics
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /metrics
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 100m
+              memory: 256Mi
+            requests:
+              cpu: 80m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
