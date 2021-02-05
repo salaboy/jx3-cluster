@@ -1,0 +1,11 @@
+filepath: ""
+namespace: jx-production
+repositories:
+- name: dev
+  url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+releases:
+- chart: dev/zeebe-operator
+  version: 0.0.100
+  name: zeebe-operator
+templates: {}
+renderedvalues: {}
