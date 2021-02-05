@@ -100,6 +100,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - zeebe-io/zeebe-operator
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - zeebe-io/zeebe-tasklist-helm
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -505,6 +509,22 @@ data:
       - cat
       - dog
       - pony
+      zeebe-io/zeebe-operator:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       zeebe-io/zeebe-tasklist-helm:
       - approve
       - assign
@@ -617,6 +637,9 @@ data:
       trusted_org: todo
     - repos:
       - zeebe-io/zeebe-operate-helm
+      trusted_org: todo
+    - repos:
+      - zeebe-io/zeebe-operator
       trusted_org: todo
     - repos:
       - zeebe-io/zeebe-tasklist-helm

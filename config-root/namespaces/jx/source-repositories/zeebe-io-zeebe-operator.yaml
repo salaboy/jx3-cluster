@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: zeebe-io
+    provider: github
+    repository: zeebe-operator
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: zeebe-io-zeebe-operator
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/zeebe-io/zeebe-operator.git
+  org: zeebe-io
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: zeebe-operator
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/zeebe-io/zeebe-operator

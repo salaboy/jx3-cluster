@@ -31,6 +31,7 @@ data:
         zeebe-io/zeebe-cluster-helm: true
         zeebe-io/zeebe-full-helm: true
         zeebe-io/zeebe-operate-helm: true
+        zeebe-io/zeebe-operator: true
         zeebe-io/zeebe-tasklist-helm: true
         zeebe-io/zeebe-zeeqs-helm: true
     plank: {}
@@ -68,6 +69,7 @@ data:
         zeebe-io/zeebe-cluster-helm: merge
         zeebe-io/zeebe-full-helm: merge
         zeebe-io/zeebe-operate-helm: merge
+        zeebe-io/zeebe-operator: merge
         zeebe-io/zeebe-tasklist-helm: merge
         zeebe-io/zeebe-zeeqs-helm: merge
       queries:
@@ -104,6 +106,7 @@ data:
         - zeebe-io/zeebe-cluster-helm
         - zeebe-io/zeebe-full-helm
         - zeebe-io/zeebe-operate-helm
+        - zeebe-io/zeebe-operator
         - zeebe-io/zeebe-tasklist-helm
         - zeebe-io/zeebe-zeeqs-helm
       - labels:
@@ -139,6 +142,7 @@ data:
         - zeebe-io/zeebe-cluster-helm
         - zeebe-io/zeebe-full-helm
         - zeebe-io/zeebe-operate-helm
+        - zeebe-io/zeebe-operator
         - zeebe-io/zeebe-tasklist-helm
         - zeebe-io/zeebe-zeeqs-helm
       target_url: http://dashboard-jx.104.154.179.98.nip.io
