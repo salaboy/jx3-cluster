@@ -7,6 +7,5 @@ namespace: jx-staging
 repositories:
 - name: dev2
   url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-releases:
 templates: {}
 renderedvalues: {}
