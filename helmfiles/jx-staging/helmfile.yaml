@@ -8,10 +8,5 @@ repositories:
 - name: dev2
   url: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
 releases:
-- chart: dev2/zeebe-operator
-  version: 0.0.100
-  name: zeebe-operator
-  values:
-  - jx-values.yaml
 templates: {}
 renderedvalues: {}
