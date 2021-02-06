@@ -112,22 +112,6 @@
     version: 0.0.28
 - namespace: jx-staging
   path: helmfiles/jx-staging/helmfile.yaml
-  releases:
-  - apiVersion: v1
-    appVersion: "1.0"
-    dependencies:
-    - alias: tekton
-      condition: tekton.enabled
-      name: tekton
-      repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-      version: 0.0.63
-    description: Zeebe Operator Helm Chart
-    icon: https://zeebe.io/img/zeebe-logo.png
-    name: zeebe-operator
-    repositoryName: dev2
-    repositoryUrl: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-    resourcePath: config-root/namespaces/jx-staging/zeebe-operator
-    version: 0.0.100
 - namespace: nginx
   path: helmfiles/nginx/helmfile.yaml
   releases:

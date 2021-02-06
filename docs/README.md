@@ -65,15 +65,6 @@
 	      <td><a href='https://jenkins-x.io/'>source</a></td>
 	    </tr>
     <tr>
-		      <td colspan='4'><h3>jx-staging</h3></td>
-		    </tr>
-	    <tr>
-	      <td><a href='' title='Zeebe Operator Helm Chart'> <img src='https://zeebe.io/img/zeebe-logo.png' width='24px' height='24px'> zeebe-operator </a></td>
-	      <td>0.0.100</td>
-	      <td></td>
-	      <td></td>
-	    </tr>
-    <tr>
 		      <td colspan='4'><h3>nginx</h3></td>
 		    </tr>
 	    <tr>
